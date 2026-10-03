@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Skin Era | Depilación con cera en Puerto Vallarta",
+    "description": "Una nueva era para tu piel. Depilación con cera en Puerto Vallarta con higiene visible, atención informada y un espacio privado pensado para tu comodidad."
+  },
+  "a11y": { "skip": "Saltar al contenido" },
+  "nav": {
+    "label": "Principal",
+    "menu": "Abrir menú",
+    "home": "Inicio",
+    "about": "Quiénes somos",
+    "services": "Servicios",
+    "firstTime": "Tu primera vez",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "book": "Agendar"
+  },
+  "hero": {
+    "eyebrow": "Depilación con cera · Puerto Vallarta",
+    "title": "Una nueva era para tu piel",
+    "lead": "Cuidamos tu piel antes que cualquier servicio. Un espacio privado, limpio y tranquilo, con atención que te explica cada paso.",
+    "ctaPrimary": "Conoce los servicios",
+    "ctaSecondary": "Escríbenos",
+    "countdownLabel": "Abrimos en",
+    "cdDays": "días",
+    "cdHours": "horas",
+    "cdMinutes": "min",
+    "cdSeconds": "seg",
+    "pillarsLabel": "Lo que nos define",
+    "pillar1": "Higiene visible",
+    "pillar2": "Ceras sin crueldad animal",
+    "pillar3": "Atención personalizada"
+  }
+}

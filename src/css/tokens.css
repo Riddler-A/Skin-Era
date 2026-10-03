@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Giflika";
+  src: url("/assets/fonts/Giflika-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "League Spartan";
+  src: url("/assets/fonts/LeagueSpartan-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* Paleta del brandeck (valores medidos sobre las láminas) */
+  --crema: #E8DEC5;
+  --ocre: #BE8840;
+  --cafe: #6C5649;
+  --rosa: #D4B2A9;
+
+  /* Derivados: tintes de la misma paleta para fondos y superficies */
+  --crema-claro: #F4EFE4;
+  --crema-profundo: #DDD0B0;
+  --cafe-oscuro: #54433A;
+  --linea: rgb(108 86 73 / 0.22);
+
+  --font-display: "Giflika", "Cormorant Garamond", Georgia, serif;
+  --font-body: "League Spartan", "Helvetica Neue", Arial, sans-serif;
+
+  --step-eyebrow: clamp(0.78rem, 0.74rem + 0.15vw, 0.86rem);
+  --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-lead: clamp(1.1rem, 1.02rem + 0.4vw, 1.3rem);
+  --step-h1: clamp(2.6rem, 1.6rem + 5vw, 5.4rem);
+  --step-h2: clamp(2rem, 1.4rem + 2.6vw, 3.4rem);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: clamp(4rem, 3rem + 5vw, 8rem);
+
+  --radius: 999px;
+  --header-h: 4.5rem;
+  --container: 76rem;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

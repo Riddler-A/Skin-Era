@@ -1,0 +1,37 @@
+<section class="hero" id="inicio" aria-labelledby="hero-titulo">
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow">{{hero.eyebrow}}</p>
+      <h1 class="hero__title" id="hero-titulo">{{hero.title}}</h1>
+      <p class="hero__lead">{{hero.lead}}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#servicios">{{hero.ctaPrimary}}</a>
+        <a class="btn btn--ghost" href="#contacto">{{hero.ctaSecondary}}</a>
+      </div>
+
+      <!-- Cuenta regresiva: oculta hasta que site.json > launch.enabled sea true y haya fecha -->
+      <div class="countdown" data-countdown hidden>
+        <p class="countdown__label">{{hero.countdownLabel}}</p>
+        <div class="countdown__grid" role="timer" aria-live="off">
+          <div><span data-cd="days">00</span><small>{{hero.cdDays}}</small></div>
+          <div><span data-cd="hours">00</span><small>{{hero.cdHours}}</small></div>
+          <div><span data-cd="minutes">00</span><small>{{hero.cdMinutes}}</small></div>
+          <div><span data-cd="seconds">00</span><small>{{hero.cdSeconds}}</small></div>
+        </div>
+      </div>
+
+      <ul class="hero__pillars" aria-label="{{hero.pillarsLabel}}">
+        <li>{{hero.pillar1}}</li>
+        <li>{{hero.pillar2}}</li>
+        <li>{{hero.pillar3}}</li>
+      </ul>
+    </div>
+
+    <!-- Marcador de foto: reemplazar por <img> real cuando haya fotografía de marca -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__arch">
+        <img class="hero__monogram" src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270">
+      </div>
+    </div>
+  </div>
+</section>

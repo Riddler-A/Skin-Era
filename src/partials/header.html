@@ -1,0 +1,25 @@
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="{{base}}/#inicio" aria-label="{{site.name}}: {{nav.home}}">
+      <img src="/assets/img/logo-wordmark-cafe.png" alt="Skin Era" width="1195" height="244">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      <span class="sr-only">{{nav.menu}}</span>
+    </button>
+
+    <nav class="site-nav" id="menu-principal" aria-label="{{nav.label}}" data-nav>
+      <ul class="site-nav__list">
+        <li><a href="#inicio">{{nav.home}}</a></li>
+        <li><a href="#nosotros">{{nav.about}}</a></li>
+        <li><a href="#servicios">{{nav.services}}</a></li>
+        <li><a href="#primera-vez">{{nav.firstTime}}</a></li>
+        <li><a href="#preguntas">{{nav.faq}}</a></li>
+        <li><a href="#contacto">{{nav.contact}}</a></li>
+      </ul>
+      <a class="btn btn--primary site-nav__cta" href="#contacto">{{nav.book}}</a>
+      {{#if hasEnglish}}<a class="site-nav__lang" href="/en/" hreflang="en" lang="en">EN</a>{{/if}}
+    </nav>
+  </div>
+</header>
