@@ -98,5 +98,72 @@
         "text": "Cabina privada, aroma limpio, luz suave y música tranquila para que llegues y te relajes."
       }
     }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Quiénes somos",
+      "title": "Una nueva forma de cuidar tu piel",
+      "lead": "Skin Era es un estudio de depilación con cera en Puerto Vallarta donde la técnica, la higiene y el trato cercano van antes que la prisa."
+    },
+    "story": {
+      "eyebrow": "Cómo nació",
+      "title": "El lugar que nuestra fundadora quería encontrar",
+      "p1": "Skin Era nace de la experiencia de su fundadora como clienta: poca técnica, poca atención, instalaciones descuidadas y muy poca conciencia sobre el cuidado real de la piel.",
+      "p2": "En lugar de resignarse, decidió crear el espacio que ella habría querido encontrar: uno donde se explica cada paso, se cuida cada detalle y la piel se trata con respeto desde la primera cita.",
+      "quote": "Darle una nueva era a la piel."
+    },
+    "purpose": {
+      "eyebrow": "Lo que nos guía",
+      "items": {
+        "purpose": {
+          "label": "Propósito",
+          "text": "Iniciar una nueva forma de vivir el cuidado de la piel y la depilación: profesional, higiénica, respetuosa e inclusiva, donde cada persona se sienta cómoda, segura y bien atendida."
+        },
+        "mission": {
+          "label": "Misión",
+          "text": "Brindar servicios de depilación y cuidado corporal con altos estándares de calidad, higiene, técnica y atención personalizada, en un ambiente privado, estético y relajante."
+        },
+        "vision": {
+          "label": "Visión",
+          "text": "Ser la marca referente en depilación y cuidado corporal en Puerto Vallarta, reconocida por su experiencia premium, sus protocolos de higiene y la confianza que genera."
+        }
+      }
+    },
+    "values": {
+      "eyebrow": "Nuestros valores",
+      "title": "Lo que no negociamos",
+      "items": {
+        "respect": {
+          "title": "Respeto",
+          "text": "Tratamos a cada persona con dignidad e inclusión, sin juicios por apariencia, cuerpo, peso, origen o condición personal."
+        },
+        "hygiene": {
+          "title": "Higiene",
+          "text": "Espacios, herramientas, cabinas y procesos impecables. La limpieza se ve y es parte de la experiencia."
+        },
+        "quality": {
+          "title": "Calidad",
+          "text": "Técnicas, productos y procesos elegidos con cuidado para lograr resultados seguros y consistentes."
+        },
+        "professionalism": {
+          "title": "Profesionalismo",
+          "text": "Un equipo capacitado que sabe responder tus dudas desde el primer día."
+        },
+        "skincare": {
+          "title": "Cuidado real de la piel",
+          "text": "No hacemos servicios solo por vender: evaluamos tu piel, tu sensibilidad y tus necesidades."
+        },
+        "experience": {
+          "title": "Experiencia",
+          "text": "Aroma, luz, privacidad, temperatura y música cuidados para que te sientas en calma."
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Cuando quieras, aquí estamos",
+    "text": "Conoce nuestros servicios o escríbenos para resolver tus dudas antes de tu primera cita.",
+    "primary": "Ver servicios",
+    "secondary": "Escríbenos"
   }
 }

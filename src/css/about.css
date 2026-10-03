@@ -1,0 +1,42 @@
+/* Apertura */
+.about-hero { position: relative; padding-block: var(--space-5) var(--space-6); overflow: hidden; }
+.about-hero__inner { position: relative; z-index: 1; display: grid; gap: var(--space-3); justify-items: start; }
+.about-hero__title { font-size: var(--step-h1); max-width: 13ch; text-wrap: balance; }
+.about-hero__lead { font-size: var(--step-lead); max-width: 38ch; }
+.about-hero__mark { position: absolute; right: -2.5rem; bottom: -3rem; width: clamp(8rem, 28vw, 22rem); opacity: 0.09; pointer-events: none; }
+
+/* Historia */
+.about-story { background: var(--crema); padding-block: var(--space-6); }
+.about-story__inner { display: grid; gap: var(--space-4); }
+.about-story__title { font-size: var(--step-h2); max-width: 15ch; margin-top: var(--space-2); text-wrap: balance; }
+.about-story__body { display: grid; gap: var(--space-2); font-size: var(--step-lead); max-width: 46ch; }
+.about-story__quote { margin: var(--space-3) 0 0; padding-top: var(--space-3); border-top: 1px solid var(--linea); font-family: var(--font-display); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); line-height: 1.15; color: var(--cafe); }
+
+/* Propósito, misión, visión */
+.about-purpose { background: var(--cafe); color: var(--crema); padding-block: var(--space-5); }
+.about-purpose__grid { display: grid; gap: var(--space-4); }
+.about-purpose__item { display: grid; gap: var(--space-1); align-content: start; padding-top: var(--space-2); border-top: 1px solid rgb(232 222 197 / 0.3); }
+.about-purpose__label { font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.4rem); }
+.about-purpose__item p { max-width: 40ch; opacity: 0.92; }
+
+/* Valores */
+.about-values { padding-block: var(--space-6); }
+.about-values__head { display: grid; gap: var(--space-2); margin-bottom: var(--space-4); }
+.about-values__title { font-size: var(--step-h2); }
+.about-values__list { display: grid; gap: 0; }
+.value { display: grid; gap: 0.5rem; padding-block: var(--space-3); border-top: 1px solid var(--linea); }
+.value h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 500; letter-spacing: 0.04em; line-height: 1.3; }
+.value h3::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 0.7rem; border-radius: 50%; background: var(--ocre); vertical-align: 0.15em; }
+.value p { max-width: 42ch; }
+
+@media (min-width: 48em) {
+  .about-purpose__grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+  .about-values__list { grid-template-columns: repeat(2, 1fr); column-gap: var(--space-5); }
+}
+@media (min-width: 62em) {
+  .about-hero { padding-block: var(--space-6); }
+  .about-story__inner { grid-template-columns: 0.9fr 1.1fr; gap: var(--space-6); align-items: start; }
+  .about-values__head { grid-template-columns: 0.9fr 1.1fr; align-items: end; }
+  .about-values__list { grid-template-columns: repeat(3, 1fr); }
+  .about-purpose { padding-block: var(--space-6); }
+}

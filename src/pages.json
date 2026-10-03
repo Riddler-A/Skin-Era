@@ -1,8 +1,69 @@
 [
-  { "id": "home",       "path": "",             "sections": ["hero", "commitment"], "css": ["hero", "commitment"] },
-  { "id": "about",      "path": "nosotros",     "sections": ["stub"], "css": ["stub"] },
-  { "id": "services",   "path": "servicios",    "sections": ["stub"], "css": ["stub"] },
-  { "id": "firstTime",  "path": "primera-vez",  "sections": ["stub"], "css": ["stub"] },
-  { "id": "faq",        "path": "preguntas",    "sections": ["stub"], "css": ["stub"] },
-  { "id": "contact",    "path": "contacto",     "sections": ["stub"], "css": ["stub"] }
+  {
+    "id": "home",
+    "path": "",
+    "sections": [
+      "hero",
+      "commitment"
+    ],
+    "css": [
+      "hero",
+      "commitment"
+    ]
+  },
+  {
+    "id": "about",
+    "path": "nosotros",
+    "sections": [
+      "about-hero",
+      "about-story",
+      "about-purpose",
+      "about-values",
+      "cta"
+    ],
+    "css": [
+      "about",
+      "cta"
+    ]
+  },
+  {
+    "id": "services",
+    "path": "servicios",
+    "sections": [
+      "stub"
+    ],
+    "css": [
+      "stub"
+    ]
+  },
+  {
+    "id": "firstTime",
+    "path": "primera-vez",
+    "sections": [
+      "stub"
+    ],
+    "css": [
+      "stub"
+    ]
+  },
+  {
+    "id": "faq",
+    "path": "preguntas",
+    "sections": [
+      "stub"
+    ],
+    "css": [
+      "stub"
+    ]
+  },
+  {
+    "id": "contact",
+    "path": "contacto",
+    "sections": [
+      "stub"
+    ],
+    "css": [
+      "stub"
+    ]
+  }
 ]
