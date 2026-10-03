@@ -1,6 +1,6 @@
 <header class="site-header" data-header>
   <div class="container site-header__inner">
-    <a class="site-header__logo" href="{{base}}/#inicio" aria-label="{{site.name}}: {{nav.home}}">
+    <a class="site-header__logo" href="{{base}}/" aria-label="{{site.name}}: {{nav.home}}">
       <img src="/assets/img/logo-wordmark-cafe.png" alt="Skin Era" width="1195" height="244">
     </a>
 
@@ -11,14 +11,14 @@
 
     <nav class="site-nav" id="menu-principal" aria-label="{{nav.label}}" data-nav>
       <ul class="site-nav__list">
-        <li><a href="#inicio">{{nav.home}}</a></li>
-        <li><a href="#nosotros">{{nav.about}}</a></li>
-        <li><a href="#servicios">{{nav.services}}</a></li>
-        <li><a href="#primera-vez">{{nav.firstTime}}</a></li>
-        <li><a href="#preguntas">{{nav.faq}}</a></li>
-        <li><a href="#contacto">{{nav.contact}}</a></li>
+        <li><a href="{{base}}/" {{current.home}}>{{nav.home}}</a></li>
+        <li><a href="{{base}}/nosotros/" {{current.about}}>{{nav.about}}</a></li>
+        <li><a href="{{base}}/servicios/" {{current.services}}>{{nav.services}}</a></li>
+        <li><a href="{{base}}/primera-vez/" {{current.firstTime}}>{{nav.firstTime}}</a></li>
+        <li><a href="{{base}}/preguntas/" {{current.faq}}>{{nav.faq}}</a></li>
+        <li><a href="{{base}}/contacto/" {{current.contact}}>{{nav.contact}}</a></li>
       </ul>
-      <a class="btn btn--primary site-nav__cta" href="#contacto">{{nav.book}}</a>
+      <a class="btn btn--primary site-nav__cta" href="{{base}}/contacto/">{{nav.book}}</a>
       {{#if hasEnglish}}<a class="site-nav__lang" href="/en/" hreflang="en" lang="en">EN</a>{{/if}}
     </nav>
   </div>

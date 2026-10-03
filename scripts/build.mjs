@@ -13,8 +13,8 @@ const DIST = join(ROOT, 'dist');
 
 const get = (obj, path) => path.split('.').reduce((o, k) => (o == null ? o : o[k]), obj);
 
-// Orden de las secciones del landing. Se agregan aquí a medida que se construyen.
-const SECTIONS = ['hero'];
+// Páginas del sitio (src/pages.json): cada una lista sus secciones (parciales) y su CSS.
+// Las secciones de la Home se agregan ahí a medida que se construyen.
 
 async function render(template, ctx, partials) {
   let out = template;
@@ -46,19 +46,28 @@ async function build() {
 
   // Un idioma por cada src/content/<lang>.json. Hoy solo 'es'; agregar en.json activa /en/.
   const langs = (await readdir(join(SRC, 'content'))).filter(f => /^[a-z]{2}\.json$/.test(f)).map(f => f.slice(0, 2));
+  const pages = JSON.parse(await readFile(join(SRC, 'pages.json'), 'utf8'));
+  const baseCss = ['tokens', 'base', 'header', 'footer'];
   for (const lang of langs) {
     const copy = JSON.parse(await readFile(join(SRC, 'content', `${lang}.json`), 'utf8'));
     const isDefault = lang === site.defaultLang;
     const base = isDefault ? '' : `/${lang}`;
-    const ctx = {
-      ...copy, site, lang, base,
-      hasEnglish: langs.includes('en'),
-      sectionsHtml: SECTIONS.map(s => `{{> ${s}}}`).join('\n'),
-    };
-    const html = await render(layout.replace('{{sectionsHtml}}', ctx.sectionsHtml), ctx, partials);
-    const dir = isDefault ? DIST : join(DIST, lang);
-    await mkdir(dir, { recursive: true });
-    await writeFile(join(dir, 'index.html'), html);
+    for (const page of pages) {
+      // current.<id> marca el enlace activo del menú con aria-current
+      const current = Object.fromEntries(pages.map(p => [p.id, p.id === page.id ? 'aria-current="page"' : '']));
+      const ctx = {
+        ...copy, site, lang, base, current,
+        page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}) },
+        hasEnglish: langs.includes('en'),
+        cssLinks: [...baseCss, ...page.css].filter(n => existsSync(join(SRC, 'css', `${n}.css`)))
+          .map(n => `<link rel="stylesheet" href="/css/${n}.css">`).join('\n  '),
+        sectionsHtml: page.sections.map(sec => `{{> ${sec}}}`).join('\n'),
+      };
+      const html = await render(layout.replace('{{sectionsHtml}}', ctx.sectionsHtml), ctx, partials);
+      const dir = join(isDefault ? DIST : join(DIST, lang), page.path);
+      await mkdir(dir, { recursive: true });
+      await writeFile(join(dir, 'index.html'), html);
+    }
   }
 
   await cp(join(SRC, 'css'), join(DIST, 'css'), { recursive: true });
@@ -67,7 +76,7 @@ async function build() {
   // config pública para el JS (fecha de lanzamiento, etc.)
   await writeFile(join(DIST, 'js/config.json'), JSON.stringify({ launch: site.launch }, null, 2));
   if (existsSync(join(SRC, 'static'))) await cp(join(SRC, 'static'), DIST, { recursive: true });
-  console.log(`✓ build listo en ${Date.now() - t0} ms (${langs.join(', ')})`);
+  console.log(`✓ build listo en ${Date.now() - t0} ms (${langs.join(', ')}; ${pages.length} páginas)`);
 }
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.webp': 'image/webp', '.ico': 'image/x-icon' };

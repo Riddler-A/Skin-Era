@@ -36,3 +36,14 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setMenu(
     box.hidden = false;
   } catch { /* sin config: la cuenta regresiva permanece oculta */ }
 })();
+
+// Revelado al hacer scroll para elementos [data-reveal]
+const reveals = document.querySelectorAll('[data-reveal]');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+  reveals.forEach((el) => io.observe(el));
+} else {
+  reveals.forEach((el) => el.classList.add('is-visible'));
+}

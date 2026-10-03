@@ -1,0 +1,4 @@
+.stub { padding-block: var(--space-6); min-height: 60vh; display: grid; align-items: center; }
+.stub__inner { display: grid; gap: var(--space-3); justify-items: start; }
+.stub__title { font-size: var(--step-h2); }
+.stub__text { max-width: 36ch; font-size: var(--step-lead); }

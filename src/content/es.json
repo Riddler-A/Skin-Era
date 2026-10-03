@@ -1,9 +1,7 @@
 {
-  "meta": {
-    "title": "Skin Era | Depilación con cera en Puerto Vallarta",
-    "description": "Una nueva era para tu piel. Depilación con cera en Puerto Vallarta con higiene visible, atención informada y un espacio privado pensado para tu comodidad."
+  "a11y": {
+    "skip": "Saltar al contenido"
   },
-  "a11y": { "skip": "Saltar al contenido" },
   "nav": {
     "label": "Principal",
     "menu": "Abrir menú",
@@ -30,5 +28,75 @@
     "pillar1": "Higiene visible",
     "pillar2": "Ceras sin crueldad animal",
     "pillar3": "Atención personalizada"
+  },
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Skin Era | Depilación con cera en Puerto Vallarta",
+        "description": "Una nueva era para tu piel. Depilación con cera en Puerto Vallarta con higiene visible, atención informada y un espacio privado pensado para tu comodidad."
+      }
+    },
+    "about": {
+      "title": "Quiénes somos",
+      "meta": {
+        "title": "Quiénes somos | Skin Era",
+        "description": "Conoce el propósito y los valores de Skin Era, depilación con cera en Puerto Vallarta."
+      }
+    },
+    "services": {
+      "title": "Servicios",
+      "meta": {
+        "title": "Servicios | Skin Era",
+        "description": "Servicios de depilación con cera en Puerto Vallarta."
+      }
+    },
+    "firstTime": {
+      "title": "Tu primera vez",
+      "meta": {
+        "title": "Tu primera vez | Skin Era",
+        "description": "Qué esperar en tu primera cita de depilación con cera en Skin Era."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "meta": {
+        "title": "Preguntas frecuentes | Skin Era",
+        "description": "Resolvemos tus dudas sobre la depilación con cera en Skin Era."
+      }
+    },
+    "contact": {
+      "title": "Contacto",
+      "meta": {
+        "title": "Contacto | Skin Era",
+        "description": "Escríbenos para agendar tu cita en Skin Era, Puerto Vallarta."
+      }
+    }
+  },
+  "stub": {
+    "text": "Estamos preparando esta página. Muy pronto la encontrarás aquí.",
+    "back": "Volver al inicio"
+  },
+  "commitment": {
+    "eyebrow": "Nuestro compromiso",
+    "title": "Tu piel merece un cuidado real",
+    "lead": "No vendemos un procedimiento: cuidamos tu piel, tu comodidad y tu confianza, desde que nos escribes hasta que regresas.",
+    "items": {
+      "hygiene": {
+        "title": "Higiene visible",
+        "text": "Cabinas, herramientas, fundidores y platillos impecables y a la vista: antes, durante y después de tu servicio."
+      },
+      "crueltyFree": {
+        "title": "Sin crueldad animal",
+        "text": "Elegimos ceras con ingredientes trazables y sin pruebas en animales. Es una condición, no una opción."
+      },
+      "informed": {
+        "title": "Atención informada",
+        "text": "Te explicamos cada paso, resolvemos tus dudas y puedes pausar el servicio cuando lo necesites."
+      },
+      "privacy": {
+        "title": "Privacidad y calma",
+        "text": "Cabina privada, aroma limpio, luz suave y música tranquila para que llegues y te relajes."
+      }
+    }
   }
 }
