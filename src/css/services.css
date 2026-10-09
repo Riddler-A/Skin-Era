@@ -1,0 +1,38 @@
+.services-hero { padding-block: var(--space-5) var(--space-4); }
+.services-hero__inner { display: grid; gap: var(--space-3); justify-items: start; }
+.services-hero__title { font-size: var(--step-h1); max-width: 12ch; text-wrap: balance; }
+.services-hero__lead { font-size: var(--step-lead); max-width: 40ch; }
+
+.services-list { padding-block: var(--space-4) var(--space-6); }
+.services-grid { display: grid; gap: var(--space-4) var(--space-3); }
+.service { display: grid; gap: var(--space-2); align-content: start; }
+.service__media {
+  aspect-ratio: 4 / 3; border-radius: 1.25rem; display: grid; place-items: center; overflow: hidden;
+  background: linear-gradient(160deg, var(--rosa), var(--ocre));
+  transition: transform 0.5s var(--ease);
+}
+.service:nth-child(3n+2) .service__media { background: linear-gradient(160deg, var(--crema-profundo), var(--rosa)); }
+.service:nth-child(3n+3) .service__media { background: linear-gradient(160deg, var(--ocre), var(--cafe)); }
+.service__media img { width: 18%; opacity: 0.9; }
+.service:hover .service__media { transform: scale(1.015); }
+.service__body { display: grid; gap: 0.5rem; justify-items: start; }
+.service__hint { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; color: var(--ocre); }
+.service__title { font-size: clamp(1.7rem, 1.3rem + 1.2vw, 2.2rem); }
+.service__text { max-width: 36ch; }
+.service__cta { margin-top: 0.5rem; padding: 0.65em 1.5em; font-size: 0.82rem; }
+
+.services-notes { background: var(--crema); padding-block: var(--space-6); }
+.services-notes__inner { display: grid; gap: var(--space-4); }
+.services-notes__title { font-size: var(--step-h2); }
+.services-notes__list { display: grid; gap: var(--space-3); }
+.services-notes__list li { border-top: 1px solid var(--linea); padding-top: var(--space-2); display: grid; gap: 0.4rem; }
+.services-notes__list h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 500; letter-spacing: 0.04em; }
+.services-notes__list p { max-width: 38ch; }
+.services-notes__more { max-width: 52ch; font-size: var(--step-lead); }
+
+@media (min-width: 40em) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 62em) {
+  .services-hero { padding-block: var(--space-6) var(--space-4); }
+  .services-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-5) var(--space-4); }
+  .services-notes__list { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+}

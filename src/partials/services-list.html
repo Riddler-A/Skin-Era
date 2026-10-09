@@ -1,0 +1,19 @@
+<section class="services-list" id="catalogo" aria-labelledby="catalogo-titulo">
+  <div class="container">
+    <h2 class="sr-only" id="catalogo-titulo">{{services.list.title}}</h2>
+    <ul class="services-grid">
+      {{#each services.items}}
+      <li class="service" data-reveal>
+        <!-- Marcador de foto del servicio: reemplazar .service__media por <img> real -->
+        <div class="service__media" aria-hidden="true"><img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" loading="lazy"></div>
+        <div class="service__body">
+          <p class="service__hint">0{{@number}}</p>
+          <h3 class="service__title">{{this.title}}</h3>
+          <p class="service__text">{{this.text}}</p>
+          <a class="btn btn--ghost service__cta" href="{{base}}/contacto/?servicio={{this.slug}}">{{services.list.book}}</a>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

@@ -22,6 +22,12 @@ async function render(template, ctx, partials) {
   for (let i = 0; i < 5 && /\{\{>\s*[\w-]+\s*\}\}/.test(out); i++) {
     out = out.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (_, n) => partials[n] ?? `<!-- parcial ${n} no existe -->`);
   }
+  // {{#each lista}}...{{this.campo}} {{@index}}...{{/each}} (sin anidar)
+  out = out.replace(/\{\{#each\s+([\w.]+)\s*\}\}([\s\S]*?)\{\{\/each\}\}/g, (_, k, body) =>
+    (get(ctx, k) ?? []).map((item, i) => body
+      .replace(/\{\{\s*this\.([\w.]+)\s*\}\}/g, (_, f) => String(get(item, f) ?? ''))
+      .replace(/\{\{\s*@index\s*\}\}/g, String(i))
+      .replace(/\{\{\s*@number\s*\}\}/g, String(i + 1))).join(''));
   // {{#if clave}}...{{/if}}
   out = out.replace(/\{\{#if\s+([\w.]+)\s*\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, k, body) => (get(ctx, k) ? body : ''));
   // {{clave.anidada}}

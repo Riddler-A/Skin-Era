@@ -165,5 +165,74 @@
     "text": "Conoce nuestros servicios o escríbenos para resolver tus dudas antes de tu primera cita.",
     "primary": "Ver servicios",
     "secondary": "Escríbenos"
+  },
+  "services": {
+    "_pendiente": "Lista PROVISIONAL por zonas: confirmar con Jass los servicios \"sí o sí\" antes de publicar. Sin precios por decisión del cliente.",
+    "hero": {
+      "eyebrow": "Servicios",
+      "title": "Depilación con cera, a tu medida",
+      "lead": "Elegimos la técnica y el ritmo según tu piel y tu vello. Tú decides hasta dónde y puedes pausar cuando quieras."
+    },
+    "list": {
+      "title": "Elige tu zona",
+      "book": "Agendar",
+      "hint": "Servicio"
+    },
+    "items": [
+      {
+        "slug": "rostro",
+        "title": "Rostro",
+        "text": "Cejas, labio superior, mentón y contorno, con cuidado extra en la piel más delicada."
+      },
+      {
+        "slug": "axilas",
+        "title": "Axilas",
+        "text": "Un servicio rápido y limpio, ideal para mantener la piel suave de forma constante."
+      },
+      {
+        "slug": "brazos",
+        "title": "Brazos",
+        "text": "Brazos completos o medios brazos, con acabado parejo y piel tranquila."
+      },
+      {
+        "slug": "piernas",
+        "title": "Piernas",
+        "text": "Piernas completas, medias piernas o por zonas, según lo que necesites."
+      },
+      {
+        "slug": "bikini",
+        "title": "Bikini",
+        "text": "Atención discreta y respetuosa en una cabina privada. Te explicamos cada paso."
+      },
+      {
+        "slug": "espalda-y-pecho",
+        "title": "Espalda y pecho",
+        "text": "Para quienes buscan una piel libre de vello en torso, espalda u hombros."
+      }
+    ],
+    "notes": {
+      "title": "Incluido en cada visita",
+      "items": {
+        "age": {
+          "title": "Desde los 16 años",
+          "text": "Atendemos a mujeres y hombres a partir de los 16 años."
+        },
+        "retouch": {
+          "title": "Retoque sin costo",
+          "text": "Si lo necesitas, lo retocamos sin costo dentro de los 2 a 3 días posteriores."
+        },
+        "skin": {
+          "title": "Según tu piel",
+          "text": "Evaluamos tu piel y tu sensibilidad antes de empezar, y ajustamos el servicio a ti."
+        }
+      },
+      "more": "¿No ves tu zona o tienes dudas? Escríbenos y te orientamos. Ahí mismo te compartimos tarifas y disponibilidad."
+    },
+    "cta": {
+      "title": "Empieza tu nueva era",
+      "text": "Cuéntanos qué zona te interesa y te ayudamos a elegir el servicio y el mejor horario.",
+      "primary": "Agendar",
+      "secondary": "Escríbenos"
+    }
   }
 }
