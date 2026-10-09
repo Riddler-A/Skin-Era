@@ -1,0 +1,38 @@
+.contact-hero { padding-block: var(--space-5) var(--space-4); }
+.contact-hero__inner { display: grid; gap: var(--space-3); justify-items: start; }
+.contact-hero__title { font-size: var(--step-h1); max-width: 12ch; text-wrap: balance; }
+.contact-hero__lead { font-size: var(--step-lead); max-width: 40ch; }
+
+.contact-main { padding-block: var(--space-4) var(--space-6); }
+.contact-main__inner { display: grid; gap: var(--space-5); align-items: start; }
+
+.contact-form { display: grid; gap: var(--space-3); background: var(--crema); padding: clamp(1.5rem, 1rem + 2.5vw, 3rem); border-radius: 1.5rem; }
+.contact-form__title, .contact-info__title { font-size: clamp(1.8rem, 1.4rem + 1.4vw, 2.5rem); }
+.field { display: grid; gap: 0.45rem; }
+.field label { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.field small { font-size: 0.85rem; opacity: 0.85; }
+.field input, .field select, .field textarea {
+  width: 100%; font: inherit; font-weight: 400; color: var(--cafe-oscuro);
+  background: var(--crema-claro); border: 1px solid var(--linea); border-radius: 0.9rem;
+  padding: 0.85em 1em; transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.field textarea { resize: vertical; min-height: 7rem; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ocre); box-shadow: 0 0 0 3px rgb(190 136 64 / 0.25); }
+.field input:user-invalid { border-color: #9b4a3c; }
+.contact-form__submit { justify-self: start; cursor: pointer; font-family: var(--font-body); }
+.contact-form__submit[disabled] { opacity: 0.6; cursor: progress; }
+.contact-form__status { min-height: 1.4em; font-weight: 400; }
+.contact-form__status.is-error { color: #8a3a2d; }
+.contact-form__privacy { font-size: 0.85rem; opacity: 0.85; }
+
+.contact-info { display: grid; gap: var(--space-3); }
+.info-block { display: grid; gap: 0.5rem; justify-items: start; padding-top: var(--space-2); border-top: 1px solid var(--linea); }
+.info-block h3 { font-family: var(--font-body); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.04em; }
+.info-block p { max-width: 42ch; }
+.info-block a:not(.btn) { text-underline-offset: 0.2em; }
+
+@media (min-width: 62em) {
+  .contact-hero { padding-block: var(--space-6) var(--space-4); }
+  .contact-main__inner { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-6); }
+  .contact-info { position: sticky; top: calc(var(--header-h) + var(--space-4)); }
+}

@@ -70,6 +70,13 @@
         "title": "Contacto | Skin Era",
         "description": "Escríbenos para agendar tu cita en Skin Era, Puerto Vallarta."
       }
+    },
+    "thanks": {
+      "title": "Gracias",
+      "meta": {
+        "title": "Gracias | Skin Era",
+        "description": "Recibimos tu mensaje."
+      }
     }
   },
   "stub": {
@@ -234,5 +241,43 @@
       "primary": "Agendar",
       "secondary": "Escríbenos"
     }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Hablemos de tu piel",
+      "lead": "Cuéntanos qué zona te interesa y te respondemos para ayudarte a elegir el servicio y el horario."
+    },
+    "form": {
+      "title": "Escríbenos",
+      "name": "Nombre",
+      "phone": "Teléfono o WhatsApp",
+      "service": "Servicio de interés",
+      "serviceNone": "Aún no lo sé, necesito orientación",
+      "message": "¿Algo que debamos saber? (opcional)",
+      "messageHint": "No necesitas compartir información de salud: eso lo vemos contigo en persona.",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "ok": "¡Gracias! Recibimos tu mensaje y te responderemos muy pronto.",
+      "error": "No pudimos enviarlo. Inténtalo de nuevo o escríbenos por otro medio.",
+      "privacy": "Usaremos tus datos únicamente para responderte sobre tu cita.",
+      "honeypot": "No llenar si eres humano"
+    },
+    "info": {
+      "title": "Otras formas de contactarnos",
+      "whatsapp": "WhatsApp",
+      "whatsappCta": "Escribir por WhatsApp",
+      "whatsappMsg": "Hola, me gustaría información sobre depilación con cera en Skin Era.",
+      "social": "Redes",
+      "locationTitle": "Dónde estamos",
+      "location": "Puerto Vallarta, Jalisco. Muy pronto compartiremos la dirección de nuestro estudio.",
+      "bookingTitle": "Agenda en línea",
+      "booking": "Estamos preparando la agenda en línea para que reserves tu horario en pocos pasos. Mientras tanto, escríbenos y te apartamos tu cita."
+    }
+  },
+  "thanks": {
+    "title": "¡Mensaje recibido!",
+    "text": "Gracias por escribirnos. Te responderemos muy pronto.",
+    "back": "Volver al inicio"
   }
 }

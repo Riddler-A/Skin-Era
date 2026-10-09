@@ -29,7 +29,9 @@ async function render(template, ctx, partials) {
       .replace(/\{\{\s*@index\s*\}\}/g, String(i))
       .replace(/\{\{\s*@number\s*\}\}/g, String(i + 1))).join(''));
   // {{#if clave}}...{{/if}}
-  out = out.replace(/\{\{#if\s+([\w.]+)\s*\}\}([\s\S]*?)\{\{\/if\}\}/g, (_, k, body) => (get(ctx, k) ? body : ''));
+  // (se resuelven de adentro hacia afuera, así que admite anidación)
+  const innerIf = /\{\{#if\s+([\w.]+)\s*\}\}((?:(?!\{\{#if)[\s\S])*?)\{\{\/if\}\}/g;
+  for (let prev; prev !== out; ) { prev = out; out = out.replace(innerIf, (_, k, body) => (get(ctx, k) ? body : '')); }
   // {{clave.anidada}}
   return out.replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_, k) => {
     const v = get(ctx, k);
@@ -65,8 +67,10 @@ async function build() {
         ...copy, site, lang, base, current,
         page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}) },
         hasEnglish: langs.includes('en'),
+        waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),
         cssLinks: [...baseCss, ...page.css].filter(n => existsSync(join(SRC, 'css', `${n}.css`)))
           .map(n => `<link rel="stylesheet" href="/css/${n}.css">`).join('\n  '),
+        pageScripts: (page.js ?? []).map(n => `<script src="/js/${n}.js" defer></script>`).join('\n  '),
         sectionsHtml: page.sections.map(sec => `{{> ${sec}}}`).join('\n'),
       };
       const html = await render(layout.replace('{{sectionsHtml}}', ctx.sectionsHtml), ctx, partials);

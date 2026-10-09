@@ -64,7 +64,21 @@
     "id": "contact",
     "path": "contacto",
     "sections": [
-      "stub"
+      "contact-hero",
+      "contact-main"
+    ],
+    "css": [
+      "contact"
+    ],
+    "js": [
+      "contact"
+    ]
+  },
+  {
+    "id": "thanks",
+    "path": "contacto/gracias",
+    "sections": [
+      "thanks"
     ],
     "css": [
       "stub"

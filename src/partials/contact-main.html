@@ -1,0 +1,60 @@
+<section class="contact-main" aria-label="{{contact.form.title}}">
+  <div class="container contact-main__inner">
+
+    <form class="contact-form" name="contacto" method="POST" action="{{base}}/contacto/gracias/" data-netlify="true" netlify-honeypot="bot-field" data-contact-form data-ok="{{contact.form.ok}}" data-error="{{contact.form.error}}" data-sending="{{contact.form.sending}}">
+      <h2 class="contact-form__title">{{contact.form.title}}</h2>
+      <input type="hidden" name="form-name" value="contacto">
+      <p class="sr-only"><label>{{contact.form.honeypot}} <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+      <div class="field">
+        <label for="c-nombre">{{contact.form.name}}</label>
+        <input id="c-nombre" name="nombre" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="c-telefono">{{contact.form.phone}}</label>
+        <input id="c-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+\(\)\-\s]{8,}" required>
+      </div>
+      <div class="field">
+        <label for="c-servicio">{{contact.form.service}}</label>
+        <select id="c-servicio" name="servicio">
+          <option value="orientacion">{{contact.form.serviceNone}}</option>
+          {{#each services.items}}
+          <option value="{{this.slug}}">{{this.title}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-mensaje">{{contact.form.message}}</label>
+        <textarea id="c-mensaje" name="mensaje" rows="4" aria-describedby="c-mensaje-hint"></textarea>
+        <small id="c-mensaje-hint">{{contact.form.messageHint}}</small>
+      </div>
+
+      <button class="btn btn--primary contact-form__submit" type="submit">{{contact.form.submit}}</button>
+      <p class="contact-form__status" role="status" aria-live="polite" data-form-status></p>
+      <p class="contact-form__privacy">{{contact.form.privacy}}</p>
+    </form>
+
+    <aside class="contact-info" aria-labelledby="info-titulo">
+      <h2 class="contact-info__title" id="info-titulo">{{contact.info.title}}</h2>
+
+      {{#if site.whatsapp}}
+      <div class="info-block">
+        <h3>{{contact.info.whatsapp}}</h3>
+        <a class="btn btn--ghost" href="https://wa.me/{{site.whatsapp}}?text={{waText}}" rel="noopener">{{contact.info.whatsappCta}}</a>
+      </div>
+      {{/if}}
+
+      <div class="info-block">
+        <h3>{{contact.info.bookingTitle}}</h3>
+        <p>{{contact.info.booking}}</p>
+      </div>
+
+      <div class="info-block">
+        <h3>{{contact.info.locationTitle}}</h3>
+        <p>{{contact.info.location}}</p>
+      </div>
+
+      {{#if site.instagram}}<div class="info-block"><h3>{{contact.info.social}}</h3><p><a href="{{site.instagram}}" rel="noopener">Instagram</a>{{#if site.facebook}} · <a href="{{site.facebook}}" rel="noopener">Facebook</a>{{/if}}{{#if site.tiktok}} · <a href="{{site.tiktok}}" rel="noopener">TikTok</a>{{/if}}</p></div>{{/if}}
+    </aside>
+  </div>
+</section>
