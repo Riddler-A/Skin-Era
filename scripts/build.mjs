@@ -100,6 +100,7 @@ async function build() {
           draftBadge: page.pending && site.showDrafts ? `<span class="faq-draft">${copy.blog?.draftLabel ?? ''}</span>` : '' },
         hasEnglish: langs.includes('en'),
         jsonLd: page.id === 'faq' ? jsonLd : '',
+        noAgenda: !site.agendaUrl,
         year: new Date().getFullYear(),
         hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
         waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),

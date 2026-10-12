@@ -268,7 +268,8 @@
     "hero": {
       "eyebrow": "Agendar",
       "title": "Agenda tu cita",
-      "lead": "Elige el día y la hora que mejor te acomoden en el calendario. Si prefieres que te escribamos, déjanos tus datos más abajo."
+      "lead": "Elige el día y la hora que mejor te acomoden en el calendario. Si prefieres que te escribamos, déjanos tus datos más abajo.",
+      "leadNoAgenda": "Cuéntanos qué zona te interesa y te respondemos para ayudarte a elegir el servicio y el horario."
     },
     "form": {
       "title": "O déjanos tus datos",
@@ -284,7 +285,8 @@
       "error": "No pudimos enviarlo. Inténtalo de nuevo o escríbenos por otro medio.",
       "privacy": "Usaremos tus datos únicamente para responderte sobre tu cita.",
       "honeypot": "No llenar si eres humano",
-      "intro": "Si prefieres, te escribimos para ayudarte a elegir el servicio y el horario."
+      "intro": "Si prefieres, te escribimos para ayudarte a elegir el servicio y el horario.",
+      "titleNoAgenda": "Solicita tu cita"
     },
     "info": {
       "title": "Otras formas de contactarnos",
