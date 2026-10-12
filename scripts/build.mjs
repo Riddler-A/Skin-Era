@@ -42,14 +42,17 @@ async function render(template, ctx, partials) {
 
 const FAQ_GROUPS = ['before', 'first', 'hygiene', 'after'];
 
-// Filtra borradores según site.showDrafts, marca los visibles y arma el JSON-LD (FAQPage) solo con respuestas finales.
+// Oculta (o etiqueta) los elementos con pending:true según site.showDrafts.
+const markDrafts = (items = [], site, label) => items
+  .filter(i => !i.pending || site.showDrafts)
+  .map(i => ({ ...i, draftBadge: i.pending ? `<span class="faq-draft">${label}</span>` : '' }));
+
+// FAQ: aplica borradores y arma el JSON-LD (FAQPage) solo con respuestas finales.
 function prepareFaq(faq, site) {
   if (!faq) return { faq, jsonLd: '' };
   const out = { ...faq }, published = [];
   for (const g of FAQ_GROUPS) {
-    out[g] = (faq[g] ?? [])
-      .filter(i => !i.pending || site.showDrafts)
-      .map(i => ({ ...i, draftBadge: i.pending ? `<span class="faq-draft">${faq.draftLabel}</span>` : '' }));
+    out[g] = markDrafts(faq[g], site, faq.draftLabel);
     published.push(...(faq[g] ?? []).filter(i => !i.pending));
   }
   const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: published.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) };
@@ -77,6 +80,10 @@ async function build() {
     const copy = JSON.parse(await readFile(join(SRC, 'content', `${lang}.json`), 'utf8'));
     const { faq, jsonLd } = prepareFaq(copy.faq, site);
     copy.faq = faq;
+    if (copy.firstTime) {
+      const l = copy.firstTime.draftLabel;
+      copy.firstTime = { ...copy.firstTime, stepsList: markDrafts(copy.firstTime.stepsList, site, l), prepList: markDrafts(copy.firstTime.prepList, site, l) };
+    }
     const isDefault = lang === site.defaultLang;
     const base = isDefault ? '' : `/${lang}`;
     for (const page of pages) {

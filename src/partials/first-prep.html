@@ -1,0 +1,22 @@
+{{#if firstTime.prepList.length}}
+<section class="first-prep" aria-labelledby="prep-titulo">
+  <div class="container first-prep__inner">
+    <div class="first-prep__intro" data-reveal>
+      <h2 class="first-prep__title" id="prep-titulo">{{firstTime.prep.title}}</h2>
+      <p class="first-prep__lead">{{firstTime.prep.lead}}</p>
+    </div>
+    <ul class="first-prep__list">
+      {{#each firstTime.prepList}}
+      <li class="tip" data-reveal>
+        <span class="tip__check" aria-hidden="true"></span>
+        <div>
+          <h3 class="tip__title">{{this.title}}</h3>
+          <p>{{this.text}}</p>
+          {{this.draftBadge}}
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/if}}

@@ -44,10 +44,17 @@
     "id": "firstTime",
     "path": "primera-vez",
     "sections": [
-      "stub"
+      "first-hero",
+      "first-steps",
+      "first-prep",
+      "first-comfort",
+      "first-faq",
+      "cta-book"
     ],
     "css": [
-      "stub"
+      "firsttime",
+      "faq",
+      "cta"
     ]
   },
   {

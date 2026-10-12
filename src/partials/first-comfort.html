@@ -1,0 +1,13 @@
+<section class="first-comfort" aria-labelledby="comodidad-titulo">
+  <div class="container">
+    <div class="first-comfort__head" data-reveal>
+      <h2 class="first-comfort__title" id="comodidad-titulo">{{firstTime.comfort.title}}</h2>
+      <p class="first-comfort__lead">{{firstTime.comfort.lead}}</p>
+    </div>
+    <ul class="first-comfort__grid">
+      {{#each firstTime.comfortList}}
+      <li data-reveal><h3>{{this.title}}</h3><p>{{this.text}}</p></li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="first-steps" id="tu-cita" aria-labelledby="cita-titulo">
+  <div class="container">
+    <h2 class="first-steps__title" id="cita-titulo" data-reveal>{{firstTime.steps.title}}</h2>
+    <ol class="timeline">
+      {{#each firstTime.stepsList}}
+      <li class="step" data-reveal>
+        <span class="step__num" aria-hidden="true">{{@number}}</span>
+        <div class="step__body">
+          <h3 class="step__title">{{this.title}}</h3>
+          <p>{{this.text}}</p>
+          {{this.draftBadge}}
+        </div>
+        <!-- Marcador de foto del paso: reemplazar por <img> real cuando haya fotografía del local -->
+        <div class="step__media" aria-hidden="true"><img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" loading="lazy"></div>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</section>

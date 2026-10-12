@@ -1,0 +1,16 @@
+<section class="first-faq" aria-labelledby="dudas-titulo">
+  <div class="container first-faq__inner">
+    <div data-reveal>
+      <h2 class="first-faq__title" id="dudas-titulo">{{firstTime.faq.title}}</h2>
+      <a class="btn btn--ghost first-faq__more" href="{{base}}/preguntas/">{{firstTime.faq.more}}</a>
+    </div>
+    <div class="faq-group__items">
+      {{#each faq.first}}
+      <details class="faq-item">
+        <summary class="faq-item__q"><span>{{this.q}}</span></summary>
+        <div class="faq-item__a"><p>{{this.a}}</p>{{this.draftBadge}}</div>
+      </details>
+      {{/each}}
+    </div>
+  </div>
+</section>

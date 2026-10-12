@@ -384,5 +384,102 @@
       "primary": "Escríbenos",
       "secondary": "Ver servicios"
     }
+  },
+  "firstTime": {
+    "_nota": "pending:true = BORRADOR por confirmar con Jass (se oculta con site.showDrafts=false).",
+    "draftLabel": "Borrador por confirmar",
+    "hero": {
+      "eyebrow": "Tu primera vez",
+      "title": "Tu primera cita, paso a paso",
+      "lead": "No necesitas saber nada antes. Así es tu visita a Skin Era, desde que nos escribes hasta que sales con la piel cuidada."
+    },
+    "steps": {
+      "title": "Así es tu cita"
+    },
+    "prep": {
+      "title": "Antes de venir",
+      "lead": "Pequeños detalles que hacen tu visita más cómoda."
+    },
+    "comfort": {
+      "title": "Tu comodidad va primero",
+      "lead": "Cuidamos el ambiente y el trato para que estés tranquila o tranquilo en cada momento."
+    },
+    "faq": {
+      "title": "Dudas de tu primera vez",
+      "more": "Ver todas las preguntas"
+    },
+    "stepsList": [
+      {
+        "title": "Escríbenos y agenda",
+        "text": "Cuéntanos qué zona te interesa por WhatsApp o desde la página. Te explicamos el servicio adecuado y apartamos tu horario.",
+        "pending": false
+      },
+      {
+        "title": "Llegas y te recibimos",
+        "text": "Te damos una bienvenida cordial en recepción. Nuestro equipo puede resolver tus dudas básicas desde el primer momento.",
+        "pending": false
+      },
+      {
+        "title": "Pasas a tu cabina",
+        "text": "Una cabina privada, limpia y aromática, con luz suave y música tranquila, pensada para que te relajes.",
+        "pending": false
+      },
+      {
+        "title": "Hablamos de tu piel",
+        "text": "Antes de empezar, la técnica te pregunta por tu piel, tu sensibilidad y tu salud. Esa información se llena aquí, en persona, y no antes de agendar.",
+        "pending": false
+      },
+      {
+        "title": "Tu servicio",
+        "text": "La técnica te explica el procedimiento y te va avisando cada paso, con la higiene a la vista. Puedes pausar o detener el servicio cuando quieras.",
+        "pending": false
+      },
+      {
+        "title": "Después de tu cita",
+        "text": "Te damos recomendaciones de cuidado según tu servicio y, si lo necesitas, el retoque es sin costo dentro de los 3 días posteriores.",
+        "pending": false
+      }
+    ],
+    "prepList": [
+      {
+        "title": "Largo del vello",
+        "text": "Lo ideal es que mida alrededor de medio centímetro, más o menos como un grano de arroz.",
+        "pending": true
+      },
+      {
+        "title": "Ropa cómoda",
+        "text": "Elige ropa holgada y suave que no roce la zona después del servicio.",
+        "pending": true
+      },
+      {
+        "title": "Cuida tu piel ese día",
+        "text": "Evita exfoliar, tomar sol intenso o usar productos irritantes el día de tu cita.",
+        "pending": true
+      },
+      {
+        "title": "Llega con calma",
+        "text": "Llega unos minutos antes para registrarte sin prisa y resolver tus dudas.",
+        "pending": true
+      },
+      {
+        "title": "Si vienes del trabajo o del gimnasio",
+        "text": "Podrás refrescarte con calma antes de tu servicio, con acceso a baño completo.",
+        "pending": true
+      }
+    ],
+    "comfortList": [
+      {
+        "title": "Privacidad",
+        "text": "Cada servicio se realiza en una cabina privada, sin prisas ni interrupciones."
+      },
+      {
+        "title": "Tus preguntas",
+        "text": "Pregunta lo que quieras: cómo funciona, qué sentirás, qué cuidados seguir. Estamos para explicarte."
+      },
+      {
+        "title": "Tu ritmo",
+        "text": "Puedes pedir una pausa o detener el servicio en cualquier momento. Sin explicaciones y sin juicios."
+      }
+    ]
   }
 }
