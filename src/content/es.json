@@ -319,7 +319,9 @@
         "errInvalid": "Revisa tus datos: escribe tu nombre y un número de WhatsApp válido.",
         "errBusy": "Hay muchas solicitudes en este momento. Inténtalo de nuevo en unos minutos.",
         "errGeneric": "No pudimos agendar tu cita. Inténtalo de nuevo o déjanos tus datos en el formulario de abajo.",
-        "errLoad": "No pudimos cargar los horarios. Inténtalo de nuevo."
+        "errLoad": "No pudimos cargar los horarios. Inténtalo de nuevo.",
+        "demoBanner": "Vista de demostración: estos horarios son de ejemplo y las citas no se guardan todavía.",
+        "doneDemo": "Esto fue una prueba: no se guardó ninguna cita."
       },
       "pick": "Elige un horario en el calendario.",
       "note": "Horario del centro de México. Los horarios tachados ya están ocupados."

@@ -3,13 +3,18 @@ import {
   BOOKING, addDays, buildWeek, clampWeek, dayStartISO, formatLongDate, isValidSlotStart, slotEndISO,
 } from '../lib/booking.mjs';
 import { createEvent, getBusy, isCalendarConfigured, overlaps } from '../lib/google-calendar.mjs';
+import site from '../../src/content/site.json' with { type: 'json' };
 import { clientIp, isRateLimited } from '../lib/rate-limit.mjs';
 
 export const config = { path: '/api/agenda' };
 
-// Horarios de ejemplo sin tocar el calendario: solo en tu computadora con AGENDA_DEMO=1.
+// Horarios de ejemplo (no crean citas ni tocan ningún calendario). Se activan solo si NO hay Google Calendar
+// configurado y se pide explícitamente: AGENDA_DEMO=1 en tu computadora, o "agendaDemo": true en site.json.
+// Al conectar Google Calendar la demostración se apaga sola.
 const demoMode = () =>
-  process.env.AGENDA_DEMO === '1' && !process.env.NETLIFY && !process.env.AWS_LAMBDA_FUNCTION_NAME;
+  !isCalendarConfigured() &&
+  process.env.AGENDA_DEMO !== '0' &&
+  (process.env.AGENDA_DEMO === '1' || site.agendaDemo === true);
 
 function demoBusy(timeMin) {
   const start = Date.parse(timeMin);

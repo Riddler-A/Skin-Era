@@ -95,8 +95,25 @@ test('valida el inicio de una cita', () => {
 // ---------- API ----------
 test('sin credenciales responde 503 (la página oculta el calendario)', async () => {
   delete process.env.GOOGLE_CALENDAR_ID;
+  process.env.AGENDA_DEMO = '0'; // site.json puede traer la demostración activa
   assert.equal((await get()).status, 503);
   assert.equal((await post(valid)).status, 503);
+  delete process.env.AGENDA_DEMO;
+});
+
+test('modo demostración: horarios de ejemplo, no guarda nada y se apaga con Google Calendar', async () => {
+  delete process.env.GOOGLE_CALENDAR_ID;
+  process.env.AGENDA_DEMO = '1';
+  let res = await get();
+  assert.equal(res.status, 200);
+  assert.equal((await res.json()).demo, true);
+  res = await post(valid);
+  assert.equal(res.status, 200);
+  assert.equal((await res.json()).demo, true);
+  assert.equal(created().length, 0, 'no debe crear eventos');
+  process.env.GOOGLE_CALENDAR_ID = 'jass@example.com'; // ya conectado: deja de ser demostración
+  assert.equal((await (await get()).json()).demo, undefined);
+  delete process.env.AGENDA_DEMO;
 });
 
 test('GET marca ocupados solo los eventos reales con horario', async () => {

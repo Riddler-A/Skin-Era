@@ -10,5 +10,6 @@
     "enabled": false,
     "date": null
   },
-  "showDrafts": true
+  "showDrafts": true,
+  "agendaDemo": true
 }

@@ -83,6 +83,9 @@ if (root) {
     const res = await fetch(`${api}${week ? `?week=${encodeURIComponent(week)}` : ''}`, { headers: { Accept: 'application/json' } });
     if (!res.ok) throw new Error(String(res.status));
     state.data = await res.json();
+    const demoEl = q('[data-demo]');
+    demoEl.textContent = state.data.demo ? t.demoBanner || '' : '';
+    demoEl.hidden = !state.data.demo;
     render();
     root.hidden = false;
     // Con el calendario activo, el formulario alterno de abajo se oculta (ver contact.css)
@@ -128,7 +131,7 @@ if (root) {
       });
       if (res.ok) {
         const data = await res.json();
-        els.doneText.textContent = (t.done || '').replace('{fecha}', cap(data.label || longDate.format(new Date(state.start))));
+        els.doneText.textContent = data.demo ? (t.doneDemo || '') : (t.done || '').replace('{fecha}', cap(data.label || longDate.format(new Date(state.start))));
         els.picker.hidden = true;
         els.form.closest('.agenda__side').hidden = true;
         els.done.hidden = false;

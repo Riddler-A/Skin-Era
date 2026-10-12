@@ -65,3 +65,9 @@ dominio definitivo, poner `showDrafts` en `false`**: las oculta y las excluye de
 - **Giflika es "personal use only"**: se requiere licencia comercial (https://brandsemut.com/product/giflika/) antes de publicar el dominio definitivo.
 - Fotografías temporales: el arco del hero es un marcador.
 - Sin precios por decisión del cliente.
+
+### Calendario de demostración
+
+Mientras no estén las 3 variables de Google Calendar, `"agendaDemo": true` en `src/content/site.json` muestra horarios de
+ejemplo con un aviso visible y **no guarda ninguna cita**. En cuanto se conecta Google Calendar, la demostración se apaga sola;
+conviene además poner `agendaDemo` en `false`. Para forzar que no haya demostración (por ejemplo en pruebas): `AGENDA_DEMO=0`.

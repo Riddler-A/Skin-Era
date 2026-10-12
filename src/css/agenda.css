@@ -53,3 +53,5 @@
   .agenda__panel { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--space-5); }
   .agenda__side { position: sticky; top: calc(var(--header-h) + var(--space-3)); }
 }
+.agenda__demo { margin-block: var(--space-3); padding: 0.7em 1em; border: 1px dashed var(--ocre); border-radius: var(--radius); font-size: 0.9rem; background: var(--crema); }
+.agenda__demo[hidden] { display: none; }
