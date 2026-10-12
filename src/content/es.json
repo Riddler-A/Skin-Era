@@ -1,6 +1,7 @@
 {
   "a11y": {
-    "skip": "Saltar al contenido"
+    "skip": "Saltar al contenido",
+    "top": "Volver arriba"
   },
   "nav": {
     "label": "Principal",

@@ -47,3 +47,23 @@ if ('IntersectionObserver' in window) {
 } else {
   reveals.forEach((el) => el.classList.add('is-visible'));
 }
+
+// Botón "volver arriba": aparece al bajar y devuelve al inicio (respeta prefers-reduced-motion)
+const toTop = document.querySelector('[data-to-top]');
+if (toTop) {
+  let shown = false;
+  const update = () => {
+    const show = window.scrollY > 600;
+    if (show === shown) return;
+    shown = show;
+    if (show) { toTop.hidden = false; requestAnimationFrame(() => toTop.classList.add('is-visible')); }
+    else { toTop.classList.remove('is-visible'); setTimeout(() => { if (!shown) toTop.hidden = true; }, 300); }
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+  toTop.addEventListener('click', () => {
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+    document.querySelector('.site-header__logo')?.focus({ preventScroll: true });
+  });
+}

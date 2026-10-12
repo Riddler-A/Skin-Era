@@ -75,7 +75,7 @@ async function build() {
   // Un idioma por cada src/content/<lang>.json. Hoy solo 'es'; agregar en.json activa /en/.
   const langs = (await readdir(join(SRC, 'content'))).filter(f => /^[a-z]{2}\.json$/.test(f)).map(f => f.slice(0, 2));
   const pages = JSON.parse(await readFile(join(SRC, 'pages.json'), 'utf8'));
-  const baseCss = ['tokens', 'base', 'header', 'footer'];
+  const baseCss = ['tokens', 'base', 'header', 'footer', 'totop'];
   for (const lang of langs) {
     const copy = JSON.parse(await readFile(join(SRC, 'content', `${lang}.json`), 'utf8'));
     const { faq, jsonLd } = prepareFaq(copy.faq, site);
