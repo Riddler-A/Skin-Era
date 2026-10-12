@@ -3,7 +3,8 @@
     <h2 class="map__title" id="map-titulo">{{contact.map.title}}</h2>
     <p class="map__text">{{contact.map.text}}</p>
     <div class="map__frame">
-      <iframe title="{{contact.map.iframeTitle}}" src="https://www.google.com/maps?q=Puerto+Vallarta,+Jalisco,+M%C3%A9xico&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <p class="map__fallback" aria-hidden="true">Puerto Vallarta, Jalisco</p>
+      <iframe title="{{contact.map.iframeTitle}}" src="https://maps.google.com/maps?q=Puerto+Vallarta,+Jalisco,+M%C3%A9xico&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
     <a class="map__link" href="https://www.google.com/maps/search/?api=1&amp;query=Puerto+Vallarta%2C+Jalisco%2C+M%C3%A9xico" target="_blank" rel="noopener">{{contact.map.link}}</a>
   </div>
