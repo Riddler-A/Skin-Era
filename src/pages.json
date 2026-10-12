@@ -120,5 +120,19 @@
       "blog",
       "cta"
     ]
+  },
+  {
+    "id": "soon",
+    "path": "proximamente",
+    "layout": "bare",
+    "sections": [
+      "soon"
+    ],
+    "css": [
+      "soon"
+    ],
+    "js": [
+      "waitlist"
+    ]
   }
 ]

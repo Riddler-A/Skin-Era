@@ -3,17 +3,20 @@ const header = document.querySelector('[data-header]');
 const toggle = document.querySelector('[data-nav-toggle]');
 const nav = document.querySelector('[data-nav]');
 
-const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
-onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
+if (header && toggle && nav) {
 
-const setMenu = (open) => {
-  toggle.setAttribute('aria-expanded', String(open));
-  nav.classList.toggle('is-open', open);
-};
-toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
-nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setMenu(false); toggle.focus(); } });
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const setMenu = (open) => {
+    toggle.setAttribute('aria-expanded', String(open));
+    nav.classList.toggle('is-open', open);
+  };
+  toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setMenu(false); toggle.focus(); } });
+}
 
 // Cuenta regresiva: solo se muestra si launch.enabled === true y launch.date es válida (src/content/site.json)
 (async () => {

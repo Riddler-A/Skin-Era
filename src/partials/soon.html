@@ -1,0 +1,63 @@
+<section class="soon" aria-labelledby="soon-titulo">
+  <div class="soon__top container">
+    <img class="soon__logo" src="/assets/img/logo-wordmark-cafe.png" alt="Skin Era" width="1195" height="244">
+  </div>
+
+  <div class="soon__inner container">
+    <div class="soon__copy">
+      <p class="eyebrow">{{soon.eyebrow}}</p>
+      <h1 class="soon__title" id="soon-titulo">{{soon.title}}</h1>
+      <p class="soon__lead">{{soon.lead}}</p>
+
+      <!-- Cuenta regresiva: oculta hasta que site.json > launch.enabled sea true y haya fecha -->
+      <div class="countdown" data-countdown hidden>
+        <p class="countdown__label">{{soon.countdownLabel}}</p>
+        <div class="countdown__grid" role="timer" aria-live="off">
+          <div><span data-cd="days">00</span><small>{{soon.cdDays}}</small></div>
+          <div><span data-cd="hours">00</span><small>{{soon.cdHours}}</small></div>
+          <div><span data-cd="minutes">00</span><small>{{soon.cdMinutes}}</small></div>
+          <div><span data-cd="seconds">00</span><small>{{soon.cdSeconds}}</small></div>
+        </div>
+      </div>
+
+      <form class="waitlist" name="lista-de-espera" method="POST" action="{{base}}/proximamente/" data-netlify="true" netlify-honeypot="bot-field" data-waitlist data-ok="{{soon.form.ok}}" data-error="{{soon.form.error}}" data-sending="{{soon.form.sending}}">
+        <h2 class="waitlist__title">{{soon.form.title}}</h2>
+        <input type="hidden" name="form-name" value="lista-de-espera">
+        <p class="sr-only"><label>{{soon.form.honeypot}} <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="waitlist__row">
+          <div class="field">
+            <label for="w-nombre">{{soon.form.name}}</label>
+            <input id="w-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="w-telefono">{{soon.form.phone}}</label>
+            <input id="w-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+\(\)\-\s]{8,}" required>
+          </div>
+        </div>
+        <button class="btn btn--primary waitlist__submit" type="submit">{{soon.form.submit}}</button>
+        <p class="waitlist__status" role="status" aria-live="polite" data-form-status></p>
+        <p class="waitlist__privacy">{{soon.form.privacy}}</p>
+      </form>
+
+      <a class="soon__explore" href="{{base}}/">{{soon.explore}} →</a>
+    </div>
+
+    <div class="soon__visual" aria-hidden="true">
+      <div class="soon__arch">
+        <img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270">
+      </div>
+    </div>
+  </div>
+
+  <div class="soon__bottom container">
+    <p>© {{year}} {{site.name}}. {{soon.rights}}</p>
+    {{#if hasSocial}}
+    <ul class="soon__social" aria-label="{{soon.follow}}">
+      {{#if site.instagram}}<li><a href="{{site.instagram}}" rel="noopener">Instagram</a></li>{{/if}}
+      {{#if site.facebook}}<li><a href="{{site.facebook}}" rel="noopener">Facebook</a></li>{{/if}}
+      {{#if site.tiktok}}<li><a href="{{site.tiktok}}" rel="noopener">TikTok</a></li>{{/if}}
+      {{#if site.whatsapp}}<li><a href="https://wa.me/{{site.whatsapp}}?text={{waText}}" rel="noopener">WhatsApp</a></li>{{/if}}
+    </ul>
+    {{/if}}
+  </div>
+</section>

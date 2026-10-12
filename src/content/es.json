@@ -18,8 +18,6 @@
     "eyebrow": "Depilación con cera · Puerto Vallarta",
     "title": "Una nueva era para tu piel",
     "lead": "Cuidamos tu piel antes que cualquier servicio. Un espacio privado, limpio y tranquilo, con atención que te explica cada paso.",
-    "ctaPrimary": "Conoce los servicios",
-    "ctaSecondary": "Escríbenos",
     "countdownLabel": "Abrimos en",
     "cdDays": "días",
     "cdHours": "horas",
@@ -28,7 +26,8 @@
     "pillarsLabel": "Lo que nos define",
     "pillar1": "Higiene visible",
     "pillar2": "Ceras sin crueldad animal",
-    "pillar3": "Atención personalizada"
+    "pillar3": "Atención personalizada",
+    "ctaSoon": "Entérate de la apertura"
   },
   "pages": {
     "home": {
@@ -92,6 +91,13 @@
       "meta": {
         "title": "Beneficios de la depilación con cera que quizá no conocías | Skin Era",
         "description": "Qué pasa cuando el vello se retira desde la raíz: piel lisa por más tiempo, vello más fino con constancia y otros beneficios de la depilación con cera."
+      }
+    },
+    "soon": {
+      "title": "Próximamente",
+      "meta": {
+        "title": "Próximamente | Skin Era",
+        "description": "Skin Era abre muy pronto en Puerto Vallarta. Déjanos tus datos y te avisamos cuando abramos la agenda."
       }
     }
   },
@@ -565,5 +571,29 @@
         "text": "La cera puede dejar un enrojecimiento leve durante unas horas, y no todas las pieles ni todas las situaciones son adecuadas ese día. Por eso revisamos tu piel en persona antes de empezar y, si algo no es recomendable, te lo decimos. Esta información es general y no sustituye la orientación de un profesional de la salud."
       }
     }
+  },
+  "soon": {
+    "eyebrow": "Muy pronto en Puerto Vallarta",
+    "title": "Estamos preparando tu nueva era",
+    "lead": "Depilación con cera con higiene visible, atención informada y un espacio pensado para tu comodidad. Déjanos tus datos y te avisamos en cuanto abramos la agenda.",
+    "countdownLabel": "Abrimos en",
+    "cdDays": "días",
+    "cdHours": "horas",
+    "cdMinutes": "min",
+    "cdSeconds": "seg",
+    "form": {
+      "title": "Avísame cuando abran",
+      "name": "Nombre",
+      "phone": "WhatsApp o teléfono",
+      "submit": "Avísame",
+      "sending": "Enviando…",
+      "ok": "¡Gracias! Te avisaremos en cuanto abramos.",
+      "error": "No pudimos guardar tus datos. Inténtalo de nuevo en unos minutos.",
+      "privacy": "Usaremos tus datos únicamente para avisarte de la apertura.",
+      "honeypot": "No llenar si eres humano"
+    },
+    "explore": "Conoce el sitio",
+    "follow": "Síguenos",
+    "rights": "Todos los derechos reservados."
   }
 }

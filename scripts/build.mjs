@@ -70,7 +70,7 @@ async function build() {
   for (const f of await readdir(join(SRC, 'partials'))) {
     partials[f.replace('.html', '')] = await readFile(join(SRC, 'partials', f), 'utf8');
   }
-  const layout = await readFile(join(SRC, 'layout.html'), 'utf8');
+  const layouts = { default: await readFile(join(SRC, 'layout.html'), 'utf8'), bare: await readFile(join(SRC, 'layout-bare.html'), 'utf8') };
 
   // Un idioma por cada src/content/<lang>.json. Hoy solo 'es'; agregar en.json activa /en/.
   const langs = (await readdir(join(SRC, 'content'))).filter(f => /^[a-z]{2}\.json$/.test(f)).map(f => f.slice(0, 2));
@@ -102,12 +102,12 @@ async function build() {
         year: new Date().getFullYear(),
         hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
         waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),
-        cssLinks: [...baseCss, ...page.css].filter(n => existsSync(join(SRC, 'css', `${n}.css`)))
+        cssLinks: [...(page.layout === 'bare' ? ['tokens', 'base'] : baseCss), ...page.css].filter(n => existsSync(join(SRC, 'css', `${n}.css`)))
           .map(n => `<link rel="stylesheet" href="/css/${n}.css">`).join('\n  '),
         pageScripts: (page.js ?? []).map(n => `<script src="/js/${n}.js" defer></script>`).join('\n  '),
         sectionsHtml: page.sections.map(sec => `{{> ${sec}}}`).join('\n'),
       };
-      const html = await render(layout.replace('{{sectionsHtml}}', ctx.sectionsHtml), ctx, partials);
+      const html = await render((layouts[page.layout ?? 'default']).replace('{{sectionsHtml}}', ctx.sectionsHtml), ctx, partials);
       const dir = join(isDefault ? DIST : join(DIST, lang), page.path);
       await mkdir(dir, { recursive: true });
       await writeFile(join(dir, 'index.html'), html);
