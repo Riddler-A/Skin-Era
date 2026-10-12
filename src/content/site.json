@@ -7,5 +7,9 @@
   "instagram": "",
   "facebook": "",
   "tiktok": "",
-  "launch": { "enabled": false, "date": null }
+  "launch": {
+    "enabled": false,
+    "date": null
+  },
+  "showDrafts": true
 }

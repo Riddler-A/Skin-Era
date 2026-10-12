@@ -40,6 +40,23 @@ async function render(template, ctx, partials) {
   });
 }
 
+const FAQ_GROUPS = ['before', 'first', 'hygiene', 'after'];
+
+// Filtra borradores según site.showDrafts, marca los visibles y arma el JSON-LD (FAQPage) solo con respuestas finales.
+function prepareFaq(faq, site) {
+  if (!faq) return { faq, jsonLd: '' };
+  const out = { ...faq }, published = [];
+  for (const g of FAQ_GROUPS) {
+    out[g] = (faq[g] ?? [])
+      .filter(i => !i.pending || site.showDrafts)
+      .map(i => ({ ...i, draftBadge: i.pending ? `<span class="faq-draft">${faq.draftLabel}</span>` : '' }));
+    published.push(...(faq[g] ?? []).filter(i => !i.pending));
+  }
+  const ld = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: published.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) };
+  const jsonLd = published.length ? `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>` : '';
+  return { faq: out, jsonLd };
+}
+
 async function build() {
   const t0 = Date.now();
   await rm(DIST, { recursive: true, force: true });
@@ -58,6 +75,8 @@ async function build() {
   const baseCss = ['tokens', 'base', 'header', 'footer'];
   for (const lang of langs) {
     const copy = JSON.parse(await readFile(join(SRC, 'content', `${lang}.json`), 'utf8'));
+    const { faq, jsonLd } = prepareFaq(copy.faq, site);
+    copy.faq = faq;
     const isDefault = lang === site.defaultLang;
     const base = isDefault ? '' : `/${lang}`;
     for (const page of pages) {
@@ -67,6 +86,7 @@ async function build() {
         ...copy, site, lang, base, current,
         page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}) },
         hasEnglish: langs.includes('en'),
+        jsonLd: page.id === 'faq' ? jsonLd : '',
         year: new Date().getFullYear(),
         hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
         waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),

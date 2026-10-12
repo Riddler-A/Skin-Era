@@ -1,0 +1,48 @@
+<div class="faq-list">
+  <div class="container">
+    <section class="faq-group" id="antes" aria-labelledby="antes-t">
+      <h2 class="faq-group__title" id="antes-t">{{faq.groups.before}}</h2>
+      <div class="faq-group__items">
+        {{#each faq.before}}
+        <details class="faq-item">
+          <summary class="faq-item__q"><span>{{this.q}}</span></summary>
+          <div class="faq-item__a"><p>{{this.a}}</p>{{this.draftBadge}}</div>
+        </details>
+        {{/each}}
+      </div>
+    </section>
+    <section class="faq-group" id="primera-vez" aria-labelledby="primera-vez-t">
+      <h2 class="faq-group__title" id="primera-vez-t">{{faq.groups.first}}</h2>
+      <div class="faq-group__items">
+        {{#each faq.first}}
+        <details class="faq-item">
+          <summary class="faq-item__q"><span>{{this.q}}</span></summary>
+          <div class="faq-item__a"><p>{{this.a}}</p>{{this.draftBadge}}</div>
+        </details>
+        {{/each}}
+      </div>
+    </section>
+    <section class="faq-group" id="higiene" aria-labelledby="higiene-t">
+      <h2 class="faq-group__title" id="higiene-t">{{faq.groups.hygiene}}</h2>
+      <div class="faq-group__items">
+        {{#each faq.hygiene}}
+        <details class="faq-item">
+          <summary class="faq-item__q"><span>{{this.q}}</span></summary>
+          <div class="faq-item__a"><p>{{this.a}}</p>{{this.draftBadge}}</div>
+        </details>
+        {{/each}}
+      </div>
+    </section>
+    <section class="faq-group" id="despues" aria-labelledby="despues-t">
+      <h2 class="faq-group__title" id="despues-t">{{faq.groups.after}}</h2>
+      <div class="faq-group__items">
+        {{#each faq.after}}
+        <details class="faq-item">
+          <summary class="faq-item__q"><span>{{this.q}}</span></summary>
+          <div class="faq-item__a"><p>{{this.a}}</p>{{this.draftBadge}}</div>
+        </details>
+        {{/each}}
+      </div>
+    </section>
+  </div>
+</div>

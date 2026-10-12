@@ -290,5 +290,99 @@
     "socialTitle": "Síguenos",
     "rights": "Todos los derechos reservados.",
     "backTop": "Volver arriba"
+  },
+  "faq": {
+    "_nota": "pending:true = respuesta en BORRADOR por confirmar con Jass. Con site.showDrafts=false no se publican ni entran al JSON-LD.",
+    "hero": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Resolvemos tus dudas",
+      "lead": "Todo lo que quizá te estás preguntando antes de tu primera cita. Si no encuentras tu respuesta, escríbenos."
+    },
+    "groups": {
+      "before": "Antes de tu cita",
+      "first": "Tu primera vez",
+      "hygiene": "Higiene y cera",
+      "after": "Después de tu cita"
+    },
+    "draftLabel": "Borrador por confirmar",
+    "before": [
+      {
+        "q": "¿Mi cuerpo es apto para depilarme con cera?",
+        "a": "En la mayoría de los casos sí. Antes de empezar revisamos tu piel y tu sensibilidad en persona. Si algo no es recomendable ese día, por ejemplo una irritación, una lesión, una infección activa o ciertos tratamientos, te lo decimos con honestidad y te sugerimos esperar. Tu seguridad va primero.",
+        "pending": true
+      },
+      {
+        "q": "¿Puedo ir en mi periodo?",
+        "a": "Puedes, aunque tu piel puede estar más sensible esos días. Si lo prefieres, agenda unos días antes o después; te orientamos al reservar.",
+        "pending": true
+      },
+      {
+        "q": "¿Qué tan largo debe estar el vello?",
+        "a": "Lo ideal es que mida alrededor de medio centímetro, más o menos como un grano de arroz. Si está más largo, lo recortamos; si está muy corto, te avisamos para que la cera funcione bien.",
+        "pending": true
+      },
+      {
+        "q": "¿A quién atienden y desde qué edad?",
+        "a": "Atendemos a mujeres y hombres a partir de los 16 años. Si tienes dudas sobre tu caso o la zona que te interesa, escríbenos y te orientamos.",
+        "pending": false
+      }
+    ],
+    "first": [
+      {
+        "q": "Es mi primera vez, ¿qué puedo esperar?",
+        "a": "Te recibimos en recepción, te llevamos a una cabina privada y la técnica te explica el procedimiento antes de empezar. Durante el servicio te vamos comentando cada paso, y al terminar te damos recomendaciones de cuidado para tu piel.",
+        "pending": false
+      },
+      {
+        "q": "¿Y si no me siento cómoda o cómodo?",
+        "a": "Puedes pausar o detener el servicio en el momento que quieras. Tu comodidad es lo más importante y la técnica va a tu ritmo.",
+        "pending": false
+      },
+      {
+        "q": "¿Duele?",
+        "a": "Puede haber una molestia breve; varía según la persona, la zona y tu sensibilidad. Elegimos la técnica según tu piel, te avisamos antes de cada paso y, con constancia, suele resultar más llevadero.",
+        "pending": true
+      }
+    ],
+    "hygiene": [
+      {
+        "q": "¿Hacen double-dip?",
+        "a": "No. Usamos un aplicador nuevo cada vez que lo necesitas y nunca reutilizamos el mismo en la cera. Además, cabinas, herramientas, fundidores y platillos se mantienen impecables y a la vista.",
+        "pending": true
+      },
+      {
+        "q": "¿Usan cera dura o cera suave?",
+        "a": "Lo elegimos en el momento, según el diagnóstico de tu piel, la zona y tu tipo de vello. No tienes que decidirlo antes: te explicamos qué usaremos y por qué.",
+        "pending": false
+      },
+      {
+        "q": "¿Qué cera usan?",
+        "a": "Trabajamos con ceras de ingredientes trazables, sin pruebas en animales y pensadas para distintos tipos de piel.",
+        "pending": true
+      }
+    ],
+    "after": [
+      {
+        "q": "¿Qué pasa si necesito un retoque?",
+        "a": "Si después de tu servicio necesitas un retoque, lo hacemos sin costo dentro de los 2 a 3 días posteriores.",
+        "pending": false
+      },
+      {
+        "q": "Si tengo poco vello, ¿me cobran igual?",
+        "a": "El costo depende de la zona y del servicio. Si tienes dudas sobre tu caso, cuéntanos y te orientamos antes de agendar.",
+        "pending": true
+      },
+      {
+        "q": "¿Qué cuidados debo seguir después?",
+        "a": "Al terminar te damos recomendaciones personalizadas. En general, conviene evitar sol directo, sauna, alberca, ejercicio intenso y productos irritantes durante las primeras 24 a 48 horas, y mantener la piel hidratada.",
+        "pending": true
+      }
+    ],
+    "cta": {
+      "title": "¿No encontraste tu respuesta?",
+      "text": "Escríbenos y te ayudamos a resolver tus dudas antes de tu primera cita.",
+      "primary": "Escríbenos",
+      "secondary": "Ver servicios"
+    }
   }
 }

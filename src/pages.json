@@ -54,10 +54,13 @@
     "id": "faq",
     "path": "preguntas",
     "sections": [
-      "stub"
+      "faq-hero",
+      "faq-list",
+      "cta-faq"
     ],
     "css": [
-      "stub"
+      "faq",
+      "cta"
     ]
   },
   {

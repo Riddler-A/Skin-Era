@@ -30,6 +30,11 @@ Está construida pero oculta. Para activarla, en `src/content/site.json`:
 "launch": { "enabled": true, "date": "2026-12-01T10:00:00-06:00" }
 ```
 
+## Borradores (preguntas frecuentes)
+Las respuestas con `"pending": true` en `src/content/es.json` están por confirmar con la clienta. Mientras
+`"showDrafts": true` en `src/content/site.json` se ven con la etiqueta *Borrador por confirmar*. **Antes de publicar el
+dominio definitivo, poner `showDrafts` en `false`**: las oculta y las excluye del JSON-LD (FAQPage).
+
 ## Marca
 - Colores: crema `#E8DEC5`, ocre `#BE8840`, café `#6C5649`, rosa `#D4B2A9`
 - Tipografías: Giflika (títulos; sin `¿ ¡ —`, por eso los títulos con esos signos van en League Spartan) y League Spartan (cuerpo)
