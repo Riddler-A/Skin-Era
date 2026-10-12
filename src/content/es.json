@@ -434,11 +434,6 @@
         "title": "Tu servicio",
         "text": "La técnica te explica el procedimiento y te va avisando cada paso, con la higiene a la vista. Puedes pausar o detener el servicio cuando quieras.",
         "pending": false
-      },
-      {
-        "title": "Después de tu cita",
-        "text": "Te damos recomendaciones de cuidado según tu servicio y, si lo necesitas, el retoque es sin costo dentro de los 3 días posteriores.",
-        "pending": false
       }
     ],
     "prepList": [
