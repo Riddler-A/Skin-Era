@@ -13,12 +13,13 @@
 .agenda__msg:empty { display: none; }
 .agenda__msg.is-error { color: #8a3a2d; }
 
-.agenda__days { display: grid; gap: var(--space-2); }
-.agenda__day { display: grid; gap: 0.6rem; }
-.agenda__dayname { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
-.agenda__dayname span { margin-left: 0.4rem; opacity: 0.8; letter-spacing: 0.04em; }
-.agenda__slots { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-.slot { font: inherit; font-size: 0.9rem; font-weight: 400; padding: 0.5em 0.9em; min-width: 4.2rem; border-radius: var(--radius); border: 1px solid var(--cafe); background: var(--crema-claro); color: var(--cafe-oscuro); cursor: pointer; transition: background-color 0.2s var(--ease), color 0.2s var(--ease); }
+/* Semana en columnas: un día por columna, con sus horarios apilados hacia abajo */
+.agenda__days { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: clamp(0.3rem, 0.1rem + 1vw, 0.9rem); }
+.agenda__day { display: grid; align-content: start; gap: 0.6rem; min-width: 0; }
+.agenda__dayname { display: grid; justify-items: center; gap: 0.1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--linea); font-family: var(--font-body); font-size: clamp(0.7rem, 0.6rem + 0.35vw, 0.85rem); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; }
+.agenda__dayname span { margin: 0; opacity: 0.8; letter-spacing: 0.02em; text-transform: none; }
+.agenda__slots { display: grid; gap: 0.4rem; }
+.slot { width: 100%; min-width: 0; font: inherit; font-size: clamp(0.72rem, 0.6rem + 0.4vw, 0.9rem); font-weight: 400; padding: 0.55em 0.2em; text-align: center; border-radius: var(--radius); border: 1px solid var(--cafe); background: var(--crema-claro); color: var(--cafe-oscuro); cursor: pointer; transition: background-color 0.2s var(--ease), color 0.2s var(--ease); }
 .slot:hover:not(:disabled) { background: var(--cafe); color: var(--crema-claro); }
 .slot[aria-pressed="true"] { background: var(--cafe-oscuro); border-color: var(--cafe-oscuro); color: var(--crema-claro); }
 .slot:disabled { opacity: 0.4; cursor: not-allowed; border-color: var(--linea); text-decoration: line-through; }
@@ -45,8 +46,6 @@
 .agenda__done p { max-width: 46ch; font-size: var(--step-lead); }
 
 @media (min-width: 48em) {
-  .agenda__days { grid-template-columns: repeat(3, 1fr); }
   .agenda__fields { grid-template-columns: 1fr 1fr; }
   .agenda__fields .field--wide { grid-column: 1 / -1; }
 }
-@media (min-width: 75em) { .agenda__days { grid-template-columns: repeat(6, 1fr); } .slot { min-width: 0; } }
