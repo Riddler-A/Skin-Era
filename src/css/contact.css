@@ -37,3 +37,9 @@
   .contact-info { position: sticky; top: calc(var(--header-h) + var(--space-4)); }
 }
 .contact-form__intro { max-width: 40ch; }
+
+/* Con el calendario activo no se muestra el formulario alterno: solo queda la información de la ubicación */
+.has-agenda .contact-form { display: none; }
+.has-agenda .contact-main__inner { grid-template-columns: 1fr; }
+.has-agenda .contact-info { position: static; }
+.has-agenda .contact-info__title { display: none; }

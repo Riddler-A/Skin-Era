@@ -85,6 +85,8 @@ if (root) {
     state.data = await res.json();
     render();
     root.hidden = false;
+    // Con el calendario activo, el formulario alterno de abajo se oculta (ver contact.css)
+    document.documentElement.classList.add('has-agenda');
   }
 
   async function go(week) {
