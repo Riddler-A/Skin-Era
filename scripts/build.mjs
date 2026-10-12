@@ -5,7 +5,7 @@ import { readFile, writeFile, mkdir, cp, rm, readdir } from 'node:fs/promises';
 import { existsSync, watch } from 'node:fs';
 import { createServer } from 'node:http';
 import { extname, join, normalize } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SRC = join(ROOT, 'src');
@@ -66,7 +66,6 @@ async function build() {
   await mkdir(DIST, { recursive: true });
 
   const site = JSON.parse(await readFile(join(SRC, 'content/site.json'), 'utf8'));
-  site.agendaOrigin = site.agendaUrl ? new URL(site.agendaUrl).origin : '';
   const partials = {};
   for (const f of await readdir(join(SRC, 'partials'))) {
     partials[f.replace('.html', '')] = await readFile(join(SRC, 'partials', f), 'utf8');
@@ -100,7 +99,7 @@ async function build() {
           draftBadge: page.pending && site.showDrafts ? `<span class="faq-draft">${copy.blog?.draftLabel ?? ''}</span>` : '' },
         hasEnglish: langs.includes('en'),
         jsonLd: page.id === 'faq' ? jsonLd : '',
-        noAgenda: !site.agendaUrl,
+        agendaI18n: JSON.stringify(copy.contact?.agenda?.js ?? {}).replace(/</g, '\\u003c'),
         year: new Date().getFullYear(),
         hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
         waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),
@@ -127,8 +126,25 @@ async function build() {
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.webp': 'image/webp', '.ico': 'image/x-icon' };
 
+// En desarrollo, /api/agenda usa la misma función que Netlify, con horarios de ejemplo.
+async function handleApi(req, res) {
+  const mod = await import(`${pathToFileURL(join(ROOT, 'netlify/functions/agenda.mjs')).href}?t=${Date.now()}`);
+  const chunks = [];
+  for await (const c of req) chunks.push(c);
+  const headers = {};
+  for (const h of ['content-type', 'x-forwarded-for']) if (req.headers[h]) headers[h] = req.headers[h];
+  const body = ['GET', 'HEAD'].includes(req.method) ? undefined : Buffer.concat(chunks);
+  const out = await mod.default(new Request(`http://localhost:3000${req.url}`, { method: req.method, headers, body }));
+  res.writeHead(out.status, Object.fromEntries(out.headers));
+  res.end(Buffer.from(await out.arrayBuffer()));
+}
+
 function serve() {
+  if (!process.env.GOOGLE_CALENDAR_ID) process.env.AGENDA_DEMO = '1'; // horarios de ejemplo, no crea citas reales
   createServer(async (req, res) => {
+    if (req.url.split('?')[0] === '/api/agenda') {
+      try { return await handleApi(req, res); } catch (e) { console.error(e); res.writeHead(500); return res.end('error'); }
+    }
     let p = normalize(decodeURIComponent(req.url.split('?')[0])).replace(/^(\.\.[/\\])+/, '');
     if (p.endsWith('/') || p === '') p = join(p, 'index.html');
     try {

@@ -30,6 +30,27 @@ Está construida pero oculta. Para activarla, en `src/content/site.json`:
 "launch": { "enabled": true, "date": "2026-12-01T10:00:00-06:00" }
 ```
 
+## Agenda de citas
+La página `/agendar/` incluye un calendario propio que lee y escribe en **Google Calendar** a través de una
+función de Netlify (`netlify/functions/agenda.mjs`, sin dependencias externas).
+
+- **Reglas** (días, horario, duración, anticipación): `netlify/lib/booking.mjs`. Hoy son de **ejemplo**
+  (lunes a sábado, 10:00 a 19:00, citas de 60 min, 1 día de anticipación). Ajustarlas cuando se definan los servicios.
+- **Sin credenciales** el calendario permanece oculto y solo se ve el formulario "Déjanos tus datos".
+- **Modo de prueba**: `npm run dev` usa horarios de ejemplo y no crea citas reales.
+- **Pruebas**: `npm test` (reglas de horarios y API con un Google simulado).
+
+### Conectar el calendario real de Skin Era
+1. En Google Cloud Console crea un proyecto y activa **Google Calendar API**.
+2. Crea una **cuenta de servicio** y descarga su llave JSON.
+3. En Google Calendar abre el calendario de Skin Era > *Compartir con personas* > agrega el correo de la cuenta de
+   servicio con permiso **Hacer cambios en eventos**.
+4. En Netlify > *Environment variables* agrega `GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY` y
+   `GOOGLE_CALENDAR_ID` (ver `.env.example`) y vuelve a desplegar.
+
+Las citas se crean como eventos con nombre, WhatsApp y servicio. Para bloquear horarios (descansos, días
+cerrados) crea en ese calendario eventos **con horario** (los de "todo el día" se ignoran a propósito).
+
 ## Borradores (preguntas frecuentes)
 Las respuestas con `"pending": true` en `src/content/es.json` están por confirmar con la clienta. Mientras
 `"showDrafts": true` en `src/content/site.json` se ven con la etiqueta *Borrador por confirmar*. **Antes de publicar el

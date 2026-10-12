@@ -268,11 +268,10 @@
     "hero": {
       "eyebrow": "Agendar",
       "title": "Agenda tu cita",
-      "lead": "Elige el día y la hora que mejor te acomoden en el calendario. Si prefieres que te escribamos, déjanos tus datos más abajo.",
-      "leadNoAgenda": "Cuéntanos qué zona te interesa y te respondemos para ayudarte a elegir el servicio y el horario."
+      "lead": "Agenda tu cita en línea o déjanos tus datos, y te contactamos por WhatsApp para ayudarte a elegir el servicio y el horario."
     },
     "form": {
-      "title": "O déjanos tus datos",
+      "title": "Déjanos tus datos",
       "name": "Nombre",
       "phone": "Teléfono o WhatsApp",
       "service": "Servicio de interés",
@@ -281,12 +280,11 @@
       "messageHint": "No necesitas compartir información de salud: eso lo vemos contigo en persona.",
       "submit": "Solicitar cita",
       "sending": "Enviando…",
-      "ok": "¡Gracias! Recibimos tu mensaje y te responderemos muy pronto.",
+      "ok": "¡Gracias! Recibimos tu solicitud y te contactaremos por WhatsApp muy pronto.",
       "error": "No pudimos enviarlo. Inténtalo de nuevo o escríbenos por otro medio.",
       "privacy": "Usaremos tus datos únicamente para responderte sobre tu cita.",
       "honeypot": "No llenar si eres humano",
-      "intro": "Si prefieres, te escribimos para ayudarte a elegir el servicio y el horario.",
-      "titleNoAgenda": "Solicita tu cita"
+      "intro": "Si prefieres, te contactamos por WhatsApp para ayudarte a elegir el servicio y el horario."
     },
     "info": {
       "title": "Otras formas de contactarnos",
@@ -295,14 +293,38 @@
       "whatsappMsg": "Hola, me gustaría información sobre depilación con cera en Skin Era.",
       "social": "Redes",
       "locationTitle": "Dónde estamos",
-      "location": "Puerto Vallarta, Jalisco. Muy pronto compartiremos la dirección de nuestro estudio.",
-      "bookingTitle": "Agenda en línea",
-      "booking": "Estamos preparando la agenda en línea para que reserves tu horario en pocos pasos. Mientras tanto, escríbenos y te apartamos tu cita."
+      "location": "Puerto Vallarta, Jalisco. Muy pronto compartiremos la dirección de nuestro estudio."
     },
     "agenda": {
       "title": "Elige tu día y hora",
-      "iframeTitle": "Calendario para agendar tu cita en Skin Era",
-      "fallback": "¿No ves el calendario? Ábrelo en otra pestaña"
+      "lead": "Escoge un horario disponible y déjanos tus datos. Nosotros te contactamos por WhatsApp para confirmar tu cita.",
+      "weekNav": "Cambiar de semana",
+      "prev": "Semana anterior",
+      "next": "Semana siguiente",
+      "loading": "Cargando horarios…",
+      "form": {
+        "name": "Nombre",
+        "phone": "WhatsApp",
+        "service": "Servicio de interés",
+        "serviceNone": "Aún no lo sé, necesito orientación",
+        "notes": "Algo que debamos saber (opcional)",
+        "submit": "Confirmar cita",
+        "change": "Cambiar horario",
+        "privacy": "Usaremos tus datos únicamente para contactarte sobre tu cita.",
+        "honeypot": "No llenar si eres humano"
+      },
+      "js": {
+        "chosen": "Horario elegido",
+        "sending": "Enviando…",
+        "doneTitle": "¡Listo!",
+        "done": "Tu cita quedó apartada para {fecha}. Te contactaremos por WhatsApp para confirmarla.",
+        "noSlots": "No hay horarios disponibles esta semana. Prueba con la siguiente.",
+        "errTaken": "Ese horario acaba de ocuparse. Elige otro, por favor.",
+        "errInvalid": "Revisa tus datos: escribe tu nombre y un número de WhatsApp válido.",
+        "errBusy": "Hay muchas solicitudes en este momento. Inténtalo de nuevo en unos minutos.",
+        "errGeneric": "No pudimos agendar tu cita. Inténtalo de nuevo o déjanos tus datos en el formulario de abajo.",
+        "errLoad": "No pudimos cargar los horarios. Inténtalo de nuevo."
+      }
     }
   },
   "thanks": {

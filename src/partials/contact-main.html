@@ -2,9 +2,8 @@
   <div class="container contact-main__inner">
 
     <form class="contact-form" name="contacto" method="POST" action="{{base}}/agendar/gracias/" data-netlify="true" netlify-honeypot="bot-field" data-contact-form data-ok="{{contact.form.ok}}" data-error="{{contact.form.error}}" data-sending="{{contact.form.sending}}">
-      {{#if site.agendaUrl}}<h2 class="contact-form__title">{{contact.form.title}}</h2>
-      <p class="contact-form__intro">{{contact.form.intro}}</p>{{/if}}
-      {{#if noAgenda}}<h2 class="contact-form__title">{{contact.form.titleNoAgenda}}</h2>{{/if}}
+      <h2 class="contact-form__title">{{contact.form.title}}</h2>
+      <p class="contact-form__intro">{{contact.form.intro}}</p>
       <input type="hidden" name="form-name" value="contacto">
       <p class="sr-only"><label>{{contact.form.honeypot}} <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
@@ -43,13 +42,6 @@
       <div class="info-block">
         <h3>{{contact.info.whatsapp}}</h3>
         <a class="btn btn--ghost" href="https://wa.me/{{site.whatsapp}}?text={{waText}}" rel="noopener">{{contact.info.whatsappCta}}</a>
-      </div>
-      {{/if}}
-
-      {{#if noAgenda}}
-      <div class="info-block">
-        <h3>{{contact.info.bookingTitle}}</h3>
-        <p>{{contact.info.booking}}</p>
       </div>
       {{/if}}
 

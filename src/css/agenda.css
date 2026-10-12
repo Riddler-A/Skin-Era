@@ -1,0 +1,52 @@
+.agenda { padding-block: var(--space-3) var(--space-5); }
+.agenda[hidden] { display: none; }
+.agenda__title { font-size: var(--step-h2); }
+.agenda__lead { margin-top: var(--space-1); max-width: 46ch; font-size: var(--step-lead); }
+.agenda__panel { margin-top: var(--space-3); background: var(--crema); border-radius: 1.5rem; padding: clamp(1rem, 0.5rem + 2vw, 2rem); display: grid; gap: var(--space-3); }
+
+.agenda__nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-2); }
+.agenda__week { font-weight: 500; letter-spacing: 0.04em; text-align: center; }
+.agenda__arrow { width: 2.6rem; height: 2.6rem; border-radius: 50%; border: 1px solid var(--cafe); background: transparent; color: var(--cafe); font: inherit; font-size: 1.1rem; cursor: pointer; transition: background-color 0.2s var(--ease), color 0.2s var(--ease); }
+.agenda__arrow:hover:not(:disabled) { background: var(--cafe); color: var(--crema-claro); }
+.agenda__arrow:disabled { opacity: 0.35; cursor: not-allowed; }
+.agenda__msg { min-height: 1.4em; font-size: 0.95rem; }
+.agenda__msg:empty { display: none; }
+.agenda__msg.is-error { color: #8a3a2d; }
+
+.agenda__days { display: grid; gap: var(--space-2); }
+.agenda__day { display: grid; gap: 0.6rem; }
+.agenda__dayname { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+.agenda__dayname span { margin-left: 0.4rem; opacity: 0.8; letter-spacing: 0.04em; }
+.agenda__slots { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.slot { font: inherit; font-size: 0.9rem; font-weight: 400; padding: 0.5em 0.9em; min-width: 4.2rem; border-radius: var(--radius); border: 1px solid var(--cafe); background: var(--crema-claro); color: var(--cafe-oscuro); cursor: pointer; transition: background-color 0.2s var(--ease), color 0.2s var(--ease); }
+.slot:hover:not(:disabled) { background: var(--cafe); color: var(--crema-claro); }
+.slot[aria-pressed="true"] { background: var(--cafe-oscuro); border-color: var(--cafe-oscuro); color: var(--crema-claro); }
+.slot:disabled { opacity: 0.4; cursor: not-allowed; border-color: var(--linea); text-decoration: line-through; }
+
+.agenda__form { display: grid; gap: var(--space-2); padding-top: var(--space-3); border-top: 1px solid var(--linea); }
+.agenda__form[hidden], .agenda__done[hidden] { display: none; }
+.agenda__chosen { font-family: var(--font-display); font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }
+.agenda__fields { display: grid; gap: var(--space-2); }
+.agenda .field { display: grid; gap: 0.45rem; }
+.agenda .field label { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.agenda .field input, .agenda .field select, .agenda .field textarea { width: 100%; font: inherit; font-weight: 400; color: var(--cafe-oscuro); background: var(--crema-claro); border: 1px solid var(--linea); border-radius: 0.9rem; padding: 0.8em 1em; transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease); }
+.agenda .field textarea { resize: vertical; min-height: 5rem; }
+.agenda .field input:focus, .agenda .field select:focus, .agenda .field textarea:focus { outline: none; border-color: var(--ocre); box-shadow: 0 0 0 3px rgb(190 136 64 / 0.25); }
+.agenda .field input:user-invalid { border-color: #9b4a3c; }
+.agenda__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.agenda__actions .btn { cursor: pointer; font-family: var(--font-body); }
+.agenda__actions .btn[disabled] { opacity: 0.6; cursor: progress; }
+.agenda__status { min-height: 1.4em; font-weight: 400; }
+.agenda__status.is-error { color: #8a3a2d; }
+.agenda__privacy { font-size: 0.85rem; opacity: 0.85; }
+
+.agenda__done { display: grid; gap: 0.6rem; padding: var(--space-3); background: var(--crema-claro); border-radius: 1.25rem; }
+.agenda__done-title { font-size: clamp(1.8rem, 1.4rem + 1.4vw, 2.5rem); }
+.agenda__done p { max-width: 46ch; font-size: var(--step-lead); }
+
+@media (min-width: 48em) {
+  .agenda__days { grid-template-columns: repeat(3, 1fr); }
+  .agenda__fields { grid-template-columns: 1fr 1fr; }
+  .agenda__fields .field--wide { grid-column: 1 / -1; }
+}
+@media (min-width: 75em) { .agenda__days { grid-template-columns: repeat(6, 1fr); } .slot { min-width: 0; } }

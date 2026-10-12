@@ -36,12 +36,4 @@
   .contact-main__inner { grid-template-columns: 1.1fr 0.9fr; gap: var(--space-6); }
   .contact-info { position: sticky; top: calc(var(--header-h) + var(--space-4)); }
 }
-
-/* Calendario incrustado */
-.agenda { padding-block: var(--space-3) var(--space-5); }
-.agenda__title { font-size: var(--step-h2); margin-bottom: var(--space-3); }
-.agenda__frame { background: var(--crema); border-radius: 1.5rem; padding: clamp(0.5rem, 0.25rem + 1vw, 1.25rem); overflow: hidden; }
-.agenda__frame iframe { display: block; border-radius: 1rem; background: var(--crema-claro); }
-.agenda__fallback { margin-top: var(--space-2); font-size: 0.95rem; }
-.agenda__fallback a { text-underline-offset: 0.2em; }
 .contact-form__intro { max-width: 40ch; }
