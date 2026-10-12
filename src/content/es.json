@@ -441,8 +441,8 @@
     },
     "stepsList": [
       {
-        "title": "Escríbenos y agenda",
-        "text": "Contáctanos por WhatsApp y cuéntanos qué zona te interesa. Te explicamos el servicio adecuado y apartamos tu horario.",
+        "title": "Agenda tu cita",
+        "text": "Elige tu servicio y déjanos tus datos en la página. Nosotros te contactamos por WhatsApp para explicarte el servicio adecuado y confirmar tu horario.",
         "pending": false
       },
       {
