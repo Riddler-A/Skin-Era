@@ -630,12 +630,7 @@
     "rights": "Todos los derechos reservados."
   },
   "beforeAfter": {
-    "_nota": "Dejar img vacío para mostrar los marcadores ilustrativos. Con fotos reales: poner la ruta (p. ej. /assets/img/antes.jpg) y el texto alternativo. Requieren permiso por escrito de la clienta.",
-    "eyebrow": "Antes y después",
-    "title": "Desliza y descubre la diferencia",
-    "lead": "Mueve la barra para comparar el antes y el después de tu piel.",
     "disclaimer": "Los resultados varían según cada persona y cada piel.",
-    "placeholderNote": "Imágenes ilustrativas mientras preparamos nuestras fotografías reales.",
     "sliderLabel": "Comparador de antes y después. Usa las flechas del teclado para mover la barra.",
     "valueText": "{antes}% antes, {despues}% después",
     "before": {

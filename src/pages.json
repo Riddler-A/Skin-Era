@@ -4,13 +4,12 @@
     "path": "",
     "sections": [
       "hero",
-      "commitment",
-      "compare"
+      "commitment"
     ],
     "css": [
       "hero",
-      "commitment",
-      "compare"
+      "compare",
+      "commitment"
     ],
     "js": [
       "compare"

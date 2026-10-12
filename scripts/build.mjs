@@ -100,8 +100,6 @@ async function build() {
         hasEnglish: langs.includes('en'),
         jsonLd: page.id === 'faq' ? jsonLd : '',
         agendaI18n: JSON.stringify(copy.contact?.agenda?.js ?? {}).replace(/</g, '\\u003c'),
-        compareReal: Boolean(copy.beforeAfter?.before?.img && copy.beforeAfter?.after?.img),
-        comparePlaceholder: !(copy.beforeAfter?.before?.img && copy.beforeAfter?.after?.img),
         year: new Date().getFullYear(),
         hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
         waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),
