@@ -72,7 +72,7 @@
   },
   {
     "id": "contact",
-    "path": "contacto",
+    "path": "agendar",
     "sections": [
       "contact-hero",
       "contact-main"
@@ -86,7 +86,7 @@
   },
   {
     "id": "thanks",
-    "path": "contacto/gracias",
+    "path": "agendar/gracias",
     "sections": [
       "thanks"
     ],

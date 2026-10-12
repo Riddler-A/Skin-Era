@@ -11,7 +11,6 @@
     "services": "Servicios",
     "firstTime": "Tu primera vez",
     "faq": "Preguntas",
-    "contact": "Contacto",
     "book": "Agendar",
     "blog": "Blog"
   },
@@ -67,10 +66,10 @@
       }
     },
     "contact": {
-      "title": "Contacto",
+      "title": "Agendar",
       "meta": {
-        "title": "Contacto | Skin Era",
-        "description": "Escríbenos para agendar tu cita en Skin Era, Puerto Vallarta."
+        "title": "Agendar tu cita | Skin Era",
+        "description": "Agenda tu cita de depilación con cera en Skin Era, Puerto Vallarta. Cuéntanos qué zona te interesa y te ayudamos a elegir el servicio y el horario."
       }
     },
     "thanks": {
@@ -261,19 +260,19 @@
   },
   "contact": {
     "hero": {
-      "eyebrow": "Contacto",
-      "title": "Hablemos de tu piel",
+      "eyebrow": "Agendar",
+      "title": "Agenda tu cita",
       "lead": "Cuéntanos qué zona te interesa y te respondemos para ayudarte a elegir el servicio y el horario."
     },
     "form": {
-      "title": "Escríbenos",
+      "title": "Solicita tu cita",
       "name": "Nombre",
       "phone": "Teléfono o WhatsApp",
       "service": "Servicio de interés",
       "serviceNone": "Aún no lo sé, necesito orientación",
       "message": "¿Algo que debamos saber? (opcional)",
       "messageHint": "No necesitas compartir información de salud: eso lo vemos contigo en persona.",
-      "submit": "Enviar mensaje",
+      "submit": "Solicitar cita",
       "sending": "Enviando…",
       "ok": "¡Gracias! Recibimos tu mensaje y te responderemos muy pronto.",
       "error": "No pudimos enviarlo. Inténtalo de nuevo o escríbenos por otro medio.",
