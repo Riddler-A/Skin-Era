@@ -1,0 +1,36 @@
+<article class="article" aria-labelledby="articulo-titulo">
+  <header class="article__head">
+    <div class="container article__col">
+      <p class="eyebrow">{{blogPost.benefits.eyebrow}}</p>
+      <h1 class="article__title" id="articulo-titulo">{{blogPost.benefits.title}}</h1>
+      <p class="article__lead">{{blogPost.benefits.lead}}</p>
+      <p class="article__meta">{{blogPost.benefits.meta}}</p>
+      {{page.draftBadge}}
+    </div>
+  </header>
+
+  <div class="container article__col article__body">
+    <p class="article__intro">{{blogPost.benefits.intro}}</p>
+
+    {{#each blogPost.benefits.sections}}
+    <section class="article-sec" data-reveal>
+      <h2>{{this.title}}</h2>
+      <p>{{this.text}}</p>
+      <p>{{this.text2}}</p>
+    </section>
+    {{/each}}
+
+    <aside class="article-myth" data-reveal>
+      <p class="article-myth__label">{{blogPost.benefits.myth.label}}</p>
+      <h2>{{blogPost.benefits.myth.title}}</h2>
+      <p>{{blogPost.benefits.myth.text}}</p>
+    </aside>
+
+    <section class="article-caution" data-reveal>
+      <h2>{{blogPost.benefits.caution.title}}</h2>
+      <p>{{blogPost.benefits.caution.text}}</p>
+    </section>
+
+    <a class="article__back" href="{{base}}/blog/">← {{blog.backToBlog}}</a>
+  </div>
+</article>

@@ -1,0 +1,22 @@
+<section class="blog-list" aria-label="{{blog.hero.eyebrow}}">
+  <div class="container">
+    {{#if blog.noPosts}}<p class="blog-empty">{{blog.noPosts}}</p>{{/if}}
+    <ul class="blog-grid">
+      {{#each blog.list}}
+      <li class="post-card" data-reveal>
+        <a class="post-card__media" href="{{base}}/{{this.url}}" tabindex="-1" aria-hidden="true">
+          <!-- Marcador de imagen del artículo: reemplazar por <img> real -->
+          <img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" loading="lazy">
+        </a>
+        <div class="post-card__body">
+          <p class="post-card__meta"><span class="post-card__chip">{{this.category}}</span><span>{{this.minutes}}</span></p>
+          <h2 class="post-card__title"><a href="{{base}}/{{this.url}}">{{this.title}}</a></h2>
+          <p class="post-card__excerpt">{{this.excerpt}}</p>
+          {{this.draftBadge}}
+          <a class="btn btn--ghost post-card__cta" href="{{base}}/{{this.url}}">{{blog.read}}</a>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

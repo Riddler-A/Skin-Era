@@ -93,5 +93,32 @@
     "css": [
       "stub"
     ]
+  },
+  {
+    "id": "blog",
+    "path": "blog",
+    "sections": [
+      "blog-hero",
+      "blog-list",
+      "cta-book"
+    ],
+    "css": [
+      "blog",
+      "cta"
+    ]
+  },
+  {
+    "id": "postBenefits",
+    "path": "blog/beneficios-depilacion-con-cera",
+    "parent": "blog",
+    "pending": true,
+    "sections": [
+      "blog-post",
+      "cta-book"
+    ],
+    "css": [
+      "blog",
+      "cta"
+    ]
   }
 ]

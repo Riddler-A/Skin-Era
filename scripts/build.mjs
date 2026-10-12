@@ -80,18 +80,23 @@ async function build() {
     const copy = JSON.parse(await readFile(join(SRC, 'content', `${lang}.json`), 'utf8'));
     const { faq, jsonLd } = prepareFaq(copy.faq, site);
     copy.faq = faq;
+    if (copy.blog) {
+      const list = markDrafts(copy.blog.list, site, copy.blog.draftLabel);
+      copy.blog = { ...copy.blog, list, noPosts: list.length ? '' : copy.blog.emptyText };
+    }
     if (copy.firstTime) {
       const l = copy.firstTime.draftLabel;
       copy.firstTime = { ...copy.firstTime, stepsList: markDrafts(copy.firstTime.stepsList, site, l), prepList: markDrafts(copy.firstTime.prepList, site, l) };
     }
     const isDefault = lang === site.defaultLang;
     const base = isDefault ? '' : `/${lang}`;
-    for (const page of pages) {
+    for (const page of pages.filter(p => !p.pending || site.showDrafts)) {
       // current.<id> marca el enlace activo del menú con aria-current
-      const current = Object.fromEntries(pages.map(p => [p.id, p.id === page.id ? 'aria-current="page"' : '']));
+      const current = Object.fromEntries(pages.map(p => [p.id, p.id === page.id || p.id === page.parent ? 'aria-current="page"' : '']));
       const ctx = {
         ...copy, site, lang, base, current,
-        page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}) },
+        page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}),
+          draftBadge: page.pending && site.showDrafts ? `<span class="faq-draft">${copy.blog?.draftLabel ?? ''}</span>` : '' },
         hasEnglish: langs.includes('en'),
         jsonLd: page.id === 'faq' ? jsonLd : '',
         year: new Date().getFullYear(),

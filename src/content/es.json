@@ -12,7 +12,8 @@
     "firstTime": "Tu primera vez",
     "faq": "Preguntas",
     "contact": "Contacto",
-    "book": "Agendar"
+    "book": "Agendar",
+    "blog": "Blog"
   },
   "hero": {
     "eyebrow": "Depilación con cera · Puerto Vallarta",
@@ -77,6 +78,21 @@
       "meta": {
         "title": "Gracias | Skin Era",
         "description": "Recibimos tu mensaje."
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "meta": {
+        "title": "Blog | Skin Era",
+        "description": "Consejos y datos sobre el cuidado de la piel y la depilación con cera en Puerto Vallarta, explicados sin complicaciones."
+      }
+    },
+    "postBenefits": {
+      "title": "Beneficios de la depilación con cera",
+      "pending": true,
+      "meta": {
+        "title": "Beneficios de la depilación con cera que quizá no conocías | Skin Era",
+        "description": "Qué pasa cuando el vello se retira desde la raíz: piel lisa por más tiempo, vello más fino con constancia y otros beneficios de la depilación con cera."
       }
     }
   },
@@ -290,7 +306,8 @@
     "book": "Agenda tu cita",
     "socialTitle": "Síguenos",
     "rights": "Todos los derechos reservados.",
-    "backTop": "Volver arriba"
+    "backTop": "Volver arriba",
+    "blogLink": "Blog"
   },
   "faq": {
     "_nota": "pending:true = respuesta en BORRADOR por confirmar con Jass. Con site.showDrafts=false no se publican ni entran al JSON-LD.",
@@ -477,5 +494,77 @@
         "text": "Puedes pedir una pausa o detener el servicio en cualquier momento. Sin explicaciones y sin juicios."
       }
     ]
+  },
+  "blog": {
+    "_nota": "pending:true = BORRADOR por confirmar con Jass (se oculta con site.showDrafts=false). Los datos del artículo son información general: validar tono y afirmaciones antes de publicar.",
+    "draftLabel": "Borrador por confirmar",
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Cuidado de la piel, sin complicaciones",
+      "lead": "Datos claros sobre depilación con cera y cuidado de la piel, explicados como te los contaría alguien que sabe del tema."
+    },
+    "list": [
+      {
+        "title": "Beneficios de la depilación con cera que quizá no conocías",
+        "excerpt": "Más allá de la piel lisa: qué pasa cuando el vello se retira desde la raíz y por qué tanta gente deja la rasuradora.",
+        "category": "Depilación con cera",
+        "minutes": "3 min de lectura",
+        "url": "blog/beneficios-depilacion-con-cera/",
+        "pending": true
+      }
+    ],
+    "read": "Leer artículo",
+    "emptyText": "Muy pronto publicaremos aquí nuestros primeros artículos.",
+    "backToBlog": "Volver al blog"
+  },
+  "blogPost": {
+    "benefits": {
+      "eyebrow": "Blog · Depilación con cera",
+      "title": "Beneficios de la depilación con cera que quizá no conocías",
+      "lead": "Más allá de la piel lisa: lo que pasa cuando el vello se retira desde la raíz y por qué tanta gente deja la rasuradora.",
+      "meta": "Equipo Skin Era · 3 min de lectura",
+      "intro": "Si te has depilado con cera, seguramente sabes que dura más que rasurarte. Lo que casi nadie cuenta son los otros efectos: cómo cambia la textura de tu piel, qué pasa con el vello a lo largo de los meses y por qué la rasuradora deja esa sensación áspera.",
+      "sections": [
+        {
+          "title": "Se retira desde la raíz",
+          "text": "La rasuradora corta el vello a ras de piel. La cera lo retira desde la raíz, y el vello nuevo tiene que crecer desde cero. Por eso la piel se mantiene lisa varias semanas, normalmente entre 3 y 6, según la zona y tu ritmo de crecimiento.",
+          "text2": ""
+        },
+        {
+          "title": "Sin sensación de rastrojo",
+          "text": "Al rasurar, el vello queda con la punta cortada de forma roma, y esa punta es la que se siente áspera cuando vuelve a salir. Con cera, el vello nuevo nace con la punta fina y natural, así que su regreso se siente más suave.",
+          "text2": ""
+        },
+        {
+          "title": "Con constancia, el vello suele crecer más fino",
+          "text": "Muchas personas notan que, después de varias sesiones, el vello vuelve más fino y menos denso.",
+          "text2": "No pasa igual en todas las personas ni en todas las zonas, pero es de los cambios que más se mencionan."
+        },
+        {
+          "title": "Una exfoliación ligera de regalo",
+          "text": "Al retirar la cera también se desprenden algunas células muertas de la superficie, así que la piel suele verse más uniforme y suave después del servicio.",
+          "text2": "No sustituye tu rutina de cuidado, pero es un beneficio extra que no esperabas."
+        },
+        {
+          "title": "Menos tiempo en tu rutina",
+          "text": "Con la rasuradora hay que repetir cada pocos días. Con cera, el mantenimiento se reduce a una cita cada pocas semanas, y sin cuchillas, cortes ni espuma de por medio.",
+          "text2": ""
+        },
+        {
+          "title": "Un momento para ti",
+          "text": "Hecha en un lugar tranquilo y con buena atención, una cita de depilación también es una pausa en tu semana. En Skin Era cuidamos el ambiente, la higiene y el trato para que la experiencia se sienta así.",
+          "text2": ""
+        }
+      ],
+      "myth": {
+        "label": "Mito",
+        "title": "Rasurar engrosa el vello",
+        "text": "No es cierto: rasurar no cambia el grosor ni la cantidad de vello. Lo que cambia es la punta, que queda roma y se siente más áspera. Por eso parece más grueso, aunque no lo sea."
+      },
+      "caution": {
+        "title": "Lo que conviene saber",
+        "text": "La cera puede dejar un enrojecimiento leve durante unas horas, y no todas las pieles ni todas las situaciones son adecuadas ese día. Por eso revisamos tu piel en persona antes de empezar y, si algo no es recomendable, te lo decimos. Esta información es general y no sustituye la orientación de un profesional de la salud."
+      }
+    }
   }
 }

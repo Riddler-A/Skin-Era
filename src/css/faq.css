@@ -22,7 +22,6 @@
 .faq-item__q:hover span { text-decoration: underline; text-decoration-color: var(--ocre); text-underline-offset: 0.25em; }
 .faq-item__a { padding-bottom: 1.4rem; max-width: 60ch; display: grid; gap: 0.7rem; justify-items: start; }
 
-.faq-draft { display: inline-block; padding: 0.2em 0.8em; border: 1px dashed var(--ocre); border-radius: var(--radius); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cafe); }
 
 @media (min-width: 62em) {
   .faq-hero { padding-block: var(--space-6) var(--space-4); }
