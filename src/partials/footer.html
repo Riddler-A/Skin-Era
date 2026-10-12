@@ -1,0 +1,47 @@
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+
+    <div class="site-footer__brand">
+      <a href="{{base}}/" aria-label="{{site.name}}: {{nav.home}}">
+        <img src="/assets/img/logo-secundario-cafe.png" alt="Skin Era" width="447" height="408" loading="lazy">
+      </a>
+      <p class="site-footer__tagline">{{footer.tagline}}</p>
+      <p class="site-footer__desc">{{footer.desc}}</p>
+    </div>
+
+    <nav class="site-footer__col" aria-label="{{footer.navTitle}}">
+      <h2 class="site-footer__title">{{footer.navTitle}}</h2>
+      <ul>
+        <li><a href="{{base}}/">{{nav.home}}</a></li>
+        <li><a href="{{base}}/nosotros/">{{nav.about}}</a></li>
+        <li><a href="{{base}}/servicios/">{{nav.services}}</a></li>
+        <li><a href="{{base}}/primera-vez/">{{nav.firstTime}}</a></li>
+        <li><a href="{{base}}/preguntas/">{{nav.faq}}</a></li>
+        <li><a href="{{base}}/contacto/">{{nav.contact}}</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__title">{{footer.contactTitle}}</h2>
+      <ul>
+        <li>{{footer.location}}</li>
+        <li><a href="{{base}}/contacto/">{{footer.book}}</a></li>
+      </ul>
+
+      {{#if hasSocial}}
+      <h2 class="site-footer__title site-footer__title--spaced">{{footer.socialTitle}}</h2>
+      <ul class="social">
+        {{#if site.whatsapp}}<li><a href="https://wa.me/{{site.whatsapp}}?text={{waText}}" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.5c.5 2.5 3 5 6 6.5l1.3-1.3-2-1-1 .8c-.9-.4-1.8-1.3-2.2-2.2l.8-1-1-2z"/></svg></a></li>{{/if}}
+        {{#if site.instagram}}<li><a href="{{site.instagram}}" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a></li>{{/if}}
+        {{#if site.facebook}}<li><a href="{{site.facebook}}" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-8h2.7l.5-3H14V8.2c0-.9.4-1.5 1.6-1.5H17.3V4.1C17 4 16.1 4 15.1 4 12.9 4 11 5.4 11 8v2H8.5v3H11v8z"/></svg></a></li>{{/if}}
+        {{#if site.tiktok}}<li><a href="{{site.tiktok}}" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3c.3 2.3 1.7 3.8 4 4v3c-1.4 0-2.6-.5-4-1.3V15a5.5 5.5 0 1 1-5.5-5.5c.2 0 .5 0 .8.1v3.1a2.5 2.5 0 1 0 1.7 2.4V3z"/></svg></a></li>{{/if}}
+      </ul>
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p>© {{year}} {{site.name}}. {{footer.rights}}</p>
+    <a href="#contenido" class="site-footer__top">{{footer.backTop}} ↑</a>
+  </div>
+</footer>

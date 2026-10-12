@@ -279,5 +279,16 @@
     "title": "¡Mensaje recibido!",
     "text": "Gracias por escribirnos. Te responderemos muy pronto.",
     "back": "Volver al inicio"
+  },
+  "footer": {
+    "tagline": "Una nueva era para tu piel",
+    "desc": "Depilación con cera en Puerto Vallarta, Jalisco. Higiene visible, atención informada y un espacio pensado para tu comodidad.",
+    "navTitle": "Explora",
+    "contactTitle": "Contacto",
+    "location": "Puerto Vallarta, Jalisco",
+    "book": "Agenda tu cita",
+    "socialTitle": "Síguenos",
+    "rights": "Todos los derechos reservados.",
+    "backTop": "Volver arriba"
   }
 }

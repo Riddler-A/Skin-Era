@@ -67,6 +67,8 @@ async function build() {
         ...copy, site, lang, base, current,
         page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}) },
         hasEnglish: langs.includes('en'),
+        year: new Date().getFullYear(),
+        hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
         waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),
         cssLinks: [...baseCss, ...page.css].filter(n => existsSync(join(SRC, 'css', `${n}.css`)))
           .map(n => `<link rel="stylesheet" href="/css/${n}.css">`).join('\n  '),
