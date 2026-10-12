@@ -328,6 +328,13 @@
       },
       "pick": "Elige un horario en el calendario.",
       "note": "Horario del centro de México. Los horarios tachados ya están ocupados."
+    },
+    "map": {
+      "title": "Dónde atendemos",
+      "text": "Estamos en Puerto Vallarta, Jalisco. Compartiremos la dirección exacta del estudio al confirmar tu cita.",
+      "iframeTitle": "Mapa de Puerto Vallarta, Jalisco",
+      "query": "Puerto Vallarta, Jalisco, México",
+      "link": "Abrir en Google Maps"
     }
   },
   "thanks": {

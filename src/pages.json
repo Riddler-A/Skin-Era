@@ -80,11 +80,13 @@
     "sections": [
       "contact-hero",
       "agenda",
-      "contact-main"
+      "contact-main",
+      "map"
     ],
     "css": [
       "contact",
-      "agenda"
+      "agenda",
+      "map"
     ],
     "js": [
       "contact",
