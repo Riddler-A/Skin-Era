@@ -15,7 +15,7 @@ src/
   layout.html          estructura base (head, scripts)
   partials/            una sección = un parcial (header, hero, ...)
   content/
-    site.json          datos globales (WhatsApp, redes, fecha de lanzamiento)
+    site.json          datos globales (redes, fecha de lanzamiento)
     es.json            textos en español
     en.json            (futuro) al crearlo se genera /en/ automáticamente
   css/                 tokens.css (marca) + un CSS por sección

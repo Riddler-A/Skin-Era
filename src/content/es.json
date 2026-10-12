@@ -108,7 +108,7 @@
   "commitment": {
     "eyebrow": "Nuestro compromiso",
     "title": "Tu piel merece un cuidado real",
-    "lead": "No vendemos un procedimiento: cuidamos tu piel, tu comodidad y tu confianza, desde que nos escribes hasta que regresas.",
+    "lead": "No vendemos un procedimiento: cuidamos tu piel, tu comodidad y tu confianza, desde que agendas hasta que regresas.",
     "items": {
       "hygiene": {
         "title": "Higiene visible",
@@ -191,9 +191,8 @@
   },
   "cta": {
     "title": "Cuando quieras, aquí estamos",
-    "text": "Conoce nuestros servicios o escríbenos para resolver tus dudas antes de tu primera cita.",
-    "primary": "Ver servicios",
-    "secondary": "Escríbenos"
+    "text": "Conoce nuestros servicios y agenda tu cita cuando quieras.",
+    "primary": "Ver servicios"
   },
   "services": {
     "_pendiente": "Lista PROVISIONAL por zonas: confirmar con Jass los servicios \"sí o sí\" antes de publicar. Sin precios por decisión del cliente.",
@@ -255,13 +254,12 @@
           "text": "Evaluamos tu piel y tu sensibilidad antes de empezar, y ajustamos el servicio a ti."
         }
       },
-      "more": "¿No ves tu zona o tienes dudas? Escríbenos y te orientamos. Ahí mismo te compartimos tarifas y disponibilidad."
+      "more": "¿No ves tu zona o tienes dudas? Agenda tu cita y te orientamos sobre el servicio y su disponibilidad."
     },
     "cta": {
       "title": "Empieza tu nueva era",
       "text": "Cuéntanos qué zona te interesa y te ayudamos a elegir el servicio y el mejor horario.",
-      "primary": "Agendar",
-      "secondary": "Escríbenos"
+      "primary": "Agendar"
     }
   },
   "contact": {
@@ -281,16 +279,13 @@
       "submit": "Solicitar cita",
       "sending": "Enviando…",
       "ok": "¡Gracias! Recibimos tu solicitud y te contactaremos por WhatsApp muy pronto.",
-      "error": "No pudimos enviarlo. Inténtalo de nuevo o escríbenos por otro medio.",
+      "error": "No pudimos enviarlo. Inténtalo de nuevo en unos minutos.",
       "privacy": "Usaremos tus datos únicamente para responderte sobre tu cita.",
       "honeypot": "No llenar si eres humano",
       "intro": "Si prefieres, te contactamos por WhatsApp para ayudarte a elegir el servicio y el horario."
     },
     "info": {
       "title": "Otras formas de contactarnos",
-      "whatsapp": "WhatsApp",
-      "whatsappCta": "Escribir por WhatsApp",
-      "whatsappMsg": "Hola, me gustaría información sobre depilación con cera en Skin Era.",
       "social": "Redes",
       "locationTitle": "Dónde estamos",
       "location": "Puerto Vallarta, Jalisco. Muy pronto compartiremos la dirección de nuestro estudio."
@@ -359,7 +354,7 @@
     "hero": {
       "eyebrow": "Preguntas frecuentes",
       "title": "Resolvemos tus dudas",
-      "lead": "Todo lo que quizá te estás preguntando antes de tu primera cita. Si no encuentras tu respuesta, escríbenos."
+      "lead": "Todo lo que quizá te estás preguntando antes de tu primera cita. Si no encuentras tu respuesta, agenda tu cita y te la resolvemos."
     },
     "groups": {
       "before": "Antes de tu cita",
@@ -386,7 +381,7 @@
       },
       {
         "q": "¿A quién atienden y desde qué edad?",
-        "a": "Atendemos a mujeres y hombres a partir de los 16 años. Si tienes dudas sobre tu caso o la zona que te interesa, escríbenos y te orientamos.",
+        "a": "Atendemos a mujeres y hombres a partir de los 16 años. Si tienes dudas sobre tu caso o la zona que te interesa, agenda tu cita y te orientamos.",
         "pending": false
       }
     ],
@@ -443,8 +438,8 @@
     ],
     "cta": {
       "title": "¿No encontraste tu respuesta?",
-      "text": "Escríbenos y te ayudamos a resolver tus dudas antes de tu primera cita.",
-      "primary": "Escríbenos",
+      "text": "Agenda tu cita y resolvemos tus dudas antes de empezar.",
+      "primary": "Agendar mi cita",
       "secondary": "Ver servicios"
     }
   },
@@ -454,7 +449,7 @@
     "hero": {
       "eyebrow": "Tu primera vez",
       "title": "Tu primera cita, paso a paso",
-      "lead": "No necesitas saber nada antes. Así es tu visita a Skin Era, desde que nos escribes hasta que sales con la piel cuidada."
+      "lead": "No necesitas saber nada antes. Así es tu visita a Skin Era, desde que agendas hasta que sales con la piel cuidada."
     },
     "steps": {
       "title": "Así es tu cita"

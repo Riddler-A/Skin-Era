@@ -38,13 +38,6 @@
     <aside class="contact-info" aria-labelledby="info-titulo">
       <h2 class="contact-info__title" id="info-titulo">{{contact.info.title}}</h2>
 
-      {{#if site.whatsapp}}
-      <div class="info-block">
-        <h3>{{contact.info.whatsapp}}</h3>
-        <a class="btn btn--ghost" href="https://wa.me/{{site.whatsapp}}?text={{waText}}" rel="noopener">{{contact.info.whatsappCta}}</a>
-      </div>
-      {{/if}}
-
       <div class="info-block">
         <h3>{{contact.info.locationTitle}}</h3>
         <p>{{contact.info.location}}</p>

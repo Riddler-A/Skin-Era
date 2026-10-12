@@ -101,8 +101,7 @@ async function build() {
         jsonLd: page.id === 'faq' ? jsonLd : '',
         agendaI18n: JSON.stringify(copy.contact?.agenda?.js ?? {}).replace(/</g, '\\u003c'),
         year: new Date().getFullYear(),
-        hasSocial: Boolean(site.instagram || site.facebook || site.tiktok || site.whatsapp),
-        waText: encodeURIComponent(copy.contact?.info?.whatsappMsg ?? ''),
+        hasSocial: Boolean(site.instagram || site.facebook || site.tiktok),
         cssLinks: [...(page.layout === 'bare' ? ['tokens', 'base'] : baseCss), ...page.css].filter(n => existsSync(join(SRC, 'css', `${n}.css`)))
           .map(n => `<link rel="stylesheet" href="/css/${n}.css">`).join('\n  '),
         pageScripts: (page.js ?? []).map(n => `<script src="/js/${n}.js" defer></script>`).join('\n  '),
