@@ -11,5 +11,6 @@
     "enabled": false,
     "date": null
   },
-  "showDrafts": true
+  "showDrafts": true,
+  "agendaUrl": "https://alexisconsultor.netlify.app/embed/agenda"
 }

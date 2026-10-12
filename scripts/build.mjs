@@ -66,6 +66,7 @@ async function build() {
   await mkdir(DIST, { recursive: true });
 
   const site = JSON.parse(await readFile(join(SRC, 'content/site.json'), 'utf8'));
+  site.agendaOrigin = site.agendaUrl ? new URL(site.agendaUrl).origin : '';
   const partials = {};
   for (const f of await readdir(join(SRC, 'partials'))) {
     partials[f.replace('.html', '')] = await readFile(join(SRC, 'partials', f), 'utf8');

@@ -75,13 +75,15 @@
     "path": "agendar",
     "sections": [
       "contact-hero",
+      "agenda",
       "contact-main"
     ],
     "css": [
       "contact"
     ],
     "js": [
-      "contact"
+      "contact",
+      "agenda"
     ]
   },
   {
