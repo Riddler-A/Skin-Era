@@ -10,7 +10,7 @@ if (root) {
   const els = {
     picker: q('[data-picker]'), days: q('[data-days]'), msg: q('[data-msg]'), label: q('[data-week-label]'),
     prev: q('[data-prev]'), next: q('[data-next]'), form: q('[data-agenda-form]'), chosen: q('[data-chosen]'),
-    change: q('[data-change]'), submit: q('[data-submit]'), status: q('[data-agenda-status]'),
+    submit: q('[data-submit]'), status: q('[data-agenda-status]'),
     done: q('[data-done]'), doneText: q('[data-done-text]'), service: q('#a-servicio'),
   };
   const state = { data: null, start: null, busy: false };
@@ -27,9 +27,16 @@ if (root) {
     els.msg.classList.toggle('is-error', error);
   }
 
+  function setChosen(start) {
+    state.start = start;
+    const chosen = Boolean(start);
+    els.chosen.textContent = chosen ? `${t.chosen}: ${cap(longDate.format(new Date(start)))}` : els.chosen.dataset.empty;
+    els.chosen.classList.toggle('is-chosen', chosen);
+    els.submit.disabled = !chosen;
+  }
+
   function clearSelection() {
-    state.start = null;
-    els.form.hidden = true;
+    setChosen(null);
     els.days.querySelectorAll('.slot[aria-pressed="true"]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
   }
 
@@ -91,20 +98,13 @@ if (root) {
   els.days.addEventListener('click', (e) => {
     const btn = e.target.closest('button.slot');
     if (!btn || btn.disabled) return;
-    const firstTime = els.form.hidden;
-    state.start = btn.dataset.start;
     els.days.querySelectorAll('.slot').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
-    els.chosen.textContent = `${t.chosen}: ${cap(longDate.format(new Date(state.start)))}`;
+    setChosen(btn.dataset.start);
     els.status.textContent = '';
     els.status.classList.remove('is-error');
-    els.form.hidden = false;
-    if (firstTime) els.form.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+    // En pantallas angostas el formulario queda debajo: se acerca a la vista.
+    if (els.form.getBoundingClientRect().top > innerHeight * 0.85) els.form.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
     els.form.querySelector('#a-nombre').focus({ preventScroll: true });
-  });
-
-  els.change.addEventListener('click', () => {
-    clearSelection();
-    els.days.querySelector('.slot:not(:disabled)')?.focus();
   });
 
   els.form.addEventListener('submit', async (e) => {
@@ -128,7 +128,7 @@ if (root) {
         const data = await res.json();
         els.doneText.textContent = (t.done || '').replace('{fecha}', cap(data.label || longDate.format(new Date(state.start))));
         els.picker.hidden = true;
-        els.form.hidden = true;
+        els.form.closest('.agenda__side').hidden = true;
         els.done.hidden = false;
         els.form.reset();
         els.done.focus();
@@ -148,7 +148,7 @@ if (root) {
       els.status.textContent = t.errGeneric;
     } finally {
       state.busy = false;
-      els.submit.disabled = false;
+      els.submit.disabled = !state.start; // sin horario elegido, el botón queda deshabilitado
       els.submit.textContent = label;
     }
   });

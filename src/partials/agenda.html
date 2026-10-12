@@ -6,7 +6,7 @@
     <p class="agenda__lead">{{contact.agenda.lead}}</p>
 
     <div class="agenda__panel">
-      <div data-picker>
+      <div class="agenda__cal" data-picker>
         <div class="agenda__nav" role="group" aria-label="{{contact.agenda.weekNav}}">
           <button class="agenda__arrow" type="button" data-prev aria-label="{{contact.agenda.prev}}">←</button>
           <p class="agenda__week" data-week-label aria-live="polite"></p>
@@ -14,18 +14,19 @@
         </div>
         <p class="agenda__msg" data-msg>{{contact.agenda.loading}}</p>
         <div class="agenda__days" data-days></div>
+        <p class="agenda__note">{{contact.agenda.note}}</p>
       </div>
 
-      <form class="agenda__form" data-agenda-form hidden novalidate>
-        <p class="agenda__chosen" data-chosen></p>
-        <div class="agenda__fields">
+      <div class="agenda__side">
+        <form class="agenda__form" data-agenda-form novalidate>
+          <p class="agenda__notice" data-chosen data-empty="{{contact.agenda.pick}}" aria-live="polite">{{contact.agenda.pick}}</p>
           <div class="field">
             <label for="a-nombre">{{contact.agenda.form.name}}</label>
-            <input id="a-nombre" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80">
+            <input id="a-nombre" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" placeholder="{{contact.agenda.form.namePh}}">
           </div>
           <div class="field">
             <label for="a-telefono">{{contact.agenda.form.phone}}</label>
-            <input id="a-telefono" name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9+\(\)\-\s]{8,}" maxlength="30">
+            <input id="a-telefono" name="phone" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9+\(\)\-\s]{8,}" maxlength="30" placeholder="{{contact.agenda.form.phonePh}}">
           </div>
           <div class="field">
             <label for="a-servicio">{{contact.agenda.form.service}}</label>
@@ -36,19 +37,16 @@
               {{/each}}
             </select>
           </div>
-          <div class="field field--wide">
+          <div class="field">
             <label for="a-notas">{{contact.agenda.form.notes}}</label>
             <textarea id="a-notas" name="notes" rows="3" maxlength="1000"></textarea>
           </div>
-        </div>
-        <p class="sr-only"><label>{{contact.agenda.form.honeypot}} <input name="empresa" tabindex="-1" autocomplete="off"></label></p>
-        <div class="agenda__actions">
-          <button class="btn btn--primary" type="submit" data-submit>{{contact.agenda.form.submit}}</button>
-          <button class="btn btn--ghost" type="button" data-change>{{contact.agenda.form.change}}</button>
-        </div>
-        <p class="agenda__status" role="status" aria-live="polite" data-agenda-status></p>
-        <p class="agenda__privacy">{{contact.agenda.form.privacy}}</p>
-      </form>
+          <p class="sr-only"><label>{{contact.agenda.form.honeypot}} <input name="empresa" tabindex="-1" autocomplete="off"></label></p>
+          <button class="btn btn--primary agenda__submit" type="submit" data-submit disabled>{{contact.agenda.form.submit}}</button>
+          <p class="agenda__status" role="status" aria-live="polite" data-agenda-status></p>
+          <p class="agenda__privacy">{{contact.agenda.form.privacy}}</p>
+        </form>
+      </div>
 
       <div class="agenda__done" data-done hidden role="status" tabindex="-1">
         <h3 class="agenda__done-title">{{contact.agenda.js.doneTitle}}</h3>

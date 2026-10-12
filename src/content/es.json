@@ -309,9 +309,10 @@
         "serviceNone": "Aún no lo sé, necesito orientación",
         "notes": "Algo que debamos saber (opcional)",
         "submit": "Confirmar cita",
-        "change": "Cambiar horario",
         "privacy": "Usaremos tus datos únicamente para contactarte sobre tu cita.",
-        "honeypot": "No llenar si eres humano"
+        "honeypot": "No llenar si eres humano",
+        "namePh": "Tu nombre",
+        "phonePh": "322 123 4567"
       },
       "js": {
         "chosen": "Horario elegido",
@@ -324,7 +325,9 @@
         "errBusy": "Hay muchas solicitudes en este momento. Inténtalo de nuevo en unos minutos.",
         "errGeneric": "No pudimos agendar tu cita. Inténtalo de nuevo o déjanos tus datos en el formulario de abajo.",
         "errLoad": "No pudimos cargar los horarios. Inténtalo de nuevo."
-      }
+      },
+      "pick": "Elige un horario en el calendario.",
+      "note": "Horario del centro de México. Los horarios tachados ya están ocupados."
     }
   },
   "thanks": {
