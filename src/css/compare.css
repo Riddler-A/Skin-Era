@@ -36,3 +36,4 @@
 @media (min-width: 62em) {
   .compare__inner { grid-template-columns: 0.8fr 1.2fr; gap: var(--space-6); }
 }
+.cmp--photo { aspect-ratio: 1 / 1; }

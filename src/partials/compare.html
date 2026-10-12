@@ -9,7 +9,7 @@
     </div>
 
     <!-- Comparador: "después" queda debajo y "antes" encima, recortado por la barra -->
-    <div class="cmp" data-compare data-valuetext="{{beforeAfter.valueText}}" data-reveal>
+    <div class="cmp{{#if compareReal}} cmp--photo{{/if}}" data-compare data-valuetext="{{beforeAfter.valueText}}" data-reveal>
       <div class="cmp__layer cmp__after">
         {{#if compareReal}}<img src="{{beforeAfter.after.img}}" alt="{{beforeAfter.after.alt}}" loading="lazy" draggable="false">{{/if}}
         {{#if comparePlaceholder}}<div class="cmp__ph cmp__ph--after" aria-hidden="true"><img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" draggable="false"></div>{{/if}}

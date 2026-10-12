@@ -640,13 +640,13 @@
     "valueText": "{antes}% antes, {despues}% después",
     "before": {
       "label": "Antes",
-      "img": "",
-      "alt": ""
+      "img": "/assets/img/antes.webp",
+      "alt": "Rostro con vello visible en el bigote, antes de la depilación con cera"
     },
     "after": {
       "label": "Después",
-      "img": "",
-      "alt": ""
+      "img": "/assets/img/despues.webp",
+      "alt": "Mismo rostro con la piel del bigote suave y sin vello, después de la depilación con cera"
     }
   }
 }
