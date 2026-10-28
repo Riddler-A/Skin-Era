@@ -13,6 +13,9 @@
 .site-nav__list { display: flex; gap: clamp(1rem, 2vw, 2rem); }
 .site-nav a:not(.btn) { text-decoration: none; font-size: 0.92rem; font-weight: 400; letter-spacing: 0.06em; padding-block: 0.4rem; background: linear-gradient(var(--ocre), var(--ocre)) 0 100% / 0 1px no-repeat; transition: background-size 0.3s var(--ease); }
 .site-nav a:not(.btn):hover { background-size: 100% 1px; }
+/* Página actual: subrayado fijo en ocre y texto más marcado */
+.site-nav a[aria-current="page"]:not(.btn) { font-weight: 500; color: var(--cafe-oscuro); background-image: linear-gradient(var(--ocre), var(--ocre)); background-size: 100% 2px; }
+.site-nav .btn[aria-current="page"] { box-shadow: 0 0 0 2px var(--crema-claro), 0 0 0 4px var(--ocre); }
 .site-nav .site-nav__cta { padding: 0.6em 1.4em; font-size: 0.82rem; }
 .site-nav__lang { font-size: 0.8rem; letter-spacing: 0.15em; }
 
@@ -43,6 +46,7 @@
   }
   .site-nav.is-open { transform: none; opacity: 1; visibility: visible; transition-delay: 0s; }
   .site-nav__list { flex-direction: column; gap: 0; }
+  .site-nav .site-nav__list a[aria-current="page"] { font-weight: 500; color: var(--cafe-oscuro); text-decoration: underline 2px var(--ocre); text-underline-offset: 0.35em; }
   .site-nav .site-nav__list a { display: block; font-size: 1.3rem; font-weight: 400; padding-block: 0.7rem; letter-spacing: 0.04em; background-image: none !important; }
   .site-nav__cta { align-self: flex-start; }
 }
