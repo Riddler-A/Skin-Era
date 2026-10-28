@@ -8,7 +8,7 @@
     "menu": "Abrir menú",
     "home": "Inicio",
     "about": "Quiénes somos",
-    "services": "Servicios",
+    "services": "The Menu",
     "firstTime": "Tu primera vez",
     "faq": "Preguntas",
     "book": "Agendar",
@@ -44,10 +44,10 @@
       }
     },
     "services": {
-      "title": "Servicios",
+      "title": "The Menu",
       "meta": {
-        "title": "Servicios | Skin Era",
-        "description": "Servicios de depilación con cera en Puerto Vallarta."
+        "title": "The Menu | Skin Era",
+        "description": "The Menu: servicios de depilación con cera en Puerto Vallarta."
       }
     },
     "firstTime": {
@@ -191,13 +191,13 @@
   },
   "cta": {
     "title": "Cuando quieras, aquí estamos",
-    "text": "Conoce nuestros servicios y agenda tu cita cuando quieras.",
-    "primary": "Ver servicios"
+    "text": "Conoce The Menu y agenda tu cita cuando quieras.",
+    "primary": "Ver The Menu"
   },
   "services": {
     "_pendiente": "Lista PROVISIONAL por zonas: confirmar con Jass los servicios \"sí o sí\" antes de publicar. Sin precios por decisión del cliente.",
     "hero": {
-      "eyebrow": "Servicios",
+      "eyebrow": "The Menu",
       "title": "Depilación con cera, a tu medida",
       "lead": "Elegimos la técnica y el ritmo según tu piel y tu vello. Tú decides hasta dónde y puedes pausar cuando quieras."
     },
@@ -442,7 +442,7 @@
       "title": "¿No encontraste tu respuesta?",
       "text": "Agenda tu cita y resolvemos tus dudas antes de empezar.",
       "primary": "Agendar mi cita",
-      "secondary": "Ver servicios"
+      "secondary": "Ver The Menu"
     }
   },
   "firstTime": {
