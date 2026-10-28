@@ -1,7 +1,8 @@
 {
   "a11y": {
     "skip": "Saltar al contenido",
-    "top": "Volver arriba"
+    "top": "Volver arriba",
+    "langSwitch": "Cambiar el idioma a inglés"
   },
   "nav": {
     "label": "Principal",
@@ -195,49 +196,19 @@
     "primary": "Ver The Menu"
   },
   "services": {
-    "_pendiente": "Lista PROVISIONAL por zonas: confirmar con Jass los servicios \"sí o sí\" antes de publicar. Sin precios por decisión del cliente.",
+    "_pendiente": "Lista por categoría tomada de la imagen de bienvenida de Skin Era. Textos de cada servicio PROVISIONALES: confirmar con Jass. Sin precios por decisión del cliente.",
     "hero": {
       "eyebrow": "The Menu",
       "title": "Depilación con cera, a tu medida",
       "lead": "Elegimos la técnica y el ritmo según tu piel y tu vello. Tú decides hasta dónde y puedes pausar cuando quieras."
     },
     "list": {
-      "title": "Elige tu zona",
+      "title": "Elige tu servicio",
       "book": "Agendar",
-      "hint": "Servicio"
+      "hint": "Servicio",
+      "jump": "Filtrar servicios",
+      "filterAll": "Todos"
     },
-    "items": [
-      {
-        "slug": "rostro",
-        "title": "Rostro",
-        "text": "Cejas, labio superior, mentón y contorno, con cuidado extra en la piel más delicada."
-      },
-      {
-        "slug": "axilas",
-        "title": "Axilas",
-        "text": "Un servicio rápido y limpio, ideal para mantener la piel suave de forma constante."
-      },
-      {
-        "slug": "brazos",
-        "title": "Brazos",
-        "text": "Brazos completos o medios brazos, con acabado parejo y piel tranquila."
-      },
-      {
-        "slug": "piernas",
-        "title": "Piernas",
-        "text": "Piernas completas, medias piernas o por zonas, según lo que necesites."
-      },
-      {
-        "slug": "bikini",
-        "title": "Bikini",
-        "text": "Atención discreta y respetuosa en una cabina privada. Te explicamos cada paso."
-      },
-      {
-        "slug": "espalda-y-pecho",
-        "title": "Espalda y pecho",
-        "text": "Para quienes buscan una piel libre de vello en torso, espalda u hombros."
-      }
-    ],
     "notes": {
       "title": "Incluido en cada visita",
       "items": {
@@ -260,6 +231,115 @@
       "title": "Empieza tu nueva era",
       "text": "Cuéntanos qué zona te interesa y te ayudamos a elegir el servicio y el mejor horario.",
       "primary": "Agendar"
+    },
+    "featured": {
+      "_pendiente": "Textos PROVISIONALES de Axila Spa y Brasileño Spa: confirmar con Jass qué incluye cada uno antes de publicar. Sin precios ni duraciones.",
+      "eyebrow": "Servicios destacados",
+      "title": "Nuestros favoritos",
+      "lead": "Dos servicios que queremos que conozcas primero.",
+      "badge": "Destacado",
+      "book": "Agendar",
+      "items": [
+        {
+          "slug": "axila-spa",
+          "title": "Axila Spa",
+          "text": "Depilación de axilas con un cuidado extra para la piel: un proceso limpio, rápido y tranquilo que te deja la zona suave."
+        },
+        {
+          "slug": "brasileno-spa",
+          "title": "Brasileño Spa",
+          "text": "Atención discreta y respetuosa en una cabina privada. Te explicamos cada paso y cuidamos tu comodidad de principio a fin."
+        }
+      ]
+    },
+    "damas": {
+      "title": "Damas",
+      "items": [
+        {
+          "slug": "damas-facial",
+          "title": "Área facial | mantenimiento",
+          "full": "Damas · Área facial | mantenimiento",
+          "text": "Cejas, labio superior, mentón y contorno, con cuidado extra en la piel más delicada, y mantenimiento para conservar el resultado."
+        },
+        {
+          "slug": "damas-brazos-axilas",
+          "title": "Brazos y axilas",
+          "full": "Damas · Brazos y axilas",
+          "text": "Brazos completos o medios brazos y axilas, con acabado parejo y piel tranquila."
+        },
+        {
+          "slug": "damas-corporal",
+          "title": "Corporal",
+          "full": "Damas · Corporal",
+          "text": "Depilación de zonas del cuerpo a tu medida: te orientamos según tu piel y lo que necesites."
+        },
+        {
+          "slug": "damas-piernas",
+          "title": "Piernas",
+          "full": "Damas · Piernas",
+          "text": "Piernas completas, medias piernas o por zonas, según lo que necesites."
+        },
+        {
+          "slug": "damas-bikini",
+          "title": "Bikini",
+          "full": "Damas · Bikini",
+          "text": "Atención discreta y respetuosa en una cabina privada. Te explicamos cada paso."
+        },
+        {
+          "slug": "damas-brasileno",
+          "title": "Brasileño",
+          "full": "Damas · Brasileño",
+          "text": "Atención discreta y respetuosa en una cabina privada. Te explicamos cada paso."
+        },
+        {
+          "slug": "damas-gluteos",
+          "title": "Glúteos",
+          "full": "Damas · Glúteos",
+          "text": "Depilación de glúteos con cuidado y privacidad, a tu ritmo y con tu comodidad primero."
+        },
+        {
+          "slug": "damas-spa",
+          "title": "SPA",
+          "full": "Damas · SPA",
+          "text": "Una experiencia de cuidado extra para tu piel, en un ambiente tranquilo y privado."
+        }
+      ]
+    },
+    "caballeros": {
+      "title": "Caballeros",
+      "note": "No realizamos bikini completo ni brasileño en hombres.",
+      "items": [
+        {
+          "slug": "caballeros-facial",
+          "title": "Área facial",
+          "full": "Caballeros · Área facial",
+          "text": "Depilación del área facial con cuidado en la piel más delicada."
+        },
+        {
+          "slug": "caballeros-espalda",
+          "title": "Espalda / espalda baja",
+          "full": "Caballeros · Espalda / espalda baja",
+          "text": "Para quienes buscan una piel libre de vello en espalda o espalda baja."
+        },
+        {
+          "slug": "caballeros-piernas",
+          "title": "Piernas",
+          "full": "Caballeros · Piernas",
+          "text": "Piernas completas, medias piernas o por zonas, según lo que necesites."
+        },
+        {
+          "slug": "caballeros-brazos-axilas",
+          "title": "Brazos y axilas",
+          "full": "Caballeros · Brazos y axilas",
+          "text": "Brazos completos o medios brazos y axilas, con acabado parejo y piel tranquila."
+        },
+        {
+          "slug": "caballeros-bikini",
+          "title": "Bikini",
+          "full": "Caballeros · Bikini",
+          "text": "Atención discreta y respetuosa en una cabina privada. Te explicamos cada paso."
+        }
+      ]
     }
   },
   "contact": {

@@ -1,0 +1,19 @@
+<section class="featured" id="destacados" aria-labelledby="destacados-titulo">
+  <div class="container">
+    <div class="featured__head" data-reveal>
+      <p class="eyebrow">{{services.featured.eyebrow}}</p>
+      <h2 class="featured__title" id="destacados-titulo">{{services.featured.title}}</h2>
+      <p class="featured__lead">{{services.featured.lead}}</p>
+    </div>
+    <ul class="featured__grid">
+      {{#each services.featured.items}}
+      <li class="featured__card" data-reveal>
+        <span class="featured__badge">{{services.featured.badge}}</span>
+        <h3 class="featured__name">{{this.title}}</h3>
+        <p class="featured__text">{{this.text}}</p>
+        <a class="btn btn--primary featured__cta" href="{{base}}/agendar/?servicio={{this.slug}}">{{services.featured.book}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

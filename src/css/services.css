@@ -36,3 +36,33 @@
   .services-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-5) var(--space-4); }
   .services-notes__list { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
 }
+
+/* Servicios destacados */
+.featured { padding-block: var(--space-4) var(--space-5); }
+.featured__head { display: grid; gap: var(--space-2); justify-items: start; margin-bottom: var(--space-4); }
+.featured__title { font-size: var(--step-h2); }
+.featured__lead { font-size: var(--step-lead); max-width: 40ch; }
+.featured__grid { display: grid; gap: var(--space-3); }
+.featured__card { position: relative; display: grid; align-content: start; justify-items: start; gap: var(--space-2); padding: var(--space-5) var(--space-4) var(--space-4); border-radius: 1.5rem; color: var(--crema-claro); background: radial-gradient(120% 90% at 20% 0%, rgb(232 222 197 / 0.22), transparent 55%), linear-gradient(160deg, var(--cafe) 0%, var(--cafe-oscuro) 100%); box-shadow: 0 30px 50px -34px rgb(84 67 58 / 0.7); overflow: hidden; }
+.featured__card:nth-child(even) { background: radial-gradient(120% 90% at 80% 0%, rgb(232 222 197 / 0.3), transparent 55%), linear-gradient(160deg, var(--ocre) 0%, var(--cafe) 100%); }
+.featured__badge { padding: 0.3em 0.9em; border-radius: var(--radius); background: rgb(244 239 228 / 0.16); border: 1px solid rgb(244 239 228 / 0.4); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.featured__name { font-size: clamp(2rem, 1.5rem + 2vw, 3rem); color: var(--crema-claro); }
+.featured__text { max-width: 36ch; color: var(--crema); }
+.featured__cta { background: var(--crema-claro); color: var(--cafe-oscuro); }
+.featured__cta:hover { background: var(--crema); }
+@media (min-width: 48em) { .featured__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); } }
+
+/* Damas / Caballeros */
+.services-group { scroll-margin-top: calc(var(--header-h) + 1rem); }
+.services-group + .services-group { margin-top: var(--space-6); }
+.services-group__title { font-size: var(--step-h2); margin-bottom: var(--space-4); padding-bottom: var(--space-2); border-bottom: 1px solid var(--linea); }
+.services-group__note { margin-top: var(--space-3); padding: 0.7em 1.1em; border: 1px dashed var(--ocre); border-radius: 1rem; font-size: 0.95rem; max-width: 52ch; }
+
+/* Botones de filtrado (se muestran solo con JavaScript; sin él se ven todos los servicios) */
+.services-filter { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-4); }
+.services-filter[hidden] { display: none; }
+.services-filter__btn { padding: 0.6em 1.6em; font-size: 0.85rem; cursor: pointer; font-family: var(--font-body); background: transparent; color: var(--cafe); border: 1px solid var(--cafe); }
+.services-filter__btn:hover { background: var(--crema); }
+.services-filter__btn[aria-pressed="true"] { background: var(--cafe); color: var(--crema-claro); }
+.services-group[hidden] { display: none; }
+.services-group:not([hidden]) + .services-group:not([hidden]) { margin-top: var(--space-6); }

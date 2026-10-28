@@ -1,0 +1,731 @@
+{
+  "a11y": {
+    "skip": "Skip to content",
+    "top": "Back to top",
+    "langSwitch": "Switch language to Spanish"
+  },
+  "nav": {
+    "label": "Main",
+    "menu": "Open menu",
+    "home": "Home",
+    "about": "About us",
+    "services": "The Menu",
+    "firstTime": "Your first time",
+    "faq": "FAQ",
+    "book": "Book",
+    "blog": "Blog"
+  },
+  "hero": {
+    "eyebrow": "Waxing · Puerto Vallarta",
+    "title": "A new era for your skin",
+    "lead": "We care for your skin before any service. A private, clean, calm space with care that explains every step.",
+    "countdownLabel": "Opening in",
+    "cdDays": "days",
+    "cdHours": "hours",
+    "cdMinutes": "min",
+    "cdSeconds": "sec",
+    "pillarsLabel": "What defines us",
+    "pillar1": "Visible hygiene",
+    "pillar2": "Cruelty-free waxes",
+    "pillar3": "Personalized care",
+    "ctaSoon": "Get notified of our opening"
+  },
+  "pages": {
+    "home": {
+      "meta": {
+        "title": "Skin Era | Waxing in Puerto Vallarta",
+        "description": "A new era for your skin. Waxing in Puerto Vallarta with visible hygiene, informed care and a private space designed for your comfort."
+      }
+    },
+    "about": {
+      "title": "About us",
+      "meta": {
+        "title": "About us | Skin Era",
+        "description": "Learn about the purpose and values of Skin Era, waxing in Puerto Vallarta."
+      }
+    },
+    "services": {
+      "title": "The Menu",
+      "meta": {
+        "title": "The Menu | Skin Era",
+        "description": "The Menu: waxing services in Puerto Vallarta."
+      }
+    },
+    "firstTime": {
+      "title": "Your first time",
+      "meta": {
+        "title": "Your first time | Skin Era",
+        "description": "What to expect at your first waxing appointment at Skin Era."
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "meta": {
+        "title": "FAQ | Skin Era",
+        "description": "Answers to your questions about waxing at Skin Era."
+      }
+    },
+    "contact": {
+      "title": "Book",
+      "meta": {
+        "title": "Book your appointment | Skin Era",
+        "description": "Book your waxing appointment at Skin Era, Puerto Vallarta. Tell us which area you're interested in and we'll help you choose the service and time."
+      }
+    },
+    "thanks": {
+      "title": "Thank you",
+      "meta": {
+        "title": "Thank you | Skin Era",
+        "description": "We received your message."
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "meta": {
+        "title": "Blog | Skin Era",
+        "description": "Tips and facts about skin care and waxing in Puerto Vallarta, explained simply."
+      }
+    },
+    "postBenefits": {
+      "title": "Benefits of waxing",
+      "pending": true,
+      "meta": {
+        "title": "Benefits of waxing you may not know about | Skin Era",
+        "description": "What happens when hair is removed from the root: smooth skin for longer, finer hair with consistency and other benefits of waxing."
+      }
+    },
+    "soon": {
+      "title": "Coming soon",
+      "meta": {
+        "title": "Coming soon | Skin Era",
+        "description": "Skin Era opens very soon in Puerto Vallarta. Leave us your details and we'll let you know when booking opens."
+      }
+    }
+  },
+  "stub": {
+    "text": "We're getting this page ready. You'll find it here very soon.",
+    "back": "Back to home"
+  },
+  "commitment": {
+    "eyebrow": "Our commitment",
+    "title": "Your skin deserves real care",
+    "lead": "We don't sell a procedure: we care for your skin, your comfort and your trust, from the moment you book until you come back.",
+    "items": {
+      "hygiene": {
+        "title": "Visible hygiene",
+        "text": "Spotless treatment rooms, tools, wax warmers and dishes, in plain sight: before, during and after your service."
+      },
+      "crueltyFree": {
+        "title": "Cruelty-free",
+        "text": "We choose waxes with traceable ingredients and no animal testing. It's a requirement, not an option."
+      },
+      "informed": {
+        "title": "Informed care",
+        "text": "We explain every step, answer your questions, and you can pause the service whenever you need."
+      },
+      "privacy": {
+        "title": "Privacy and calm",
+        "text": "A private room, clean scent, soft light and calm music so you can arrive and relax."
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About us",
+      "title": "A new way to care for your skin",
+      "lead": "Skin Era is a waxing studio in Puerto Vallarta where technique, hygiene and a personal touch come before rushing."
+    },
+    "story": {
+      "eyebrow": "How it began",
+      "title": "The place our founder wanted to find",
+      "p1": "Skin Era comes from its founder's experience as a client: little technique, little attention, neglected facilities and very little awareness of real skin care.",
+      "p2": "Instead of settling, she decided to create the space she would have wanted to find: one where every step is explained, every detail is cared for and skin is treated with respect from the very first appointment.",
+      "quote": "Giving skin a new era."
+    },
+    "purpose": {
+      "eyebrow": "What guides us",
+      "items": {
+        "purpose": {
+          "label": "Purpose",
+          "text": "To start a new way of experiencing skin care and hair removal: professional, hygienic, respectful and inclusive, where everyone feels comfortable, safe and well cared for."
+        },
+        "mission": {
+          "label": "Mission",
+          "text": "To provide waxing and body care services with high standards of quality, hygiene, technique and personalized attention, in a private, beautiful and relaxing environment."
+        },
+        "vision": {
+          "label": "Vision",
+          "text": "To be the leading brand in waxing and body care in Puerto Vallarta, recognized for its premium experience, its hygiene protocols and the trust it builds."
+        }
+      }
+    },
+    "values": {
+      "eyebrow": "Our values",
+      "title": "What we never compromise on",
+      "items": {
+        "respect": {
+          "title": "Respect",
+          "text": "We treat everyone with dignity and inclusion, with no judgment about appearance, body, weight, background or personal circumstances."
+        },
+        "hygiene": {
+          "title": "Hygiene",
+          "text": "Spotless spaces, tools, treatment rooms and processes. Cleanliness is visible and part of the experience."
+        },
+        "quality": {
+          "title": "Quality",
+          "text": "Techniques, products and processes chosen with care to achieve safe, consistent results."
+        },
+        "professionalism": {
+          "title": "Professionalism",
+          "text": "A trained team that can answer your questions from day one."
+        },
+        "skincare": {
+          "title": "Real skin care",
+          "text": "We don't sell services just to sell: we assess your skin, your sensitivity and your needs."
+        },
+        "experience": {
+          "title": "Experience",
+          "text": "Scent, light, privacy, temperature and music, all curated so you feel calm."
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Whenever you're ready, we're here",
+    "text": "Explore The Menu and book your appointment whenever you like.",
+    "primary": "See The Menu"
+  },
+  "services": {
+    "_pendiente": "Lista por categoría tomada de la imagen de bienvenida de Skin Era. Textos de cada servicio PROVISIONALES: confirmar con Jass. Sin precios por decisión del cliente.",
+    "hero": {
+      "eyebrow": "The Menu",
+      "title": "Waxing, tailored to you",
+      "lead": "We choose the technique and pace based on your skin and your hair. You decide how far to go, and you can pause whenever you like."
+    },
+    "list": {
+      "title": "Choose your service",
+      "book": "Book",
+      "hint": "Service",
+      "jump": "Filter services",
+      "filterAll": "All"
+    },
+    "notes": {
+      "title": "Included in every visit",
+      "items": {
+        "age": {
+          "title": "From age 16",
+          "text": "We welcome women and men from age 16."
+        },
+        "retouch": {
+          "title": "Free touch-up",
+          "text": "If you need it, we'll touch it up at no cost within 3 days afterwards."
+        },
+        "skin": {
+          "title": "Based on your skin",
+          "text": "We assess your skin and sensitivity before starting, and adapt the service to you."
+        }
+      },
+      "more": "Can't see your area or have questions? Book your appointment and we'll guide you on the service and its availability."
+    },
+    "cta": {
+      "title": "Start your new era",
+      "text": "Tell us which area you're interested in and we'll help you choose the service and the best time.",
+      "primary": "Book"
+    },
+    "featured": {
+      "_pendiente": "Textos PROVISIONALES de Axila Spa y Brasileño Spa: confirmar con Jass qué incluye cada uno antes de publicar. Sin precios ni duraciones.",
+      "eyebrow": "Featured services",
+      "title": "Our favorites",
+      "lead": "Two services we'd like you to discover first.",
+      "badge": "Featured",
+      "book": "Book",
+      "items": [
+        {
+          "slug": "axila-spa",
+          "title": "Underarm Spa",
+          "text": "Underarm waxing with extra skin care: a clean, quick and calm process that leaves the area smooth."
+        },
+        {
+          "slug": "brasileno-spa",
+          "title": "Brazilian Spa",
+          "text": "Discreet, respectful care in a private room. We explain every step and look after your comfort from start to finish."
+        }
+      ]
+    },
+    "damas": {
+      "title": "Women",
+      "items": [
+        {
+          "slug": "damas-facial",
+          "title": "Facial area | maintenance",
+          "full": "Women · Facial area | maintenance",
+          "text": "Eyebrows, upper lip, chin and contour, with extra care for the most delicate skin, plus maintenance to keep the result."
+        },
+        {
+          "slug": "damas-brazos-axilas",
+          "title": "Arms and underarms",
+          "full": "Women · Arms and underarms",
+          "text": "Full or half arms and underarms, with an even finish and calm skin."
+        },
+        {
+          "slug": "damas-corporal",
+          "title": "Body",
+          "full": "Women · Body",
+          "text": "Waxing for areas of the body, tailored to you: we guide you based on your skin and what you need."
+        },
+        {
+          "slug": "damas-piernas",
+          "title": "Legs",
+          "full": "Women · Legs",
+          "text": "Full legs, half legs or specific areas, depending on what you need."
+        },
+        {
+          "slug": "damas-bikini",
+          "title": "Bikini",
+          "full": "Women · Bikini",
+          "text": "Discreet, respectful care in a private room. We explain every step."
+        },
+        {
+          "slug": "damas-brasileno",
+          "title": "Brazilian",
+          "full": "Women · Brazilian",
+          "text": "Discreet, respectful care in a private room. We explain every step."
+        },
+        {
+          "slug": "damas-gluteos",
+          "title": "Buttocks",
+          "full": "Women · Buttocks",
+          "text": "Buttock waxing with care and privacy, at your pace and with your comfort first."
+        },
+        {
+          "slug": "damas-spa",
+          "title": "SPA",
+          "full": "Women · SPA",
+          "text": "An extra-care experience for your skin, in a calm, private setting."
+        }
+      ]
+    },
+    "caballeros": {
+      "title": "Men",
+      "note": "We do not offer full bikini or Brazilian waxing for men.",
+      "items": [
+        {
+          "slug": "caballeros-facial",
+          "title": "Facial area",
+          "full": "Men · Facial area",
+          "text": "Facial area waxing with care for the most delicate skin."
+        },
+        {
+          "slug": "caballeros-espalda",
+          "title": "Back / lower back",
+          "full": "Men · Back / lower back",
+          "text": "For those who want hair-free skin on the back or lower back."
+        },
+        {
+          "slug": "caballeros-piernas",
+          "title": "Legs",
+          "full": "Men · Legs",
+          "text": "Full legs, half legs or specific areas, depending on what you need."
+        },
+        {
+          "slug": "caballeros-brazos-axilas",
+          "title": "Arms and underarms",
+          "full": "Men · Arms and underarms",
+          "text": "Full or half arms and underarms, with an even finish and calm skin."
+        },
+        {
+          "slug": "caballeros-bikini",
+          "title": "Bikini",
+          "full": "Men · Bikini",
+          "text": "Discreet, respectful care in a private room. We explain every step."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Book",
+      "title": "Book your appointment",
+      "lead": "Book your appointment online or leave us your details, and we'll contact you on WhatsApp to help you choose the service and time."
+    },
+    "form": {
+      "title": "Leave us your details",
+      "name": "Name",
+      "phone": "Phone or WhatsApp",
+      "service": "Service of interest",
+      "serviceNone": "I'm not sure yet, I need guidance",
+      "message": "Anything we should know? (optional)",
+      "messageHint": "You don't need to share health information: we'll go over that with you in person.",
+      "submit": "Request appointment",
+      "sending": "Sending…",
+      "ok": "Thank you! We received your request and will contact you on WhatsApp very soon.",
+      "error": "We couldn't send it. Please try again in a few minutes.",
+      "privacy": "We'll only use your details to reply about your appointment.",
+      "honeypot": "Leave empty if you are human",
+      "intro": "If you prefer, we'll contact you on WhatsApp to help you choose the service and time."
+    },
+    "info": {
+      "title": "Other ways to reach us",
+      "social": "Social",
+      "locationTitle": "Where we are",
+      "location": "Puerto Vallarta, Jalisco. We'll share our studio's address very soon."
+    },
+    "agenda": {
+      "title": "Choose your day and time",
+      "lead": "Pick an available time and leave us your details. We'll contact you on WhatsApp to confirm your appointment.",
+      "weekNav": "Change week",
+      "prev": "Previous week",
+      "next": "Next week",
+      "loading": "Loading times…",
+      "form": {
+        "name": "Name",
+        "phone": "WhatsApp",
+        "service": "Service of interest",
+        "serviceNone": "I'm not sure yet, I need guidance",
+        "notes": "Anything we should know (optional)",
+        "submit": "Confirm appointment",
+        "privacy": "We'll only use your details to contact you about your appointment.",
+        "honeypot": "Leave empty if you are human",
+        "namePh": "Your name",
+        "phonePh": "322 123 4567"
+      },
+      "js": {
+        "chosen": "Selected time",
+        "sending": "Sending…",
+        "doneTitle": "All set!",
+        "done": "Your appointment is reserved for {fecha}. We'll contact you on WhatsApp to confirm it.",
+        "noSlots": "No times available this week. Try the next one.",
+        "errTaken": "That time was just taken. Please choose another one.",
+        "errInvalid": "Please check your details: enter your name and a valid WhatsApp number.",
+        "errBusy": "There are many requests right now. Please try again in a few minutes.",
+        "errGeneric": "We couldn't book your appointment. Please try again or leave your details in the form below.",
+        "errLoad": "We couldn't load the times. Please try again.",
+        "demoBanner": "Demo view: these times are examples and appointments are not saved yet.",
+        "doneDemo": "This was a test: no appointment was saved."
+      },
+      "pick": "Pick a time on the calendar.",
+      "note": "Central Mexico time. Crossed-out times are already taken."
+    },
+    "map": {
+      "title": "Where we are located",
+      "text": "We're in Puerto Vallarta, Jalisco. We'll share the studio's exact address when we confirm your appointment.",
+      "iframeTitle": "Map of Puerto Vallarta, Jalisco",
+      "query": "Puerto Vallarta, Jalisco, Mexico",
+      "link": "Open in Google Maps"
+    }
+  },
+  "thanks": {
+    "title": "Message received!",
+    "text": "Thank you for writing to us. We'll reply very soon.",
+    "back": "Back to home"
+  },
+  "footer": {
+    "tagline": "A new era for your skin",
+    "desc": "Waxing in Puerto Vallarta, Jalisco. Visible hygiene, informed care and a space designed for your comfort.",
+    "navTitle": "Explore",
+    "contactTitle": "Contact",
+    "location": "Puerto Vallarta, Jalisco",
+    "book": "Book your appointment",
+    "socialTitle": "Follow us",
+    "rights": "All rights reserved.",
+    "backTop": "Back to top",
+    "blogLink": "Blog"
+  },
+  "faq": {
+    "_nota": "pending:true = respuesta en BORRADOR por confirmar con Jass. Con site.showDrafts=false no se publican ni entran al JSON-LD.",
+    "hero": {
+      "eyebrow": "Frequently asked questions",
+      "title": "We answer your questions",
+      "lead": "Everything you might be wondering before your first appointment. If you can't find your answer, book your appointment and we'll answer it."
+    },
+    "groups": {
+      "before": "Before your appointment",
+      "first": "Your first time",
+      "hygiene": "Hygiene and wax",
+      "after": "After your appointment"
+    },
+    "draftLabel": "Draft pending confirmation",
+    "before": [
+      {
+        "q": "Is my body suitable for waxing?",
+        "a": "In most cases, yes. Before we start, we check your skin and sensitivity in person. If something isn't advisable that day, such as an irritation, an injury, an active infection or certain treatments, we'll tell you honestly and suggest waiting. Your safety comes first.",
+        "pending": true
+      },
+      {
+        "q": "Can I come during my period?",
+        "a": "You can, although your skin may be more sensitive those days. If you prefer, book a few days before or after; we'll guide you when you book.",
+        "pending": true
+      },
+      {
+        "q": "How long should the hair be?",
+        "a": "Ideally about half a centimeter, roughly the size of a grain of rice. If it's longer, we trim it; if it's too short, we'll let you know so the wax works well.",
+        "pending": true
+      },
+      {
+        "q": "Who do you serve, and from what age?",
+        "a": "We welcome women and men from age 16. If you have questions about your case or the area you're interested in, book your appointment and we'll guide you.",
+        "pending": false
+      }
+    ],
+    "first": [
+      {
+        "q": "It's my first time, what can I expect?",
+        "a": "We greet you at reception, take you to a private room, and your technician explains the procedure before starting. During the service we talk you through each step, and afterwards we give you care recommendations for your skin.",
+        "pending": false
+      },
+      {
+        "q": "What if I don't feel comfortable?",
+        "a": "You can pause or stop the service at any time. Your comfort matters most and your technician works at your pace.",
+        "pending": false
+      },
+      {
+        "q": "Does it hurt?",
+        "a": "There may be brief discomfort; it varies by person, area and sensitivity. We choose the technique based on your skin, warn you before each step, and with consistency it usually gets easier.",
+        "pending": true
+      }
+    ],
+    "hygiene": [
+      {
+        "q": "Do you double-dip?",
+        "a": "No. We use a new applicator each time you need one and never reuse the same one in the wax. Treatment rooms, tools, warmers and dishes are also kept spotless and in plain sight.",
+        "pending": true
+      },
+      {
+        "q": "Do you use hard wax or soft wax?",
+        "a": "We choose on the spot, based on your skin assessment, the area and your hair type. You don't have to decide beforehand: we explain what we'll use and why.",
+        "pending": false
+      },
+      {
+        "q": "What wax do you use?",
+        "a": "We work with waxes made from traceable ingredients, with no animal testing, designed for different skin types.",
+        "pending": true
+      }
+    ],
+    "after": [
+      {
+        "q": "What if I need a touch-up?",
+        "a": "If you need a touch-up after your service, we do it at no cost within 3 days.",
+        "pending": false
+      },
+      {
+        "q": "If I have little hair, do you charge the same?",
+        "a": "Yes, the cost is the same. The price depends on the area and the service, not on the amount of hair. If you have questions about your case, tell us and we'll guide you before booking.",
+        "pending": true
+      },
+      {
+        "q": "What aftercare should I follow?",
+        "a": "When we finish we give you personalized recommendations. In general, avoid direct sun, sauna, pools, intense exercise and irritating products for the first 24 to 48 hours, and keep your skin moisturized.",
+        "pending": true
+      }
+    ],
+    "cta": {
+      "title": "Didn't find your answer?",
+      "text": "Book your appointment and we'll answer your questions before we start.",
+      "primary": "Book my appointment",
+      "secondary": "See The Menu"
+    }
+  },
+  "firstTime": {
+    "_nota": "pending:true = BORRADOR por confirmar con Jass (se oculta con site.showDrafts=false).",
+    "draftLabel": "Draft pending confirmation",
+    "hero": {
+      "eyebrow": "Your first time",
+      "title": "Your first appointment, step by step",
+      "lead": "You don't need to know anything beforehand. This is your visit to Skin Era, from the moment you book until you leave with well-cared-for skin."
+    },
+    "steps": {
+      "title": "What your appointment is like"
+    },
+    "prep": {
+      "title": "Before you come",
+      "lead": "Small details that make your visit more comfortable."
+    },
+    "comfort": {
+      "title": "Your comfort comes first",
+      "lead": "We take care of the atmosphere and the way we treat you so you feel at ease at every moment."
+    },
+    "faq": {
+      "title": "Questions about your first time",
+      "more": "See all questions"
+    },
+    "stepsList": [
+      {
+        "title": "Book your appointment",
+        "text": "Choose your service and leave us your details on the page. We'll contact you on WhatsApp to explain the right service and confirm your time.",
+        "pending": false
+      },
+      {
+        "title": "You arrive and we welcome you",
+        "text": "We give you a warm welcome at reception. Our team can answer your basic questions right from the start.",
+        "pending": false
+      },
+      {
+        "title": "You go to your room",
+        "text": "A private, clean, fragrant room with soft light and calm music, designed to help you relax.",
+        "pending": false
+      },
+      {
+        "title": "We talk about your skin",
+        "text": "Before starting, your technician asks about your skin, your sensitivity and your health.",
+        "pending": false
+      },
+      {
+        "title": "Your service",
+        "text": "Your technician explains the procedure and tells you each step, with hygiene in plain sight. You can pause or stop the service whenever you like.",
+        "pending": false
+      }
+    ],
+    "prepList": [
+      {
+        "title": "Hair length",
+        "text": "Ideally about half a centimeter, roughly the size of a grain of rice.",
+        "pending": true
+      },
+      {
+        "title": "Comfortable clothes",
+        "text": "Choose loose, soft clothing that won't rub the area after the service.",
+        "pending": true
+      },
+      {
+        "title": "Care for your skin that day",
+        "text": "Avoid exfoliating, intense sun or irritating products on the day of your appointment.",
+        "pending": true
+      },
+      {
+        "title": "Arrive unhurried",
+        "text": "Arrive a few minutes early to check in without rushing and ask your questions.",
+        "pending": true
+      },
+      {
+        "title": "If you're coming from work or the gym",
+        "text": "You can freshen up at ease before your service, with access to a full bathroom.",
+        "pending": true
+      }
+    ],
+    "comfortList": [
+      {
+        "title": "Privacy",
+        "text": "Every service takes place in a private room, with no rushing or interruptions."
+      },
+      {
+        "title": "Your questions",
+        "text": "Ask anything: how it works, what you'll feel, what aftercare to follow. We're here to explain."
+      },
+      {
+        "title": "Your pace",
+        "text": "You can ask for a pause or stop the service at any time. No explanations needed and no judgment."
+      }
+    ]
+  },
+  "blog": {
+    "_nota": "pending:true = BORRADOR por confirmar con Jass (se oculta con site.showDrafts=false). Los datos del artículo son información general: validar tono y afirmaciones antes de publicar.",
+    "draftLabel": "Draft pending confirmation",
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Skin care, made simple",
+      "lead": "Clear facts about waxing and skin care, explained the way someone who knows the subject would tell you."
+    },
+    "list": [
+      {
+        "title": "Benefits of waxing you may not know about",
+        "excerpt": "Beyond smooth skin: what happens when hair is removed from the root and why so many people give up the razor.",
+        "category": "Waxing",
+        "minutes": "3 min read",
+        "url": "blog/beneficios-depilacion-con-cera/",
+        "pending": true
+      }
+    ],
+    "read": "Read article",
+    "emptyText": "We'll publish our first articles here very soon.",
+    "backToBlog": "Back to the blog"
+  },
+  "blogPost": {
+    "benefits": {
+      "eyebrow": "Blog · Waxing",
+      "title": "Benefits of waxing you may not know about",
+      "lead": "Beyond smooth skin: what happens when hair is removed from the root and why so many people give up the razor.",
+      "meta": "Skin Era team · 3 min read",
+      "intro": "If you've waxed before, you probably know it lasts longer than shaving. What almost nobody mentions are the other effects: how the texture of your skin changes, what happens to your hair over the months and why the razor leaves that rough feeling.",
+      "sections": [
+        {
+          "title": "It's removed from the root",
+          "text": "A razor cuts hair at skin level. Wax removes it from the root, and new hair has to grow back from scratch. That's why skin stays smooth for several weeks, usually between 3 and 6, depending on the area and your growth rate.",
+          "text2": ""
+        },
+        {
+          "title": "No stubble feeling",
+          "text": "When you shave, the hair is left with a blunt, cut tip, and that tip feels rough when it grows back. With wax, new hair grows in with a fine, natural tip, so its return feels softer.",
+          "text2": ""
+        },
+        {
+          "title": "With consistency, hair tends to grow back finer",
+          "text": "Many people notice that after several sessions, hair grows back finer and less dense.",
+          "text2": "It doesn't happen the same way for everyone or in every area, but it's one of the changes people mention most."
+        },
+        {
+          "title": "A light exfoliation as a bonus",
+          "text": "When the wax is removed, some dead cells on the surface come off too, so skin usually looks more even and smooth after the service.",
+          "text2": "It doesn't replace your skin care routine, but it's an extra benefit you didn't expect."
+        },
+        {
+          "title": "Less time in your routine",
+          "text": "With a razor you have to repeat every few days. With wax, upkeep comes down to one appointment every few weeks, with no blades, nicks or foam.",
+          "text2": ""
+        },
+        {
+          "title": "A moment for yourself",
+          "text": "Done in a calm place with good care, a waxing appointment is also a pause in your week. At Skin Era we look after the atmosphere, the hygiene and the way we treat you so the experience feels that way.",
+          "text2": ""
+        }
+      ],
+      "myth": {
+        "label": "Myth",
+        "title": "Shaving makes hair thicker",
+        "text": "Not true: shaving doesn't change hair thickness or amount. What changes is the tip, which is left blunt and feels rougher. That's why it seems thicker, even though it isn't."
+      },
+      "caution": {
+        "title": "Good to know",
+        "text": "Wax can leave mild redness for a few hours, and not every skin type or situation is suitable that day. That's why we check your skin in person before starting and, if something isn't advisable, we'll tell you. This information is general and doesn't replace advice from a health professional."
+      }
+    }
+  },
+  "soon": {
+    "eyebrow": "Coming soon to Puerto Vallarta",
+    "title": "We're getting your new era ready",
+    "lead": "Waxing with visible hygiene, informed care and a space designed for your comfort. Leave us your details and we'll let you know as soon as our booking opens.",
+    "countdownLabel": "Opening in",
+    "cdDays": "days",
+    "cdHours": "hours",
+    "cdMinutes": "min",
+    "cdSeconds": "sec",
+    "form": {
+      "title": "Notify me when you open",
+      "name": "Name",
+      "phone": "WhatsApp or phone",
+      "submit": "Notify me",
+      "sending": "Sending…",
+      "ok": "Thank you! We'll let you know as soon as we open.",
+      "error": "We couldn't save your details. Please try again in a few minutes.",
+      "privacy": "We'll only use your details to let you know about the opening.",
+      "honeypot": "Leave empty if you are human"
+    },
+    "explore": "Explore the site",
+    "follow": "Follow us",
+    "rights": "All rights reserved."
+  },
+  "beforeAfter": {
+    "disclaimer": "Results vary from person to person and skin to skin.",
+    "sliderLabel": "Before and after comparison. Use the arrow keys to move the slider.",
+    "valueText": "{antes}% before, {despues}% after",
+    "before": {
+      "label": "Before",
+      "img": "/assets/img/antes.webp",
+      "alt": "Face with visible hair on the upper lip, before waxing"
+    },
+    "after": {
+      "label": "After",
+      "img": "/assets/img/despues.webp",
+      "alt": "The same face with smooth, hair-free skin on the upper lip, after waxing"
+    }
+  }
+}

@@ -1,6 +1,8 @@
 /* Landing "Próximamente": una pantalla, sin menú */
 .soon { min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; background: var(--crema-claro); }
-.soon__top { padding-block: var(--space-3); }
+.soon__top { display: flex; align-items: center; justify-content: space-between; padding-block: var(--space-3); }
+.soon__lang { display: inline-flex; align-items: center; justify-content: center; min-width: 2.6rem; padding: 0.35em 0.8em; border: 1px solid var(--cafe); border-radius: 999px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-decoration: none; color: var(--cafe); }
+.soon__lang:hover { background: var(--cafe); color: var(--crema-claro); }
 .soon__logo { height: 2.1rem; width: auto; }
 
 .soon__inner { display: grid; gap: var(--space-4); align-items: center; padding-block: var(--space-3) var(--space-5); }

@@ -1,19 +1,45 @@
 <section class="services-list" id="catalogo" aria-labelledby="catalogo-titulo">
   <div class="container">
     <h2 class="sr-only" id="catalogo-titulo">{{services.list.title}}</h2>
-    <ul class="services-grid">
-      {{#each services.items}}
-      <li class="service" data-reveal>
-        <!-- Marcador de foto del servicio: reemplazar .service__media por <img> real -->
-        <div class="service__media" aria-hidden="true"><img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" loading="lazy"></div>
-        <div class="service__body">
-          <p class="service__hint">0{{@number}}</p>
-          <h3 class="service__title">{{this.title}}</h3>
-          <p class="service__text">{{this.text}}</p>
-          <a class="btn btn--ghost service__cta" href="{{base}}/agendar/?servicio={{this.slug}}">{{services.list.book}}</a>
-        </div>
-      </li>
-      {{/each}}
-    </ul>
+    <div class="services-filter" role="group" aria-label="{{services.list.jump}}" data-filter hidden>
+      <button class="btn services-filter__btn" type="button" data-filter-value="all" aria-pressed="true">{{services.list.filterAll}}</button>
+      <button class="btn services-filter__btn" type="button" data-filter-value="damas" aria-pressed="false">{{services.damas.title}}</button>
+      <button class="btn services-filter__btn" type="button" data-filter-value="caballeros" aria-pressed="false">{{services.caballeros.title}}</button>
+    </div>
+
+    <div class="services-group" id="damas" data-group="damas">
+      <h3 class="services-group__title">{{services.damas.title}}</h3>
+      <ul class="services-grid">
+        {{#each services.damas.items}}
+        <li class="service" data-reveal>
+          <div class="service__media" aria-hidden="true"><img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" loading="lazy"></div>
+          <div class="service__body">
+            <p class="service__hint">0{{@number}}</p>
+            <h4 class="service__title">{{this.title}}</h4>
+            <p class="service__text">{{this.text}}</p>
+            <a class="btn btn--ghost service__cta" href="{{base}}/agendar/?servicio={{this.slug}}">{{services.list.book}}</a>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="services-group" id="caballeros" data-group="caballeros">
+      <h3 class="services-group__title">{{services.caballeros.title}}</h3>
+      <ul class="services-grid">
+        {{#each services.caballeros.items}}
+        <li class="service" data-reveal>
+          <div class="service__media" aria-hidden="true"><img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270" loading="lazy"></div>
+          <div class="service__body">
+            <p class="service__hint">0{{@number}}</p>
+            <h4 class="service__title">{{this.title}}</h4>
+            <p class="service__text">{{this.text}}</p>
+            <a class="btn btn--ghost service__cta" href="{{base}}/agendar/?servicio={{this.slug}}">{{services.list.book}}</a>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+      <p class="services-group__note">{{services.caballeros.note}}</p>
+    </div>
   </div>
 </section>

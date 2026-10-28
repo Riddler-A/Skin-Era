@@ -19,7 +19,7 @@
         <li><a href="{{base}}/blog/" {{current.blog}}>{{nav.blog}}</a></li>
       </ul>
       <a class="btn btn--primary site-nav__cta" href="{{base}}/agendar/" {{current.contact}}>{{nav.book}}</a>
-      {{#if hasEnglish}}<a class="site-nav__lang" href="/en/" hreflang="en" lang="en">EN</a>{{/if}}
+      {{#if langSwitchHref}}<a class="site-nav__lang" href="{{langSwitchHref}}" hreflang="{{langSwitchLang}}" lang="{{langSwitchLang}}" aria-label="{{a11y.langSwitch}}" title="{{a11y.langSwitch}}">{{langSwitchLabel}}</a>{{/if}}
     </nav>
   </div>
 </header>

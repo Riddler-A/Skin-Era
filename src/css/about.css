@@ -23,15 +23,20 @@
 .about-values { padding-block: var(--space-6); }
 .about-values__head { display: grid; gap: var(--space-2); margin-bottom: var(--space-4); }
 .about-values__title { font-size: var(--step-h2); }
-.about-values__list { display: grid; gap: 0; }
-.value { display: grid; gap: 0.5rem; padding-block: var(--space-3); border-top: 1px solid var(--linea); }
+.about-values__list { display: grid; gap: var(--space-3); }
+/* Tarjetas de papel: al pasar el mouse (o enfocar con teclado) se levantan y giran un poco */
+.value { --tilt: -1.6deg; position: relative; display: grid; align-content: start; gap: 0.6rem; padding: var(--space-4) var(--space-3); background: linear-gradient(160deg, var(--crema-claro) 0%, var(--crema) 100%); border: 1px solid rgb(108 86 73 / 0.14); border-radius: 0.35rem; box-shadow: 0 1px 1px rgb(108 86 73 / 0.12), 0 6px 14px -8px rgb(108 86 73 / 0.35); transform-origin: 50% 85%; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+.value:nth-child(even) { --tilt: 1.6deg; }
+/* esquina doblada, como una hoja */
+.value::after { content: ""; position: absolute; right: 0; bottom: 0; width: 1.6rem; height: 1.6rem; background: linear-gradient(135deg, transparent 50%, var(--crema-profundo) 50%); border-top-left-radius: 0.3rem; box-shadow: -2px -2px 4px -2px rgb(108 86 73 / 0.25); pointer-events: none; }
+.value:hover, .value:focus-within { transform: translateY(-8px) rotate(var(--tilt)); box-shadow: 0 2px 2px rgb(108 86 73 / 0.12), 0 26px 36px -18px rgb(108 86 73 / 0.55); }
 .value h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 500; letter-spacing: 0.04em; line-height: 1.3; }
 .value h3::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 0.7rem; border-radius: 50%; background: var(--ocre); vertical-align: 0.15em; }
 .value p { max-width: 42ch; }
 
 @media (min-width: 48em) {
   .about-purpose__grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
-  .about-values__list { grid-template-columns: repeat(2, 1fr); column-gap: var(--space-5); }
+  .about-values__list { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 62em) {
   .about-hero { padding-block: var(--space-6); }
@@ -40,3 +45,10 @@
   .about-values__list { grid-template-columns: repeat(3, 1fr); }
   .about-purpose { padding-block: var(--space-6); }
 }
+
+/* La animación de aparición (data-reveal) también usa transform: en las tarjetas se deja el efecto de giro activo */
+@media (prefers-reduced-motion: no-preference) {
+  .js .value[data-reveal] { transition: opacity 0.8s var(--ease), transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+  .js .value[data-reveal].is-visible:hover, .js .value[data-reveal].is-visible:focus-within { transform: translateY(-8px) rotate(var(--tilt)); }
+}
+@media (prefers-reduced-motion: reduce) { .value:hover, .value:focus-within { transform: none; } }

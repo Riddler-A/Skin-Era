@@ -14,8 +14,11 @@ if (root) {
     done: q('[data-done]'), doneText: q('[data-done-text]'), service: q('#a-servicio'),
   };
   const state = { data: null, start: null, busy: false };
-  const longDate = new Intl.DateTimeFormat('es-MX', { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit', timeZone: 'America/Mexico_City' });
-  const dayFmt = new Intl.DateTimeFormat('es-MX', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+  const locale = document.documentElement.lang === 'en' ? 'en-US' : 'es-MX';
+  const longDate = new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit', timeZone: 'America/Mexico_City' });
+  const dayFmt = new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', timeZone: 'UTC' });
+  const weekdayFmt = new Intl.DateTimeFormat(locale, { weekday: 'long', timeZone: 'UTC' });
+  const shortFmt = new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'numeric', timeZone: 'UTC' });
   const weekLabel = (a, b) => {
     try { return dayFmt.formatRange(asUTC(a), asUTC(b)); } catch { return `${dayFmt.format(asUTC(a))} – ${dayFmt.format(asUTC(b))}`; }
   };
@@ -55,9 +58,9 @@ if (root) {
       wrap.className = 'agenda__day';
       const title = document.createElement('h3');
       title.className = 'agenda__dayname';
-      title.append(day.label);
+      title.append(cap(weekdayFmt.format(asUTC(day.date))));
       const short = document.createElement('span');
-      short.textContent = day.short;
+      short.textContent = shortFmt.format(asUTC(day.date));
       title.append(short);
       const slots = document.createElement('div');
       slots.className = 'agenda__slots';
@@ -131,7 +134,7 @@ if (root) {
       });
       if (res.ok) {
         const data = await res.json();
-        els.doneText.textContent = data.demo ? (t.doneDemo || '') : (t.done || '').replace('{fecha}', cap(data.label || longDate.format(new Date(state.start))));
+        els.doneText.textContent = data.demo ? (t.doneDemo || '') : (t.done || '').replace('{fecha}', cap(longDate.format(new Date(data.start || state.start))));
         els.picker.hidden = true;
         els.form.closest('.agenda__side').hidden = true;
         els.done.hidden = false;

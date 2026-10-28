@@ -35,6 +35,7 @@
     "path": "servicios",
     "sections": [
       "services-hero",
+      "services-featured",
       "services-list",
       "services-notes",
       "cta-book"
@@ -42,6 +43,9 @@
     "css": [
       "services",
       "cta"
+    ],
+    "js": [
+      "services"
     ]
   },
   {

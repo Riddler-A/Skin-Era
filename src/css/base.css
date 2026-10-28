@@ -1,5 +1,9 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 1rem); -webkit-text-size-adjust: 100%; }
+/* Texto seleccionado con los colores de marca (rosa + café oscuro) */
+::selection { background: var(--rosa); color: var(--cafe-oscuro); }
+::-moz-selection { background: var(--rosa); color: var(--cafe-oscuro); }
+
 body {
   margin: 0;
   background: var(--crema-claro);

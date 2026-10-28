@@ -19,9 +19,12 @@
         <label for="c-servicio">{{contact.form.service}}</label>
         <select id="c-servicio" name="servicio">
           <option value="orientacion">{{contact.form.serviceNone}}</option>
-          {{#each services.items}}
-          <option value="{{this.slug}}">{{this.title}}</option>
-          {{/each}}
+          <optgroup label="{{services.damas.title}}">
+            {{#each services.damas.items}}<option value="{{this.slug}}">{{this.title}}</option>{{/each}}
+          </optgroup>
+          <optgroup label="{{services.caballeros.title}}">
+            {{#each services.caballeros.items}}<option value="{{this.slug}}">{{this.title}}</option>{{/each}}
+          </optgroup>
         </select>
       </div>
       <div class="field">

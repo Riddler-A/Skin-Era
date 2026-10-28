@@ -1,6 +1,7 @@
 <section class="soon" aria-labelledby="soon-titulo">
   <div class="soon__top container">
     <img class="soon__logo" src="/assets/img/logo-wordmark-cafe.png" alt="Skin Era" width="1195" height="244">
+    {{#if langSwitchHref}}<a class="soon__lang" href="{{langSwitchHref}}" hreflang="{{langSwitchLang}}" lang="{{langSwitchLang}}" aria-label="{{a11y.langSwitch}}" title="{{a11y.langSwitch}}">{{langSwitchLabel}}</a>{{/if}}
   </div>
 
   <div class="soon__inner container">

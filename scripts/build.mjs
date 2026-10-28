@@ -60,6 +60,21 @@ function prepareFaq(faq, site) {
   return { faq: out, jsonLd };
 }
 
+// Selector de idioma: enlace a la misma página en el otro idioma + etiquetas hreflang
+function langContext(lang, langs, site, page) {
+  const urlFor = (l) => `${l === site.defaultLang ? '' : `/${l}`}/${page.path ? `${page.path}/` : ''}`;
+  const other = langs.find(l => l !== lang);
+  return {
+    langSwitchHref: other ? urlFor(other) : '',
+    langSwitchLabel: other ? other.toUpperCase() : '',
+    langSwitchLang: other ?? '',
+    hreflangLinks: langs.length > 1
+      ? [...langs.map(l => `<link rel="alternate" hreflang="${l}" href="${site.url}${urlFor(l)}">`), `<link rel="alternate" hreflang="x-default" href="${site.url}${urlFor(site.defaultLang)}">`].join('\n  ')
+      : '',
+    ogLocale: lang === 'en' ? 'en_US' : 'es_MX',
+  };
+}
+
 async function build() {
   const t0 = Date.now();
   await rm(DIST, { recursive: true, force: true });
@@ -97,7 +112,7 @@ async function build() {
         ...copy, site, lang, base, current,
         page: { id: page.id, path: page.path ? `${page.path}/` : '', ...(copy.pages?.[page.id] ?? {}),
           draftBadge: page.pending && site.showDrafts ? `<span class="faq-draft">${copy.blog?.draftLabel ?? ''}</span>` : '' },
-        hasEnglish: langs.includes('en'),
+        ...langContext(lang, langs, site, page),
         jsonLd: page.id === 'faq' ? jsonLd : '',
         agendaI18n: JSON.stringify(copy.contact?.agenda?.js ?? {}).replace(/</g, '\\u003c'),
         year: new Date().getFullYear(),
