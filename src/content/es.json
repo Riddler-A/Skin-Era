@@ -771,7 +771,9 @@
         "imgAlt": "Skin Era, una nueva era para tu piel"
       },
       "zoom": "Ampliar imagen",
-      "close": "Cerrar"
+      "close": "Cerrar",
+      "latest": "Ir a lo más reciente",
+      "first": "Volver al inicio"
     }
   },
   "beforeAfter": {
