@@ -145,7 +145,8 @@
       "soon"
     ],
     "js": [
-      "waitlist"
+      "waitlist",
+      "timeline"
     ]
   }
 ]

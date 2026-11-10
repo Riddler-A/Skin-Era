@@ -711,7 +711,68 @@
     },
     "explore": "Explore the site",
     "follow": "Follow us",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "timeline": {
+      "eyebrow": "Our story",
+      "items": [
+        {
+          "label": "Chapter 1",
+          "title": "Before Skin Era, there was La Peau.",
+          "text": "A different name. A first vision. The beginning of something that was still discovering its identity.",
+          "img": "/assets/img/la-peau.webp",
+          "w": 800,
+          "h": 1000,
+          "imgAlt": "La Peau Studio post: a space dedicated to skin care, with the motto “Your skin is in committed hands”"
+        },
+        {
+          "label": "Chapter 2 · The transformation",
+          "title": "A new way of imagining Skin Era.",
+          "text": "La Peau was beginning to fade into the past to make way for a new vision. Among sketches, ideas and different proposals, Skin Era was starting to find its own identity.",
+          "img": "/assets/img/skin-era-bocetos.webp",
+          "w": 800,
+          "h": 1200,
+          "imgAlt": "Three sketches of the Skin Era logotype with different details over the letter E"
+        },
+        {
+          "label": "Chapter 3 · Visual identity",
+          "title": "An identity in progress.",
+          "text": "The exploration continued through new typographic proposals, color combinations and visual compositions. Every element was part of the process of defining an identity of its own for Skin Era.",
+          "img": "/assets/img/skin-era-identidad.webp",
+          "w": 800,
+          "h": 784,
+          "imgAlt": "Skin Era logotype in a thin typeface on white, cream and ochre backgrounds"
+        },
+        {
+          "label": "Chapter 4 · Trademark registration",
+          "title": "One brand. Two registrations.",
+          "text": "Skin Era reached a new milestone: the official registration of its name and slogan with the Mexican Institute of Industrial Property (IMPI). Two essential elements of its identity, now legally protected.",
+          "img": "/assets/img/registro-impi.webp",
+          "w": 800,
+          "h": 782,
+          "imgAlt": "Registration notices for the SKIN ERA trademark and the slogan “A new era for your skin”"
+        },
+        {
+          "label": "Chapter 5 · Practice and refinement",
+          "title": "A space to refine our craft.",
+          "text": "As part of Skin Era's development, we created a space dedicated to practicing and refining our waxing techniques. A stage of learning and preparation to offer a professional, quality service.",
+          "video": "/assets/video/capitulo-5.mp4",
+          "poster": "/assets/img/capitulo-5-poster.webp",
+          "w": 432,
+          "h": 768,
+          "imgAlt": "Video of the Skin Era space during its preparation: finishing work, installations and the brand sign"
+        }
+      ],
+      "closing": {
+        "title": "The story continues.",
+        "text": "There are still chapters to be written. Skin Era keeps taking shape, with the same vision that gave rise to this dream.",
+        "img": "/assets/img/firma-skin-era.webp",
+        "w": 900,
+        "h": 305,
+        "imgAlt": "Skin Era, a new era for your skin"
+      },
+      "zoom": "Enlarge image",
+      "close": "Close"
+    }
   },
   "beforeAfter": {
     "disclaimer": "Results vary from person to person and skin to skin.",

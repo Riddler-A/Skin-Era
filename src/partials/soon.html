@@ -5,7 +5,8 @@
   </div>
 
   <div class="soon__inner container">
-    <div class="soon__copy">
+    <div class="soon__left">
+    <div class="soon__head">
       <p class="eyebrow">{{soon.eyebrow}}</p>
       <h1 class="soon__title" id="soon-titulo">{{soon.title}}</h1>
       <p class="soon__lead">{{soon.lead}}</p>
@@ -20,7 +21,9 @@
           <div><span data-cd="seconds">00</span><small>{{soon.cdSeconds}}</small></div>
         </div>
       </div>
+    </div>
 
+    <div class="soon__cta">
       <form class="waitlist" name="lista-de-espera" method="POST" action="{{base}}/proximamente/" data-netlify="true" netlify-honeypot="bot-field" data-waitlist data-ok="{{soon.form.ok}}" data-error="{{soon.form.error}}" data-sending="{{soon.form.sending}}">
         <h2 class="waitlist__title">{{soon.form.title}}</h2>
         <input type="hidden" name="form-name" value="lista-de-espera">
@@ -42,13 +45,40 @@
 
       <a class="soon__explore" href="{{base}}/">{{soon.explore}} →</a>
     </div>
+    </div>
 
-    <div class="soon__visual" aria-hidden="true">
-      <div class="soon__arch">
-        <img src="/assets/img/logo-monograma-crema.png" alt="" width="218" height="270">
-      </div>
+    <div class="soon__right" data-story>
+      <!-- Línea de tiempo: se pueden agregar más capítulos (<li class="timeline__item">) -->
+      <section class="timeline" aria-labelledby="timeline-titulo">
+        <p class="eyebrow" id="timeline-titulo">{{soon.timeline.eyebrow}}</p>
+        <ol class="timeline__list">
+          {{#each soon.timeline.items}}
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <p class="timeline__label">{{this.label}}</p>
+            <div class="timeline__card">
+              {{this.imgTag}}
+              <div class="timeline__body">
+                <h2 class="timeline__title">{{this.title}}</h2>
+                <p class="timeline__text">{{this.text}}</p>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+        <div class="timeline__closing">
+          <h2 class="timeline__closing-title">{{soon.timeline.closing.title}}</h2>
+          <p class="timeline__closing-text">{{soon.timeline.closing.text}}</p>
+          <img class="timeline__signature" src="{{soon.timeline.closing.img}}" alt="{{soon.timeline.closing.imgAlt}}" width="{{soon.timeline.closing.w}}" height="{{soon.timeline.closing.h}}" loading="lazy">
+        </div>
+      </section>
     </div>
   </div>
+
+  <dialog class="lightbox" data-lightbox aria-label="{{soon.timeline.zoom}}">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="{{soon.timeline.close}}">×</button>
+    <img class="lightbox__img" src="" alt="">
+  </dialog>
 
   <div class="soon__bottom container">
     <p>© {{year}} {{site.name}}. {{soon.rights}}</p>

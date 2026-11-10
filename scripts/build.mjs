@@ -99,6 +99,16 @@ async function build() {
       const list = markDrafts(copy.blog.list, site, copy.blog.draftLabel);
       copy.blog = { ...copy.blog, list, noPosts: list.length ? '' : copy.blog.emptyText };
     }
+    if (copy.soon?.timeline?.items) {
+      // la imagen de cada capítulo es opcional: sin img, la tarjeta solo lleva texto
+      const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+      copy.soon.timeline.items = copy.soon.timeline.items.map(it => ({
+        ...it,
+        imgTag: it.video
+          ? `<video class="timeline__img timeline__video" src="${esc(it.video)}" poster="${esc(it.poster)}" width="${it.w}" height="${it.h}" muted loop playsinline controls preload="metadata" aria-label="${esc(it.imgAlt)}" data-timeline-video></video>`
+          : it.img ? `<button class="timeline__zoom" type="button" data-zoom aria-label="${esc(copy.soon.timeline.zoom)}: ${esc(it.imgAlt)}"><img class="timeline__img" src="${esc(it.img)}" alt="${esc(it.imgAlt)}" width="${it.w}" height="${it.h}" loading="lazy"></button>` : '',
+      }));
+    }
     if (copy.firstTime) {
       const l = copy.firstTime.draftLabel;
       copy.firstTime = { ...copy.firstTime, stepsList: markDrafts(copy.firstTime.stepsList, site, l), prepList: markDrafts(copy.firstTime.prepList, site, l) };

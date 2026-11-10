@@ -9,7 +9,7 @@
     "menu": "Abrir menú",
     "home": "Inicio",
     "about": "Quiénes somos",
-    "services": "The Menu",
+    "services": "Menú",
     "firstTime": "Tu primera vez",
     "faq": "Preguntas",
     "book": "Agendar",
@@ -45,10 +45,10 @@
       }
     },
     "services": {
-      "title": "The Menu",
+      "title": "Menú",
       "meta": {
-        "title": "The Menu | Skin Era",
-        "description": "The Menu: servicios de depilación con cera en Puerto Vallarta."
+        "title": "Menú | Skin Era",
+        "description": "Menú: servicios de depilación con cera en Puerto Vallarta."
       }
     },
     "firstTime": {
@@ -192,13 +192,13 @@
   },
   "cta": {
     "title": "Cuando quieras, aquí estamos",
-    "text": "Conoce The Menu y agenda tu cita cuando quieras.",
-    "primary": "Ver The Menu"
+    "text": "Conoce el Menú y agenda tu cita cuando quieras.",
+    "primary": "Ver el Menú"
   },
   "services": {
     "_pendiente": "Lista por categoría tomada de la imagen de bienvenida de Skin Era. Textos de cada servicio PROVISIONALES: confirmar con Jass. Sin precios por decisión del cliente.",
     "hero": {
-      "eyebrow": "The Menu",
+      "eyebrow": "Menú",
       "title": "Depilación con cera, a tu medida",
       "lead": "Elegimos la técnica y el ritmo según tu piel y tu vello. Tú decides hasta dónde y puedes pausar cuando quieras."
     },
@@ -522,7 +522,7 @@
       "title": "¿No encontraste tu respuesta?",
       "text": "Agenda tu cita y resolvemos tus dudas antes de empezar.",
       "primary": "Agendar mi cita",
-      "secondary": "Ver The Menu"
+      "secondary": "Ver el Menú"
     }
   },
   "firstTime": {
@@ -711,7 +711,68 @@
     },
     "explore": "Conoce el sitio",
     "follow": "Síguenos",
-    "rights": "Todos los derechos reservados."
+    "rights": "Todos los derechos reservados.",
+    "timeline": {
+      "eyebrow": "Nuestra historia",
+      "items": [
+        {
+          "label": "Capítulo 1",
+          "title": "Antes de Skin Era, existió La Peau.",
+          "text": "Un nombre distinto. Una primera visión. El comienzo de algo que todavía estaba por descubrir su identidad.",
+          "img": "/assets/img/la-peau.webp",
+          "w": 800,
+          "h": 1000,
+          "imgAlt": "Publicación de La Peau Studio: un espacio dedicado al cuidado de tu piel, con el lema «Tu piel está en manos comprometidas»"
+        },
+        {
+          "label": "Capítulo 2 · La transformación",
+          "title": "Una nueva forma de imaginar Skin Era.",
+          "text": "La Peau comenzaba a quedar atrás para dar paso a una nueva visión. Entre bocetos, ideas y distintas propuestas, Skin Era empezaba a encontrar su propia identidad.",
+          "img": "/assets/img/skin-era-bocetos.webp",
+          "w": 800,
+          "h": 1200,
+          "imgAlt": "Tres bocetos del logotipo de Skin Era con distintos detalles sobre la letra E"
+        },
+        {
+          "label": "Capítulo 3 · Identidad visual",
+          "title": "Una identidad en desarrollo.",
+          "text": "La exploración continuó a través de nuevas propuestas tipográficas, combinaciones de color y composiciones visuales. Cada elemento formaba parte del proceso de definir una identidad propia para Skin Era.",
+          "img": "/assets/img/skin-era-identidad.webp",
+          "w": 800,
+          "h": 784,
+          "imgAlt": "Logotipo de Skin Era en tipografía fina sobre fondo blanco, crema y ocre"
+        },
+        {
+          "label": "Capítulo 4 · Registro de marca",
+          "title": "Una marca. Dos registros.",
+          "text": "Skin Era alcanzó un nuevo hito: el registro oficial de su nombre y eslogan ante el Instituto Mexicano de la Propiedad Industrial (IMPI). Dos elementos esenciales de su identidad, ahora legalmente protegidos.",
+          "img": "/assets/img/registro-impi.webp",
+          "w": 800,
+          "h": 782,
+          "imgAlt": "Avisos de registro de la marca SKIN ERA y del eslogan «Una nueva era para tu piel»"
+        },
+        {
+          "label": "Capítulo 5 · Práctica y perfeccionamiento",
+          "title": "Un espacio para perfeccionar.",
+          "text": "Como parte del desarrollo de Skin Era, creamos un espacio dedicado a la práctica y al perfeccionamiento de nuestras técnicas de depilación. Una etapa de aprendizaje y preparación para ofrecer un servicio profesional y de calidad.",
+          "video": "/assets/video/capitulo-5.mp4",
+          "poster": "/assets/img/capitulo-5-poster.webp",
+          "w": 432,
+          "h": 768,
+          "imgAlt": "Video del espacio de Skin Era durante su preparación: acabados de obra, instalaciones y el letrero de la marca"
+        }
+      ],
+      "closing": {
+        "title": "La historia continúa.",
+        "text": "Aún quedan capítulos por escribir. Skin Era sigue tomando forma, con la misma visión que dio origen a este sueño.",
+        "img": "/assets/img/firma-skin-era.webp",
+        "w": 900,
+        "h": 305,
+        "imgAlt": "Skin Era, una nueva era para tu piel"
+      },
+      "zoom": "Ampliar imagen",
+      "close": "Cerrar"
+    }
   },
   "beforeAfter": {
     "disclaimer": "Los resultados varían según cada persona y cada piel.",
