@@ -102,9 +102,7 @@
 
 /* Botón: ir a lo más reciente / volver al inicio de la historia */
 /* Botón flotante (sin franja): queda a la vista mientras se recorre la historia */
-.soon__right { display: flex; flex-direction: column; }
-.timeline__jump-wrap { order: 3; position: sticky; bottom: 1rem; z-index: 5; height: 0; display: flex; align-items: flex-end; justify-content: flex-end; pointer-events: none; }
-.timeline__jump-wrap .timeline__jump { transform: translateY(0); }
+.timeline__jump-wrap { position: sticky; top: 0.75rem; z-index: 5; height: 0; display: flex; align-items: flex-start; justify-content: flex-end; pointer-events: none; }
 .soon__skip { font-weight: 500; letter-spacing: 0.04em; text-decoration: none; padding: 0.5em 1.1em; border: 1px solid var(--cafe); border-radius: 999px; font-size: 0.9rem; }
 .soon__skip:hover { background: var(--cafe); color: var(--crema-claro); }
 .timeline__jump { flex: none; pointer-events: auto; background: var(--crema-claro); box-shadow: 0 10px 24px -12px rgb(84 67 58 / 0.55); display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5em 1.1em; border: 1px solid var(--cafe); border-radius: 999px; color: var(--cafe); font: inherit; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background-color 0.2s var(--ease), color 0.2s var(--ease); }
@@ -140,7 +138,6 @@
   .waitlist__submit { margin-top: 0.25rem; }
   .waitlist__status { min-height: 0; }
   .waitlist__status:empty { display: none; }
-  .timeline__jump-wrap { order: 0; top: 0.75rem; bottom: auto; align-items: flex-start; }
   .soon__skip { display: none; }
   .soon__right { order: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: var(--space-2) var(--space-3) var(--space-5) 0; scrollbar-width: thin; scrollbar-color: var(--ocre) transparent; -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 2rem), transparent 100%); mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 2rem), transparent 100%); }
   .soon__right:focus-visible { outline: 2px solid var(--ocre); outline-offset: -2px; }
