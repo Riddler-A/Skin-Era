@@ -105,7 +105,7 @@ async function build() {
       copy.soon.timeline.items = copy.soon.timeline.items.map(it => ({
         ...it,
         imgTag: it.video
-          ? `<video class="timeline__img timeline__video" src="${esc(it.video)}" poster="${esc(it.poster)}" width="${it.w}" height="${it.h}" muted loop playsinline controls preload="metadata" aria-label="${esc(it.imgAlt)}" data-timeline-video></video>`
+          ? `<div class="timeline__media"><video class="timeline__img timeline__video" src="${esc(it.video)}" poster="${esc(it.poster)}" width="${it.w}" height="${it.h}" muted loop playsinline controls preload="metadata" aria-label="${esc(it.imgAlt)}" data-timeline-video></video><button class="timeline__sound" type="button" data-sound data-label-on="${esc(copy.soon.timeline.soundOn)}" data-label-off="${esc(copy.soon.timeline.soundOff)}" aria-label="${esc(copy.soon.timeline.soundOn)}" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path class="timeline__sound-on" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/><path class="timeline__sound-off" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button></div>`
           : it.img ? `<button class="timeline__zoom" type="button" data-zoom aria-label="${esc(copy.soon.timeline.zoom)}: ${esc(it.imgAlt)}"><img class="timeline__img" src="${esc(it.img)}" alt="${esc(it.imgAlt)}" width="${it.w}" height="${it.h}" loading="lazy"></button>` : '',
       }));
     }

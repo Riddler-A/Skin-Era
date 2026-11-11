@@ -773,8 +773,11 @@
       "zoom": "Enlarge image",
       "close": "Close",
       "latest": "Jump to the latest",
-      "first": "Back to the start"
-    }
+      "first": "Back to the start",
+      "soundOn": "Turn sound on",
+      "soundOff": "Mute"
+    },
+    "skipToForm": "Go to the form"
   },
   "beforeAfter": {
     "disclaimer": "Results vary from person to person and skin to skin.",

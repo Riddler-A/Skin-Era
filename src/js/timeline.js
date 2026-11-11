@@ -65,3 +65,23 @@ if (jump && items.length > 1) {
   jump.hidden = false;
   sync();
 }
+
+// Sonido del video: arranca en silencio (los navegadores no permiten autoplay con sonido); el botón lo activa.
+document.querySelectorAll('[data-sound]').forEach((btn) => {
+  const video = btn.parentElement.querySelector('video');
+  if (!video) return;
+  const sync = () => {
+    const on = !video.muted && video.volume > 0;
+    btn.setAttribute('aria-pressed', String(on));
+    const label = on ? btn.dataset.labelOff : btn.dataset.labelOn;
+    btn.setAttribute('aria-label', label);
+    btn.title = label;
+  };
+  btn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    if (!video.muted) { video.volume = 1; video.play().catch(() => {}); }
+    sync();
+  });
+  video.addEventListener('volumechange', sync); // también si usan el control propio del video
+  sync();
+});

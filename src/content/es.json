@@ -773,8 +773,11 @@
       "zoom": "Ampliar imagen",
       "close": "Cerrar",
       "latest": "Ir a lo más reciente",
-      "first": "Volver al inicio"
-    }
+      "first": "Volver al inicio",
+      "soundOn": "Activar sonido",
+      "soundOff": "Silenciar"
+    },
+    "skipToForm": "Ir al formulario"
   },
   "beforeAfter": {
     "disclaimer": "Los resultados varían según cada persona y cada piel.",

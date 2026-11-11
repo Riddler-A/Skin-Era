@@ -10,6 +10,7 @@
       <p class="eyebrow">{{soon.eyebrow}}</p>
       <h1 class="soon__title" id="soon-titulo">{{soon.title}}</h1>
       <p class="soon__lead">{{soon.lead}}</p>
+      <a class="soon__skip" href="#lista">{{soon.skipToForm}} ↓</a>
 
       <!-- Cuenta regresiva: oculta hasta que site.json > launch.enabled sea true y haya fecha -->
       <div class="countdown" data-countdown hidden>
@@ -24,7 +25,7 @@
     </div>
 
     <div class="soon__cta">
-      <form class="waitlist" name="lista-de-espera" method="POST" action="{{base}}/proximamente/" data-netlify="true" netlify-honeypot="bot-field" data-waitlist data-ok="{{soon.form.ok}}" data-error="{{soon.form.error}}" data-sending="{{soon.form.sending}}">
+      <form class="waitlist" id="lista" name="lista-de-espera" method="POST" action="{{base}}/proximamente/" data-netlify="true" netlify-honeypot="bot-field" data-waitlist data-ok="{{soon.form.ok}}" data-error="{{soon.form.error}}" data-sending="{{soon.form.sending}}">
         <h2 class="waitlist__title">{{soon.form.title}}</h2>
         <input type="hidden" name="form-name" value="lista-de-espera">
         <p class="sr-only"><label>{{soon.form.honeypot}} <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
